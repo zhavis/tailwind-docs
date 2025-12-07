@@ -1,4 +1,3 @@
-// scripts/generate_index.js
 const fs = require("fs");
 const path = require("path");
 
@@ -38,12 +37,12 @@ function walk(dir, base = "") {
 
 // MAIN
 if (!fs.existsSync(DOCS)) {
-  console.error("❌ docs/ folder not found!");
+  console.error("docs/ folder not found!");
   process.exit(1);
 }
 
 const result = walk(DOCS);
 fs.writeFileSync(OUT, JSON.stringify(result, null, 2));
 
-console.log("✅ Generated _index.json at root:");
+console.log("Generated _index.json at root:");
 console.log(JSON.stringify(result, null, 2));
