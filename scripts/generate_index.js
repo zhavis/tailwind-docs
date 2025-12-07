@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = process.cwd();
-const DOCS = path.join(ROOT, "docs");
+const DOCS = path.join(ROOT, "../docs");
 const OUT = path.join(ROOT, "_index.json");
 
 function walk(dir, base = "") {
