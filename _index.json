@@ -1,0 +1,29 @@
+[
+  {
+    "name": "guide",
+    "type": "file",
+    "path": "guide.mdx"
+  },
+  {
+    "name": "introduction",
+    "type": "file",
+    "path": "introduction.mdx"
+  },
+  {
+    "name": "link",
+    "type": "dir",
+    "path": "link",
+    "children": [
+      {
+        "name": "tests",
+        "type": "file",
+        "path": "link/tests.mdx"
+      }
+    ]
+  },
+  {
+    "name": "new",
+    "type": "file",
+    "path": "new.mdx"
+  }
+]
