@@ -44,5 +44,5 @@ if (!fs.existsSync(DOCS)) {
 const result = walk(DOCS);
 fs.writeFileSync(OUT, JSON.stringify(result, null, 2));
 
-console.log("Generated _index.json at root:");
+console.log("Generated _index.json :");
 console.log(JSON.stringify(result, null, 2));
