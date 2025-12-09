@@ -1,18 +1,8 @@
 [
   {
-    "name": "Utility-First",
+    "name": "basics",
     "type": "file",
-    "path": "Utility-First.mdx"
-  },
-  {
-    "name": "colors",
-    "type": "file",
-    "path": "colors.mdx"
-  },
-  {
-    "name": "guide",
-    "type": "file",
-    "path": "guide.mdx"
+    "path": "basics.mdx"
   },
   {
     "name": "installation",
@@ -25,30 +15,45 @@
     "path": "introduction.mdx"
   },
   {
-    "name": "link",
+    "name": "responsive-design",
+    "type": "file",
+    "path": "responsive-design.mdx"
+  },
+  {
+    "name": "utilities",
     "type": "dir",
-    "path": "link",
+    "path": "utilities",
     "children": [
       {
-        "name": "tests",
+        "name": "buttons",
         "type": "file",
-        "path": "link/tests.mdx"
+        "path": "utilities/buttons.mdx"
+      },
+      {
+        "name": "colors",
+        "type": "file",
+        "path": "utilities/colors.mdx"
+      },
+      {
+        "name": "components",
+        "type": "file",
+        "path": "utilities/components.mdx"
+      },
+      {
+        "name": "spacing",
+        "type": "file",
+        "path": "utilities/spacing.mdx"
+      },
+      {
+        "name": "start",
+        "type": "file",
+        "path": "utilities/start.mdx"
+      },
+      {
+        "name": "typography",
+        "type": "file",
+        "path": "utilities/typography.mdx"
       }
     ]
-  },
-  {
-    "name": "spacing",
-    "type": "file",
-    "path": "spacing.mdx"
-  },
-  {
-    "name": "tailwind-basics",
-    "type": "file",
-    "path": "tailwind-basics.mdx"
-  },
-  {
-    "name": "typography",
-    "type": "file",
-    "path": "typography.mdx"
   }
 ]
