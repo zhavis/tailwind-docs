@@ -5,6 +5,11 @@
     "path": "guide.mdx"
   },
   {
+    "name": "installation",
+    "type": "file",
+    "path": "installation.mdx"
+  },
+  {
     "name": "introduction",
     "type": "file",
     "path": "introduction.mdx"
