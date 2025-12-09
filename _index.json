@@ -1,10 +1,5 @@
 [
   {
-    "name": "introduction",
-    "type": "file",
-    "path": "introduction.mdx"
-  },
-  {
     "name": "basics",
     "type": "file",
     "path": "basics.mdx"
@@ -20,8 +15,6 @@
     "path": "installation.mdx"
   },
   {
-<<<<<<< HEAD
-=======
     "name": "introduction",
     "type": "file",
     "path": "introduction.mdx"
@@ -32,7 +25,6 @@
     "path": "refrences.mdx"
   },
   {
->>>>>>> 47c4d1b47ff9c066a3d5b5a9f0c287caca847b69
     "name": "responsive-design",
     "type": "file",
     "path": "responsive-design.mdx"
@@ -42,11 +34,6 @@
     "type": "dir",
     "path": "utilities",
     "children": [
-      {
-        "name": "start",
-        "type": "file",
-        "path": "utilities/start.mdx"
-      },
       {
         "name": "buttons",
         "type": "file",
@@ -71,6 +58,11 @@
         "name": "spacing",
         "type": "file",
         "path": "utilities/spacing.mdx"
+      },
+      {
+        "name": "start",
+        "type": "file",
+        "path": "utilities/start.mdx"
       },
       {
         "name": "typography",
