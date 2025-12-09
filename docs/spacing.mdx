@@ -1,0 +1,125 @@
+# Spacing (Margin & Padding)
+
+Tailwind CSS provides a **flexible spacing system** for margins, padding, gaps, and more. Spacing is based on a **scale**, where the default unit is `0.25rem` (4px).
+
+---
+
+## 1. Padding
+
+Use `p-*` classes to apply padding:
+
+```html
+<div class="p-4 bg-gray-200">
+  Padding on all sides (1rem)
+</div>
+```
+
+- `p-0` → 0 padding
+- `p-1` → 0.25rem
+- `p-2` → 0.5rem
+- `p-4` → 1rem
+- `p-8` → 2rem
+
+### Padding on Specific Sides
+
+- `pt-*` → padding-top
+- `pr-*` → padding-right
+- `pb-*` → padding-bottom
+- `pl-*` → padding-left
+- `px-*` → padding-left & padding-right
+- `py-*` → padding-top & padding-bottom
+
+**Example:**
+
+```html
+<div class="px-6 py-4 bg-blue-200">
+  Horizontal padding: 1.5rem, Vertical padding: 1rem
+</div>
+```
+
+---
+
+## 2. Margin
+
+Use `m-*` classes to apply margin:
+
+```html
+<div class="m-4 bg-green-200">
+  Margin on all sides (1rem)
+</div>
+```
+
+### Margin on Specific Sides
+
+- `mt-*` → margin-top
+- `mr-*` → margin-right
+- `mb-*` → margin-bottom
+- `ml-*` → margin-left
+- `mx-*` → margin-left & margin-right
+- `my-*` → margin-top & margin-bottom
+
+**Example:**
+
+```html
+<div class="mt-6 mb-2 mx-4 bg-yellow-200 p-4">
+  Top margin: 1.5rem, Bottom: 0.5rem, Left & Right: 1rem
+</div>
+```
+
+### Negative Margins
+
+Tailwind also supports negative margins:
+
+```html
+<div class="mt-[-2rem] bg-red-200 p-4">
+  Negative top margin: -2rem
+</div>
+```
+
+- Use `-mt-*`, `-mb-*`, `-ml-*`, `-mr-*`, `-mx-*`, `-my-*`
+- This allows overlapping elements easily
+
+---
+
+## 3. Gap Utilities (Flex & Grid)
+
+Spacing between items in flex or grid layouts:
+
+```html
+<div class="flex gap-4">
+  <div class="bg-blue-300 p-4">Item 1</div>
+  <div class="bg-blue-500 p-4">Item 2</div>
+  <div class="bg-blue-700 p-4">Item 3</div>
+</div>
+```
+
+- `gap-0` → no gap
+- `gap-2` → 0.5rem
+- `gap-4` → 1rem
+- `gap-8` → 2rem
+
+You can also specify row and column gaps separately:
+
+- `gap-x-*` → horizontal gap
+- `gap-y-*` → vertical gap
+
+---
+
+## 4. Summary of Spacing Utilities
+
+| Utility | Description | Example |
+|---------|-------------|---------|
+| `p-*` | Padding all sides | `p-4` |
+| `px-*` | Padding horizontal | `px-6` |
+| `py-*` | Padding vertical | `py-2` |
+| `m-*` | Margin all sides | `m-4` |
+| `mx-*` | Margin horizontal | `mx-2` |
+| `my-*` | Margin vertical | `my-6` |
+| `-m-*` | Negative margin | `-mt-4` |
+| `gap-*` | Gap between flex/grid items | `gap-4` |
+| `gap-x-*` | Horizontal gap | `gap-x-2` |
+| `gap-y-*` | Vertical gap | `gap-y-6` |
+
+---
+
+**Tip:** Use **consistent spacing values** across your project to maintain visual rhythm and alignment. Tailwind's scale ensures uniformity without writing custom CSS.

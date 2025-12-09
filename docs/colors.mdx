@@ -1,0 +1,125 @@
+# Colors
+
+Tailwind CSS provides a **built-in color palette** that includes a wide range of shades for backgrounds, text, borders, and more. Colors are represented using **semantic class names** with numeric scales, making it easy to maintain consistency across your project.
+
+---
+
+## 1. Background Colors
+
+Use the `bg-{color}-{shade}` utility to set background colors:
+
+```html
+<div class="bg-blue-500 text-white p-4 mb-2">Blue Background</div>
+<div class="bg-red-200 text-red-800 p-4 mb-2">Light Red Background</div>
+<div class="bg-green-300 text-green-900 p-4 mb-2">Green Background</div>
+```
+
+- `bg-blue-500` → medium blue background
+- `bg-red-200` → light red background
+- `bg-green-300` → light green background
+
+---
+
+## 2. Text Colors
+
+Use the `text-{color}-{shade}` utility to set text colors:
+
+```html
+<p class="text-gray-800">Dark gray text</p>
+<p class="text-yellow-500">Yellow text</p>
+<p class="text-purple-600">Purple text</p>
+```
+
+- `text-gray-800` → dark gray
+- `text-yellow-500` → medium yellow
+- `text-purple-600` → purple with medium-dark shade
+
+---
+
+## 3. Border Colors
+
+Use the `border-{color}-{shade}` utility to style borders:
+
+```html
+<div class="border-2 border-blue-500 p-4">Box with blue border</div>
+<div class="border-2 border-red-300 p-4">Box with light red border</div>
+```
+
+- `border-blue-500` → medium blue border
+- `border-red-300` → light red border
+
+---
+
+## 4. Hover & Focus States
+
+Tailwind allows you to change colors on hover or focus using **pseudo-class prefixes**:
+
+```html
+<button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+  Hover Me
+</button>
+
+<input class="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded" placeholder="Focus me">
+```
+
+- `hover:bg-green-600` → darker green on hover
+- `focus:border-blue-500` → border color changes on focus
+- `focus:ring-2 focus:ring-blue-200` → adds focus ring
+
+---
+
+## 5. Opacity and Transparency
+
+You can control color opacity with the `bg-opacity-*` or `text-opacity-*` utilities:
+
+```html
+<div class="bg-blue-500 bg-opacity-50 text-white p-4">
+  Semi-transparent blue background
+</div>
+
+<p class="text-black text-opacity-70">
+  Semi-transparent text
+</p>
+```
+
+- `bg-opacity-50` → 50% background opacity
+- `text-opacity-70` → 70% text opacity
+
+---
+
+## 6. Custom Colors
+
+You can add custom colors in `tailwind.config.js`:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brandBlue: '#1E40AF',
+        brandRed: '#DC2626',
+      },
+    },
+  },
+};
+```
+
+Then use them in HTML:
+
+```html
+<div class="bg-brandBlue text-white p-4">Custom Brand Blue</div>
+<div class="bg-brandRed text-white p-4">Custom Brand Red</div>
+```
+
+---
+
+## Summary
+
+- `bg-*` → background color
+- `text-*` → text color
+- `border-*` → border color
+- Pseudo-class prefixes: `hover:`, `focus:`, `active:`
+- Opacity utilities: `bg-opacity-*`, `text-opacity-*`
+- Custom colors can be added in the configuration file
+
+Mastering colors in Tailwind ensures **consistent, accessible, and maintainable designs**.

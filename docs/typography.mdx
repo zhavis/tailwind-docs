@@ -1,0 +1,153 @@
+# Typography
+
+Tailwind CSS provides a comprehensive set of **typography utilities** for controlling font size, weight, line height, letter spacing, text alignment, and more. These utilities help maintain **consistent, readable, and responsive text** throughout your project.
+
+---
+
+## 1. Font Size
+
+Use `text-{size}` to set font sizes:
+
+```html
+<h1 class="text-4xl font-bold mb-4">Heading 1</h1>
+<h2 class="text-3xl font-semibold mb-3">Heading 2</h2>
+<p class="text-base text-gray-700">This is a paragraph with base font size.</p>
+<small class="text-sm text-gray-500">Small text example</small>
+```
+
+**Default font size scale:**
+
+- `text-xs` → 0.75rem
+- `text-sm` → 0.875rem
+- `text-base` → 1rem
+- `text-lg` → 1.125rem
+- `text-xl` → 1.25rem
+- `text-2xl` → 1.5rem
+- `text-3xl` → 1.875rem
+- `text-4xl` → 2.25rem
+- `text-5xl` → 3rem
+
+---
+
+## 2. Font Weight
+
+Use `font-{weight}` to set font weight:
+
+```html
+<p class="font-thin">Thin</p>
+<p class="font-light">Light</p>
+<p class="font-normal">Normal</p>
+<p class="font-medium">Medium</p>
+<p class="font-semibold">Semi-bold</p>
+<p class="font-bold">Bold</p>
+<p class="font-extrabold">Extra-bold</p>
+```
+
+---
+
+## 3. Line Height (Leading)
+
+Control vertical spacing between lines using `leading-{size}`:
+
+```html
+<p class="leading-none">No extra line height</p>
+<p class="leading-tight">Tight line height</p>
+<p class="leading-snug">Snug line height</p>
+<p class="leading-normal">Normal line height</p>
+<p class="leading-relaxed">Relaxed line height</p>
+<p class="leading-loose">Loose line height</p>
+```
+
+---
+
+## 4. Letter Spacing (Tracking)
+
+Adjust spacing between letters using `tracking-{size}`:
+
+```html
+<p class="tracking-tighter">Tighter tracking</p>
+<p class="tracking-tight">Tight tracking</p>
+<p class="tracking-normal">Normal tracking</p>
+<p class="tracking-wide">Wide tracking</p>
+<p class="tracking-wider">Wider tracking</p>
+<p class="tracking-widest">Widest tracking</p>
+```
+
+---
+
+## 5. Text Alignment
+
+Set text alignment using `text-{alignment}`:
+
+```html
+<p class="text-left">Left aligned</p>
+<p class="text-center">Center aligned</p>
+<p class="text-right">Right aligned</p>
+<p class="text-justify">Justified text</p>
+```
+
+---
+
+## 6. Text Color
+
+Control text color using `text-{color}-{shade}`:
+
+```html
+<p class="text-gray-800">Dark gray text</p>
+<p class="text-blue-500">Blue text</p>
+<p class="text-red-600">Red text</p>
+```
+
+---
+
+## 7. Text Transform
+
+Change text case using:
+
+```html
+<p class="uppercase">Uppercase</p>
+<p class="lowercase">lowercase</p>
+<p class="capitalize">Capitalize Each Word</p>
+```
+
+---
+
+## 8. Font Style
+
+Set italic or normal style:
+
+```html
+<p class="italic">Italic text</p>
+<p class="not-italic">Normal text</p>
+```
+
+---
+
+## 9. Example: Styled Card Text
+
+```html
+<div class="max-w-sm p-4 bg-white rounded shadow">
+  <h2 class="text-2xl font-bold mb-2">Card Title</h2>
+  <p class="text-gray-700 leading-relaxed mb-4">
+    This is a paragraph with base font size, gray color, and relaxed line height for better readability.
+  </p>
+  <span class="text-sm text-gray-500 uppercase tracking-wide">Category</span>
+</div>
+```
+
+This demonstrates **font size, weight, color, line height, and letter spacing** combined to create readable and visually appealing text.
+
+---
+
+## Summary
+
+- `text-*` → font size
+- `font-*` → font weight
+- `leading-*` → line height
+- `tracking-*` → letter spacing
+- `text-left/center/right/justify` → alignment
+- `text-{color}-{shade}` → color
+- `uppercase/lowercase/capitalize` → text case
+- `italic/not-italic` → font style
+
+Mastering typography utilities ensures **consistent and responsive text design** in Tailwind CSS.
