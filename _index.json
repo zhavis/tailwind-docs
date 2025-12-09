@@ -5,6 +5,11 @@
     "path": "basics.mdx"
   },
   {
+    "name": "customization",
+    "type": "file",
+    "path": "customization.mdx"
+  },
+  {
     "name": "installation",
     "type": "file",
     "path": "installation.mdx"
@@ -13,6 +18,11 @@
     "name": "introduction",
     "type": "file",
     "path": "introduction.mdx"
+  },
+  {
+    "name": "refrences",
+    "type": "file",
+    "path": "refrences.mdx"
   },
   {
     "name": "responsive-design",
@@ -28,6 +38,11 @@
         "name": "buttons",
         "type": "file",
         "path": "utilities/buttons.mdx"
+      },
+      {
+        "name": "cards",
+        "type": "file",
+        "path": "utilities/cards.mdx"
       },
       {
         "name": "colors",
