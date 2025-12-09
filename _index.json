@@ -1,5 +1,15 @@
 [
   {
+    "name": "Utility-First",
+    "type": "file",
+    "path": "Utility-First.mdx"
+  },
+  {
+    "name": "colors",
+    "type": "file",
+    "path": "colors.mdx"
+  },
+  {
     "name": "guide",
     "type": "file",
     "path": "guide.mdx"
@@ -27,8 +37,18 @@
     ]
   },
   {
-    "name": "new",
+    "name": "spacing",
     "type": "file",
-    "path": "new.mdx"
+    "path": "spacing.mdx"
+  },
+  {
+    "name": "tailwind-basics",
+    "type": "file",
+    "path": "tailwind-basics.mdx"
+  },
+  {
+    "name": "typography",
+    "type": "file",
+    "path": "typography.mdx"
   }
 ]
