@@ -1,0 +1,557 @@
+# Cards
+
+Cards are versatile containers for displaying content and actions about a single subject. Tailwind CSS makes it easy to create beautiful, responsive cards with consistent styling.
+
+---
+
+## 1. Basic Card Structure
+
+### Simple Card
+```html
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Card Title</div>
+    <p class="text-gray-700 text-base">
+      This is a simple card example with basic styling.
+    </p>
+  </div>
+</div>
+```
+
+### Card with Image
+```html
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+  <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Card image">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Card Title</div>
+    <p class="text-gray-700 text-base">
+      Card with image header and content.
+    </p>
+  </div>
+</div>
+```
+
+---
+
+## 2. Card Layout Variations
+
+### Horizontal Card
+```html
+<div class="flex flex-col md:flex-row max-w-2xl rounded overflow-hidden shadow-lg bg-white">
+  <div class="md:w-1/3">
+    <img class="w-full h-48 md:h-full object-cover" src="https://via.placeholder.com/300x400" alt="Card image">
+  </div>
+  <div class="md:w-2/3 p-6">
+    <div class="font-bold text-xl mb-2">Horizontal Card</div>
+    <p class="text-gray-700 mb-4">
+      This card switches from vertical on mobile to horizontal on desktop.
+    </p>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+      Action
+    </button>
+  </div>
+</div>
+```
+
+### Grid of Cards
+```html
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Card 1 -->
+  <div class="rounded overflow-hidden shadow-lg bg-white">
+    <div class="p-6">
+      <h3 class="font-bold text-lg mb-2">Card 1</h3>
+      <p class="text-gray-600">Card content here.</p>
+    </div>
+  </div>
+  
+  <!-- Card 2 -->
+  <div class="rounded overflow-hidden shadow-lg bg-white">
+    <div class="p-6">
+      <h3 class="font-bold text-lg mb-2">Card 2</h3>
+      <p class="text-gray-600">Card content here.</p>
+    </div>
+  </div>
+  
+  <!-- Card 3 -->
+  <div class="rounded overflow-hidden shadow-lg bg-white">
+    <div class="p-6">
+      <h3 class="font-bold text-lg mb-2">Card 3</h3>
+      <p class="text-gray-600">Card content here.</p>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## 3. Card Components
+
+### Card Header
+```html
+<div class="bg-white rounded-lg shadow">
+  <div class="px-6 py-4 border-b border-gray-200">
+    <h3 class="text-lg font-semibold text-gray-800">Card Header</h3>
+    <p class="text-sm text-gray-600">Optional subtitle</p>
+  </div>
+  <div class="p-6">
+    <p>Card content goes here.</p>
+  </div>
+</div>
+```
+
+### Card Footer
+```html
+<div class="bg-white rounded-lg shadow">
+  <div class="p-6">
+    <p>Card content goes here.</p>
+  </div>
+  <div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-600">Footer text</span>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-1 px-3 rounded">
+        Action
+      </button>
+    </div>
+  </div>
+</div>
+```
+
+### Card with Actions
+```html
+<div class="bg-white rounded-lg shadow">
+  <div class="p-6">
+    <h3 class="text-lg font-semibold mb-4">Card with Actions</h3>
+    <p class="text-gray-600 mb-6">Card content description.</p>
+    <div class="flex space-x-3">
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+        Primary
+      </button>
+      <button class="border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium py-2 px-4 rounded">
+        Secondary
+      </button>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## 4. Card Styles
+
+### Elevated Card
+```html
+<div class="bg-white rounded-xl shadow-xl p-6">
+  <h3 class="text-xl font-bold mb-4">Elevated Card</h3>
+  <p class="text-gray-600">With larger shadow and rounded corners.</p>
+</div>
+```
+
+### Flat Card (No Shadow)
+```html
+<div class="bg-white rounded-lg border border-gray-200 p-6">
+  <h3 class="text-lg font-semibold mb-3">Flat Card</h3>
+  <p class="text-gray-600">Clean design without shadows.</p>
+</div>
+```
+
+### Card with Gradient
+```html
+<div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg p-8 text-white">
+  <h3 class="text-2xl font-bold mb-4">Gradient Card</h3>
+  <p class="mb-6">Beautiful gradient background.</p>
+  <button class="bg-white text-blue-600 hover:bg-blue-50 font-medium py-2 px-4 rounded">
+    Get Started
+  </button>
+</div>
+```
+
+### Glassmorphism Card
+```html
+<div class="bg-white/30 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg p-8">
+  <h3 class="text-xl font-bold mb-4 text-gray-800">Glassmorphism Card</h3>
+  <p class="text-gray-700">Modern glass effect design.</p>
+</div>
+```
+
+---
+
+## 5. Card Content Elements
+
+### Card with Stats
+```html
+<div class="bg-white rounded-xl shadow p-6">
+  <div class="flex items-center justify-between mb-4">
+    <h3 class="text-lg font-semibold text-gray-800">Statistics</h3>
+    <span class="text-sm text-green-600 bg-green-100 px-2 py-1 rounded-full">+12%</span>
+  </div>
+  <div class="space-y-4">
+    <div>
+      <p class="text-sm text-gray-600">Revenue</p>
+      <p class="text-2xl font-bold text-gray-800">$24,500</p>
+    </div>
+    <div>
+      <p class="text-sm text-gray-600">Users</p>
+      <p class="text-2xl font-bold text-gray-800">1,842</p>
+    </div>
+  </div>
+</div>
+```
+
+### Card with List
+```html
+<div class="bg-white rounded-lg shadow">
+  <div class="px-6 py-4 border-b border-gray-200">
+    <h3 class="text-lg font-semibold">Task List</h3>
+  </div>
+  <div class="divide-y divide-gray-200">
+    <div class="px-6 py-4 flex items-center">
+      <input type="checkbox" class="rounded text-blue-500 mr-3">
+      <span>Complete project proposal</span>
+    </div>
+    <div class="px-6 py-4 flex items-center">
+      <input type="checkbox" class="rounded text-blue-500 mr-3">
+      <span>Review design mockups</span>
+    </div>
+    <div class="px-6 py-4 flex items-center">
+      <input type="checkbox" class="rounded text-blue-500 mr-3">
+      <span>Team meeting at 2 PM</span>
+    </div>
+  </div>
+</div>
+```
+
+### Card with Avatar
+```html
+<div class="bg-white rounded-xl shadow p-6">
+  <div class="flex items-center mb-4">
+    <img class="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/50" alt="Avatar">
+    <div>
+      <h4 class="font-semibold text-gray-800">John Doe</h4>
+      <p class="text-sm text-gray-600">Software Developer</p>
+    </div>
+  </div>
+  <p class="text-gray-700">
+    "This card features user information with an avatar."
+  </p>
+</div>
+```
+
+### Card with Badges
+```html
+<div class="bg-white rounded-lg shadow">
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-4">
+      <h3 class="text-lg font-semibold">Project Card</h3>
+      <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">Active</span>
+    </div>
+    <p class="text-gray-600 mb-4">Project description goes here.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+      <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Tailwind</span>
+      <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## 6. Interactive Cards
+
+### Hover Effects
+```html
+<div class="bg-white rounded-lg shadow hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+  <div class="p-6">
+    <h3 class="text-lg font-semibold mb-3">Hover Card</h3>
+    <p class="text-gray-600">This card elevates on hover.</p>
+  </div>
+</div>
+
+<!-- Scale on hover -->
+<div class="bg-white rounded-lg shadow hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+  <div class="p-6">
+    <h3 class="text-lg font-semibold mb-3">Interactive Card</h3>
+    <p class="text-gray-600">Lifts up on hover.</p>
+  </div>
+</div>
+```
+
+### Clickable Card
+```html
+<a href="#" class="block bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+  <div class="p-6">
+    <h3 class="text-lg font-semibold text-blue-600 mb-2">Clickable Card</h3>
+    <p class="text-gray-600">This entire card is clickable.</p>
+  </div>
+</a>
+```
+
+---
+
+## 7. Special Card Types
+
+### Pricing Card
+```html
+<div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 text-center">
+  <h3 class="text-2xl font-bold mb-4">Pro Plan</h3>
+  <div class="mb-6">
+    <span class="text-4xl font-bold">$29</span>
+    <span class="text-gray-600">/month</span>
+  </div>
+  <ul class="space-y-3 mb-8">
+    <li class="flex items-center">
+      <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+      </svg>
+      <span>10 Projects</span>
+    </li>
+    <li class="flex items-center">
+      <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+      </svg>
+      <span>Unlimited Storage</span>
+    </li>
+    <li class="flex items-center">
+      <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+      </svg>
+      <span>Priority Support</span>
+    </li>
+  </ul>
+  <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg">
+    Get Started
+  </button>
+</div>
+```
+
+### Testimonial Card
+```html
+<div class="bg-white rounded-xl shadow p-8">
+  <div class="flex items-center mb-6">
+    <div class="flex items-center">
+      <img class="w-12 h-12 rounded-full mr-4" src="https://via.placeholder.com/50" alt="Customer">
+      <div>
+        <h4 class="font-semibold">Sarah Johnson</h4>
+        <p class="text-sm text-gray-600">Marketing Director</p>
+      </div>
+    </div>
+    <div class="ml-auto text-yellow-400">
+      ★★★★★
+    </div>
+  </div>
+  <p class="text-gray-700 italic">
+    "This product has completely transformed our workflow. The team is more productive and collaboration has never been easier."
+  </p>
+</div>
+```
+
+### Feature Card
+```html
+<div class="bg-white rounded-lg shadow p-6 text-center">
+  <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>
+  </div>
+  <h3 class="text-lg font-semibold mb-2">Fast Performance</h3>
+  <p class="text-gray-600">
+    Optimized for speed with minimal loading times and smooth interactions.
+  </p>
+</div>
+```
+
+---
+
+## 8. Responsive Cards
+
+### Responsive Grid
+```html
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <!-- Cards adapt to different screen sizes -->
+  <div class="bg-white rounded-lg shadow p-4">
+    <h3 class="text-lg font-semibold mb-2">Card 1</h3>
+    <p class="text-gray-600 text-sm">Responsive content</p>
+  </div>
+  <!-- More cards... -->
+</div>
+```
+
+### Mobile-Optimized Card
+```html
+<div class="bg-white rounded-lg shadow sm:rounded-xl sm:p-8 p-4">
+  <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4">
+    <img class="w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4" src="https://via.placeholder.com/64" alt="Avatar">
+    <div>
+      <h3 class="text-lg sm:text-xl font-semibold">Responsive Card</h3>
+      <p class="text-gray-600 text-sm sm:text-base">Adapts to screen size</p>
+    </div>
+  </div>
+  <p class="text-gray-700 text-sm sm:text-base">
+    This card changes layout and typography based on screen size.
+  </p>
+</div>
+```
+
+---
+
+## 9. Card Skeleton/Loading State
+```html
+<div class="bg-white rounded-lg shadow animate-pulse">
+  <div class="p-6">
+    <!-- Title skeleton -->
+    <div class="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+    
+    <!-- Content skeleton -->
+    <div class="space-y-3">
+      <div class="h-4 bg-gray-200 rounded"></div>
+      <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+      <div class="h-4 bg-gray-200 rounded w-4/6"></div>
+    </div>
+    
+    <!-- Button skeleton -->
+    <div class="mt-6">
+      <div class="h-10 bg-gray-200 rounded w-32"></div>
+    </div>
+  </div>
+</div>
+```
+
+---
+
+## 10. Card Component (React Example)
+
+```jsx
+// Card.jsx
+export default function Card({
+  children,
+  title,
+  subtitle,
+  image,
+  imageAlt,
+  actions,
+  footer,
+  hoverable = false,
+  className = '',
+  ...props
+}) {
+  const baseClasses = "bg-white rounded-lg shadow";
+  const hoverClasses = hoverable ? "hover:shadow-xl transition-shadow duration-300" : "";
+  
+  return (
+    <div className={`${baseClasses} ${hoverClasses} ${className}`} {...props}>
+      {/* Image */}
+      {image && (
+        <img 
+          className="w-full h-48 object-cover rounded-t-lg" 
+          src={image} 
+          alt={imageAlt || ''} 
+        />
+      )}
+      
+      {/* Header */}
+      {(title || subtitle) && (
+        <div className="px-6 pt-6">
+          {title && <h3 className="text-xl font-semibold text-gray-800">{title}</h3>}
+          {subtitle && <p className="text-gray-600 mt-1">{subtitle}</p>}
+        </div>
+      )}
+      
+      {/* Content */}
+      <div className="p-6">
+        {children}
+      </div>
+      
+      {/* Actions */}
+      {actions && (
+        <div className="px-6 pb-6">
+          {actions}
+        </div>
+      )}
+      
+      {/* Footer */}
+      {footer && (
+        <div className="px-6 py-4 border-t border-gray-200 bg-gray-50 rounded-b-lg">
+          {footer}
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+**Usage:**
+```jsx
+<Card 
+  title="Product Card"
+  subtitle="Premium Plan"
+  image="https://via.placeholder.com/400x200"
+  hoverable
+  actions={
+    <button className="bg-blue-500 text-white px-4 py-2 rounded">
+      Buy Now
+    </button>
+  }
+>
+  <p>Card content goes here.</p>
+</Card>
+```
+
+---
+
+## 11. Best Practices
+
+### Do:
+- Maintain consistent padding and spacing
+- Use semantic HTML structure
+- Ensure proper contrast ratios
+- Add hover/focus states for interactive cards
+- Make cards accessible (proper headings, ARIA labels)
+- Optimize images for card thumbnails
+
+### Don't:
+- Overcrowd cards with too much information
+- Use cards for primary navigation
+- Forget about mobile touch targets
+- Use low-contrast text on colored backgrounds
+- Mix too many different card styles in one view
+
+---
+
+## 12. Accessibility Considerations
+
+### Semantic Structure
+```html
+<article class="bg-white rounded-lg shadow" aria-labelledby="card-title-1">
+  <header class="p-6">
+    <h3 id="card-title-1" class="text-lg font-semibold">Card Title</h3>
+  </header>
+  <div class="px-6 pb-6">
+    <p>Card content with proper semantic structure.</p>
+  </div>
+</article>
+```
+
+### Keyboard Navigation
+```html
+<div role="button" tabindex="0" 
+     class="bg-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
+  <div class="p-6">
+    <h3>Clickable Card</h3>
+    <p>Accessible with keyboard navigation.</p>
+  </div>
+</div>
+```
+
+---
+
+## Summary
+
+Cards are essential UI components for organizing and presenting content. With Tailwind:
+
+1. **Start simple** with basic card structures
+2. **Enhance with utility classes** for styling
+3. **Make them interactive** with hover and focus states
+4. **Ensure responsiveness** for all screen sizes
+5. **Prioritize accessibility** with proper semantic markup
+
+Remember to keep cards focused on a single topic, use consistent styling, and maintain good information hierarchy within each card.
