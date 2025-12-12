@@ -1,20 +1,21 @@
 const fs = require("fs");
 const path = require("path");
 
-const INDEX_FILE = "./_index.json";   
-const AI_INDEX_FILE = "./_ai_index.json"; 
+const INDEX_FILE = "_index.json";       
+const AI_INDEX_FILE = "_ai_index.json"; 
 const SUMMARY_FILE = "summary.json";
 const REPORT_FILE = "report.html";
 
-const indexData = fs.existsSync(INDEX_FILE) ? JSON.parse(fs.readFileSync(INDEX_FILE, "utf8")) : { docs: [] };
-const aiData = fs.existsSync(AI_INDEX_FILE) ? JSON.parse(fs.readFileSync(AI_INDEX_FILE, "utf8")) : { docs: [] };
+let indexDataRaw = fs.existsSync(INDEX_FILE) ? JSON.parse(fs.readFileSync(INDEX_FILE, "utf8")) : null;
+let aiDataRaw = fs.existsSync(AI_INDEX_FILE) ? JSON.parse(fs.readFileSync(AI_INDEX_FILE, "utf8")) : null;
+
+const indexData = Array.isArray(indexDataRaw) ? { docs: indexDataRaw } : (indexDataRaw && indexDataRaw.docs ? indexDataRaw : { docs: [] });
+const aiData = Array.isArray(aiDataRaw) ? { docs: aiDataRaw } : (aiDataRaw && aiDataRaw.docs ? aiDataRaw : { docs: [] });
 
 const totalDocs = indexData.docs.length;
 const totalChunks = aiData.docs.length;
-
-const wordsPerDoc = aiData.docs.map(d => d.text.split(/\s+/).length);
+const wordsPerDoc = aiData.docs.map(d => d.text?.split(/\s+/).length || 0);
 const averageWordsPerDoc = wordsPerDoc.length > 0 ? Math.round(wordsPerDoc.reduce((a,b)=>a+b,0)/wordsPerDoc.length) : 0;
-
 const brokenLinks = indexData.docs.reduce((acc, doc) => acc + (doc.links ? doc.links.filter(l=>!l).length : 0), 0);
 
 const summary = {
