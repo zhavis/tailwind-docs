@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "fs-extra": "^11.3.2",
+    "glob": "^13.0.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.1",
+    "lunr": "^2.3.9",
+    "marked": "^17.0.1"
+  }
+}
