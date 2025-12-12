@@ -1,74 +1,47 @@
 const fs = require("fs");
 const path = require("path");
+const glob = require("glob");
+const matter = require("gray-matter");
 
-const DOCS_DIR = "./docs";
+const DOCS_DIR = "docs";
 const OUTPUT = "_ai_index.json";
 
-function splitIntoChunks(text, max = 800) {
-  const words = text.split(/\s+/);
+function chunkText(text, size = 600) {
   const chunks = [];
-  let current = [];
-
-  for (const w of words) {
-    if (current.join(" ").length + w.length > max) {
-      chunks.push(current.join(" "));
-      current = [];
-    }
-    current.push(w);
+  for (let i = 0; i < text.length; i += size) {
+    chunks.push(text.slice(i, i + size));
   }
-
-  if (current.length) chunks.push(current.join(" "));
-
   return chunks;
 }
 
-function walkDocs() {
-  const files = [];
+const files = glob.sync(`${DOCS_DIR}/**/*.{md,mdx,MD,MDX}`);
+const docs = [];
 
-  function walk(dir) {
-    for (const entry of fs.readdirSync(dir)) {
-      const full = path.join(dir, entry);
-      const stat = fs.statSync(full);
+files.forEach(file => {
+  const raw = fs.readFileSync(file, "utf8");
+  const parsed = matter(raw);
 
-      if (stat.isDirectory()) walk(full);
-      else if (full.endsWith(".md")) files.push(full);
-    }
-  }
+  const content = parsed.content.trim();
+  if (!content) return;
 
-  walk(DOCS_DIR);
-  return files;
-}
+  const baseId = file.replace(`${DOCS_DIR}/`, "");
 
-function main() {
-  const files = walkDocs();
+  const chunks = chunkText(content);
 
-  const result = {
-    version: 1,
-    generated_at: new Date().toISOString(),
-    docs: []
-  };
-
-  for (const file of files) {
-    const raw = fs.readFileSync(file, "utf8");
-
-    const title = raw.match(/^# (.+)/)?.[1] || path.basename(file);
-    const summary = raw.split("\n").slice(1, 4).join(" ");
-
-    const chunks = splitIntoChunks(raw).map((c, i) => ({
-      id: `${path.basename(file)}-${i}`,
-      content: c
-    }));
-
-    result.docs.push({
-      path: file,
-      title,
-      summary,
-      chunks
+  chunks.forEach((chunk, idx) => {
+    docs.push({
+      id: `${baseId}#${idx}`,
+      slug: baseId,
+      text: chunk
     });
-  }
+  });
+});
 
-  fs.writeFileSync(OUTPUT, JSON.stringify(result, null, 2));
-  console.log("Generated:", OUTPUT);
-}
+const result = {
+  version: 1,
+  generated_at: new Date().toISOString(),
+  docs
+};
 
-main();
+fs.writeFileSync(OUTPUT, JSON.stringify(result, null, 2));
+console.log("AI index generated:", docs.length, "chunks");
