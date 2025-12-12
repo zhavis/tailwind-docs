@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const INDEX_FILE = "_index.json";   
-const AI_INDEX_FILE = "_ai_index.json"; 
+const INDEX_FILE = "./_index.json";   
+const AI_INDEX_FILE = "./_ai_index.json"; 
 const SUMMARY_FILE = "summary.json";
 const REPORT_FILE = "report.html";
 
@@ -26,7 +26,7 @@ const summary = {
 };
 
 fs.writeFileSync(SUMMARY_FILE, JSON.stringify(summary, null, 2));
-console.log("✔ summary.json generated");
+console.log("summary.json generated");
 
 const reportHtml = `
 <!DOCTYPE html>
