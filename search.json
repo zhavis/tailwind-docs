@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "basics.mdx",
+    "text": " Tailwind Basics\n\nTailwind CSS is built around the concept of utility-first classes, where each class applies a single CSS property. Understanding the core utilities is essential to building layouts quickly and efficiently.\n\n---\n\n 1. Utility-First Concept\n\nInstead of writing custom CSS for every element:\n\ncss\n.button {\n  background-color: blue;\n  color: white;\n  padding: 0.5rem 1rem;\n  border-radius: 0.25rem;\n}\n\n[Start utility first concept](https://docs-hubb.netlify.app/docs/utilities/start)\n\nT"
+  },
+  {
+    "slug": "customization.mdx",
+    "text": " Customization\n\nTailwind CSS is designed to be highly customizable. You can extend or override the default configuration to match your project's design system perfectly. The main configuration file is tailwind.config.js.\n\n---\n\n 1. Basic Configuration File\n\nWhen you run npx tailwindcss init, it creates a basic configuration file:\n\njavascript\n/ @type {import('tailwindcss').Config} /\nmodule.exports = {\n  content: [\n    \"./src//.{html,js,jsx,ts,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: "
+  },
+  {
+    "slug": "installation.mdx",
+    "text": " Installation\n\nTailwind CSS can be installed in multiple ways depending on your project type: via npm (recommended), CDN (quick prototyping), or using CLI tools.\n\n---\n\n 1. Using npm (Recommended for Projects)\n\nThis is the recommended method for modern projects because it allows full customization and integration with build tools.\n\n Step 1: Initialize your project\nbash\n Create a new project folder and initialize npm\nmkdir my-project\ncd my-project\nnpm init -y\n\n\n Step 2: Install Tailwind CSS and it"
+  },
+  {
+    "slug": "introduction.mdx",
+    "text": " Introduction to Tailwind CSS\r\n\r\nTailwind CSS is a utility-first CSS framework that enables developers to build modern, responsive user interfaces rapidly by applying pre-defined classes directly in HTML. Unlike traditional CSS frameworks, Tailwind emphasizes atomic, reusable utility classes rather than pre-styled components. This gives you full control over design while keeping your code concise and maintainable.\r\n\r\n---\r\n\r\n Key Concepts\r\n\r\n Utility-First Approach\r\n\r\nTraditional CSS often involv"
+  },
+  {
+    "slug": "refrences.mdx",
+    "text": " References\n\n Official Documentation & Resources\n\n Core Documentation\n- [Tailwind CSS Official Documentation](https://tailwindcss.com/docs) - Complete API reference and guides\n- [Tailwind CSS v3.0 Docs](https://tailwindcss.com/docs/upgrade-guide) - Latest version documentation\n- [Tailwind Play](https://play.tailwindcss.com/) - Online Tailwind editor and sandbox\n- [Tailwind UI](https://tailwindui.com/) - Official component library (paid)\n- [Headless UI](https://headlessui.dev/) - Unstyled, access"
+  },
+  {
+    "slug": "responsive-design.mdx",
+    "text": " Responsive Design\n\nTailwind CSS follows a mobile-first approach to responsive design. This means that styles are applied for mobile screens by default, and you can add modifiers for larger screens. The framework provides responsive breakpoints that you can use to adjust your design at different screen sizes.\n\n---\n\n 1. Breakpoints\n\nTailwind comes with five default breakpoints:\n\n| Prefix | Minimum Width | Description |\n|--------|---------------|-------------|\n| sm:  | 640px         | Small screen"
+  },
+  {
+    "slug": "utilities/buttons.mdx",
+    "text": " Buttons\n\nButtons are fundamental UI components that users interact with. Tailwind CSS makes it easy to create beautiful, responsive buttons with consistent styling across your application.\n\n---\n\n 1. Basic Button Styles\n\n Primary Button\nhtml\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rounded\"\n  Primary Button\n</button\n\n\n Secondary Button\nhtml\n<button class=\"bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded\"\n  Secondary Button\n</button\n\n\n Outlined Button\nhtml\n<button class="
+  },
+  {
+    "slug": "utilities/cards.mdx",
+    "text": " Cards\n\nCards are versatile containers for displaying content and actions about a single subject. Tailwind CSS makes it easy to create beautiful, responsive cards with consistent styling.\n\n---\n\n 1. Basic Card Structure\n\n Simple Card\nhtml\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg bg-white\"\n  <div class=\"px-6 py-4\"\n    <div class=\"font-bold text-xl mb-2\"Card Title</div\n    <p class=\"text-gray-700 text-base\"\n      This is a simple card example with basic styling.\n    </p\n  </div\n</div\n"
+  },
+  {
+    "slug": "utilities/colors.mdx",
+    "text": " Colors\n\nTailwind CSS provides a built-in color palette that includes a wide range of shades for backgrounds, text, borders, and more. Colors are represented using semantic class names with numeric scales, making it easy to maintain consistency across your project.\n\n---\n\n 1. Background Colors\n\nUse the bg-{color}-{shade} utility to set background colors:\n\nhtml\n<div class=\"bg-blue-500 text-white p-4 mb-2\"Blue Background</div\n<div class=\"bg-red-200 text-red-800 p-4 mb-2\"Light Red Background</div\n<d"
+  },
+  {
+    "slug": "utilities/components.mdx",
+    "text": " Components\n\nWhile Tailwind CSS is known for its utility-first approach, it also provides ways to create reusable components. There are several methods to build components with Tailwind, from simple utility composition to full component extraction.\n\n---\n\n 1. Utility-Based Components\n\nThe simplest way to create components is by composing utility classes directly in your HTML:\n\nhtml\n<!-- Button Component --\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded\"\n  Prim"
+  },
+  {
+    "slug": "utilities/spacing.mdx",
+    "text": " Spacing (Margin & Padding)\n\nTailwind CSS provides a flexible spacing system for margins, padding, gaps, and more. Spacing is based on a scale, where the default unit is 0.25rem (4px).\n\n---\n\n 1. Padding\n\nUse p- classes to apply padding:\n\nhtml\n<div class=\"p-4 bg-gray-200\"\n  Padding on all sides (1rem)\n</div\n\n\n- p-0 → 0 padding\n- p-1 → 0.25rem\n- p-2 → 0.5rem\n- p-4 → 1rem\n- p-8 → 2rem\n\n Padding on Specific Sides\n\n- pt- → padding-top\n- pr- → padding-right\n- pb- → padding-bottom\n- pl- → padding-left\n"
+  },
+  {
+    "slug": "utilities/start.mdx",
+    "text": " Utility-First Concept\n\nTailwind CSS is built around the utility-first philosophy, meaning that instead of writing custom CSS classes for each component, you compose your design directly in HTML using small, single-purpose classes called utilities. Each utility class corresponds to a single CSS property, making it easier to maintain, scale, and customize designs.\n\n---\n\n Traditional CSS Approach\n\nIn traditional CSS, you might write:\n\ncss\n.button {\n  background-color: blue;\n  color: white;\n  paddi"
+  },
+  {
+    "slug": "utilities/typography.mdx",
+    "text": " Typography\n\nTailwind CSS provides a comprehensive set of typography utilities for controlling font size, weight, line height, letter spacing, text alignment, and more. These utilities help maintain consistent, readable, and responsive text throughout your project.\n\n---\n\n 1. Font Size\n\nUse text-{size} to set font sizes:\n\nhtml\n<h1 class=\"text-4xl font-bold mb-4\"Heading 1</h1\n<h2 class=\"text-3xl font-semibold mb-3\"Heading 2</h2\n<p class=\"text-base text-gray-700\"This is a paragraph with base font s"
+  }
+]
