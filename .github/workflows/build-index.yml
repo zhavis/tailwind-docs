@@ -1,15 +1,15 @@
-name: Build Docs Index
+name: Build Docs Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  index:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,24 +22,41 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Generate _index.json
+      - name: Install deps
         run: |
-          mkdir -p scripts
-          node scripts/generate_index.js
+          npm install || true
+
+      - name: Generate _index.json (Main Links File)
+        run: node scripts/generate_index.js
+
+      - name: Generate Directory Tree Graph
+        run: node scripts/generate_tree_graph.js
+
+      - name: Generate Content Graph
+        run: node scripts/generate_content_graph.js
+
+      - name: Generate Search Index
+        run: node scripts/generate_search_index.js
+
+      - name: Generate Manifest
+        run: node scripts/generate_manifest.js
+
+      - name: Generate AI Index (Chatbot JSON)
+        run: node scripts/generate_ai_index.js
 
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add _index.json
+          git add _index.json graphs/ manifest.json search.json _ai_index.json
 
           if git diff --staged --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "auto: update _index.json"
+          git commit -m "auto: update docs pipeline with AI index"
           git push
