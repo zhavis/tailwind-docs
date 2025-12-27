@@ -37,6 +37,6 @@
   },
   {
     "slug": "utilities/typography.mdx",
-    "text": " Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n Font Size\nUse text- to make your text bigger or smaller:\nhtml\n<h1 class=\"text-4xl font-bold\"Big Heading</h1\n<p class=\"text-base text-gray-700\"Normal paragraph</p\n<small class=\"text-sm text-gray-500\"Small text</small\n\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl m"
+    "text": " Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n Font Size\nUse text- to make your text bigger or smaller:\nhtml\n<h1 className=\"text-4xl font-bold\"Big Heading</h1\n<p className=\"text-base text-gray-700\"Normal paragraph</p\n<small className=\"text-sm text-gray-500\"Small text</small\n\ntext-xs makes tiny\ntext-base makes norma"
   }
 ]
