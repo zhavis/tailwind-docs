@@ -60,18 +60,6 @@
     "parent": "docs/utilities"
   },
   {
-    "id": "docs/utilities/spacing.mdx",
-    "name": "spacing.mdx",
-    "type": "file",
-    "parent": "docs/utilities"
-  },
-  {
-    "id": "docs/utilities/start.mdx",
-    "name": "start.mdx",
-    "type": "file",
-    "parent": "docs/utilities"
-  },
-  {
     "id": "docs/utilities/typography.mdx",
     "name": "typography.mdx",
     "type": "file",

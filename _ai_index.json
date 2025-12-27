@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T15:06:00.897Z",
+  "generated_at": "2025-12-27T15:36:04.160Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -60,342 +60,47 @@
     {
       "id": "utilities/typography.mdx#0",
       "slug": "utilities/typography.mdx",
-      "text": "# Typography\n\nTailwind CSS provides a comprehensive set of **typography utilities** for controlling font size, weight, line height, letter spacing, text alignment, and more. These utilities help maintain **consistent, readable, and responsive text** throughout your project.\n\n---\n\n## 1. Font Size\n\nUse `text-{size}` to set font sizes:\n\n```html\n<h1 class=\"text-4xl font-bold mb-4\">Heading 1</h1>\n<h2 class=\"text-3xl font-semibold mb-3\">Heading 2</h2>\n<p class=\"text-base text-gray-700\">This is a paragraph with base font size.</p>\n<small class=\"text-sm text-gray-500\">Small text example</small>\n```\n\n*"
+      "text": "# Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n### Font Size\nUse text-* to make your text bigger or smaller:\n\n<h1 class=\"text-4xl font-bold\">Big Heading</h1>\n<p class=\"text-base text-gray-700\">Normal paragraph</p>\n<small class=\"text-sm text-gray-500\">Small text</small>\n\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes really big\n\n### Font Weight\nUse font-* to make text bold or light:\n\n<p class=\"font-light"
     },
     {
       "id": "utilities/typography.mdx#1",
       "slug": "utilities/typography.mdx",
-      "text": "*Default font size scale:**\n\n- `text-xs` → 0.75rem\n- `text-sm` → 0.875rem\n- `text-base` → 1rem\n- `text-lg` → 1.125rem\n- `text-xl` → 1.25rem\n- `text-2xl` → 1.5rem\n- `text-3xl` → 1.875rem\n- `text-4xl` → 2.25rem\n- `text-5xl` → 3rem\n\n---\n\n## 2. Font Weight\n\nUse `font-{weight}` to set font weight:\n\n```html\n<p class=\"font-thin\">Thin</p>\n<p class=\"font-light\">Light</p>\n<p class=\"font-normal\">Normal</p>\n<p class=\"font-medium\">Medium</p>\n<p class=\"font-semibold\">Semi-bold</p>\n<p class=\"font-bold\">Bold</p>\n<p class=\"font-extrabold\">Extra-bold</p>\n```\n\n---\n\n## 3. Line Height (Leading)\n\nControl vertical s"
-    },
-    {
-      "id": "utilities/typography.mdx#2",
-      "slug": "utilities/typography.mdx",
-      "text": "pacing between lines using `leading-{size}`:\n\n```html\n<p class=\"leading-none\">No extra line height</p>\n<p class=\"leading-tight\">Tight line height</p>\n<p class=\"leading-snug\">Snug line height</p>\n<p class=\"leading-normal\">Normal line height</p>\n<p class=\"leading-relaxed\">Relaxed line height</p>\n<p class=\"leading-loose\">Loose line height</p>\n```\n\n---\n\n## 4. Letter Spacing (Tracking)\n\nAdjust spacing between letters using `tracking-{size}`:\n\n```html\n<p class=\"tracking-tighter\">Tighter tracking</p>\n<p class=\"tracking-tight\">Tight tracking</p>\n<p class=\"tracking-normal\">Normal tracking</p>\n<p class="
-    },
-    {
-      "id": "utilities/typography.mdx#3",
-      "slug": "utilities/typography.mdx",
-      "text": "\"tracking-wide\">Wide tracking</p>\n<p class=\"tracking-wider\">Wider tracking</p>\n<p class=\"tracking-widest\">Widest tracking</p>\n```\n\n---\n\n## 5. Text Alignment\n\nSet text alignment using `text-{alignment}`:\n\n```html\n<p class=\"text-left\">Left aligned</p>\n<p class=\"text-center\">Center aligned</p>\n<p class=\"text-right\">Right aligned</p>\n<p class=\"text-justify\">Justified text</p>\n```\n\n---\n\n## 6. Text Color\n\nControl text color using `text-{color}-{shade}`:\n\n```html\n<p class=\"text-gray-800\">Dark gray text</p>\n<p class=\"text-blue-500\">Blue text</p>\n<p class=\"text-red-600\">Red text</p>\n```\n\n---\n\n## 7. Tex"
-    },
-    {
-      "id": "utilities/typography.mdx#4",
-      "slug": "utilities/typography.mdx",
-      "text": "t Transform\n\nChange text case using:\n\n```html\n<p class=\"uppercase\">Uppercase</p>\n<p class=\"lowercase\">lowercase</p>\n<p class=\"capitalize\">Capitalize Each Word</p>\n```\n\n---\n\n## 8. Font Style\n\nSet italic or normal style:\n\n```html\n<p class=\"italic\">Italic text</p>\n<p class=\"not-italic\">Normal text</p>\n```\n\n---\n\n## 9. Example: Styled Card Text\n\n```html\n<div class=\"max-w-sm p-4 bg-white rounded shadow\">\n  <h2 class=\"text-2xl font-bold mb-2\">Card Title</h2>\n  <p class=\"text-gray-700 leading-relaxed mb-4\">\n    This is a paragraph with base font size, gray color, and relaxed line height for better rea"
-    },
-    {
-      "id": "utilities/typography.mdx#5",
-      "slug": "utilities/typography.mdx",
-      "text": "dability.\n  </p>\n  <span class=\"text-sm text-gray-500 uppercase tracking-wide\">Category</span>\n</div>\n```\n\nThis demonstrates **font size, weight, color, line height, and letter spacing** combined to create readable and visually appealing text.\n\n---\n\n## Summary\n\n- `text-*` → font size\n- `font-*` → font weight\n- `leading-*` → line height\n- `tracking-*` → letter spacing\n- `text-left/center/right/justify` → alignment\n- `text-{color}-{shade}` → color\n- `uppercase/lowercase/capitalize` → text case\n- `italic/not-italic` → font style\n\nMastering typography utilities ensures **consistent and responsive "
-    },
-    {
-      "id": "utilities/typography.mdx#6",
-      "slug": "utilities/typography.mdx",
-      "text": "text design** in Tailwind CSS."
-    },
-    {
-      "id": "utilities/start.mdx#0",
-      "slug": "utilities/start.mdx",
-      "text": "# Utility-First Concept\n\nTailwind CSS is built around the **utility-first philosophy**, meaning that instead of writing custom CSS classes for each component, you compose your design directly in HTML using **small, single-purpose classes** called utilities. Each utility class corresponds to a **single CSS property**, making it easier to maintain, scale, and customize designs.\n\n---\n\n## Traditional CSS Approach\n\nIn traditional CSS, you might write:\n\n```css\n.button {\n  background-color: blue;\n  color: white;\n  padding: 0.5rem 1rem;\n  border-radius: 0.25rem;\n}\n```\n\nAnd then use it in HTML:\n\n```htm"
-    },
-    {
-      "id": "utilities/start.mdx#1",
-      "slug": "utilities/start.mdx",
-      "text": "l\n<button class=\"button\">Click Me</button>\n```\n\n**Problems:**\n- You need to create many CSS classes for different variations\n- Styling logic is separated from the markup\n- Overwriting styles often leads to specificity conflicts\n\n---\n\n## Tailwind Utility-First Approach\n\nWith Tailwind, you apply utility classes directly in the HTML:\n\n```html\n<button class=\"bg-blue-500 text-white px-4 py-2 rounded\">\n  Click Me\n</button>\n```\n\n**Explanation of classes:**\n- `bg-blue-500` → background color\n- `text-white` → text color\n- `px-4` → horizontal padding\n- `py-2` → vertical padding\n- `rounded` → border radi"
-    },
-    {
-      "id": "utilities/start.mdx#2",
-      "slug": "utilities/start.mdx",
-      "text": "us\n\n**Advantages:**\n- **No separate CSS files** needed for basic styling\n- **Rapid prototyping** – you can build components without writing new CSS\n- **Consistent design** – using Tailwind's predefined scale ensures uniform spacing, colors, and typography\n- **Easy customization** – override or extend classes via `tailwind.config.js` if needed\n\n---\n\n## Example: Two Buttons\n\n```html\n<button class=\"bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600\">\n  Confirm\n</button>\n\n<button class=\"bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600\">\n  Cancel\n</button>\n```\n\n- Both button"
-    },
-    {
-      "id": "utilities/start.mdx#3",
-      "slug": "utilities/start.mdx",
-      "text": "s use **the same spacing and radius utilities**, keeping the UI consistent\n- Only the **colors differ**, which is easily adjusted with utility classes\n- Hover effects are applied with a simple `hover:` prefix\n\n---\n\n## Summary\n\nThe **utility-first concept** allows you to:\n- Style elements directly in HTML\n- Maintain design consistency\n- Avoid writing repetitive CSS\n- Rapidly prototype and build scalable interfaces\n\nBy mastering utility classes, you can build complex components entirely with Tailwind, reducing the need for custom CSS files."
-    },
-    {
-      "id": "utilities/spacing.mdx#0",
-      "slug": "utilities/spacing.mdx",
-      "text": "# Spacing (Margin & Padding)\n\nTailwind CSS provides a **flexible spacing system** for margins, padding, gaps, and more. Spacing is based on a **scale**, where the default unit is `0.25rem` (4px).\n\n---\n\n## 1. Padding\n\nUse `p-*` classes to apply padding:\n\n```html\n<div class=\"p-4 bg-gray-200\">\n  Padding on all sides (1rem)\n</div>\n```\n\n- `p-0` → 0 padding\n- `p-1` → 0.25rem\n- `p-2` → 0.5rem\n- `p-4` → 1rem\n- `p-8` → 2rem\n\n### Padding on Specific Sides\n\n- `pt-*` → padding-top\n- `pr-*` → padding-right\n- `pb-*` → padding-bottom\n- `pl-*` → padding-left\n- `px-*` → padding-left & padding-right\n- `py-*` → "
-    },
-    {
-      "id": "utilities/spacing.mdx#1",
-      "slug": "utilities/spacing.mdx",
-      "text": "padding-top & padding-bottom\n\n**Example:**\n\n```html\n<div class=\"px-6 py-4 bg-blue-200\">\n  Horizontal padding: 1.5rem, Vertical padding: 1rem\n</div>\n```\n\n---\n\n## 2. Margin\n\nUse `m-*` classes to apply margin:\n\n```html\n<div class=\"m-4 bg-green-200\">\n  Margin on all sides (1rem)\n</div>\n```\n\n### Margin on Specific Sides\n\n- `mt-*` → margin-top\n- `mr-*` → margin-right\n- `mb-*` → margin-bottom\n- `ml-*` → margin-left\n- `mx-*` → margin-left & margin-right\n- `my-*` → margin-top & margin-bottom\n\n**Example:**\n\n```html\n<div class=\"mt-6 mb-2 mx-4 bg-yellow-200 p-4\">\n  Top margin: 1.5rem, Bottom: 0.5rem, Left"
-    },
-    {
-      "id": "utilities/spacing.mdx#2",
-      "slug": "utilities/spacing.mdx",
-      "text": " & Right: 1rem\n</div>\n```\n\n### Negative Margins\n\nTailwind also supports negative margins:\n\n```html\n<div class=\"mt-[-2rem] bg-red-200 p-4\">\n  Negative top margin: -2rem\n</div>\n```\n\n- Use `-mt-*`, `-mb-*`, `-ml-*`, `-mr-*`, `-mx-*`, `-my-*`\n- This allows overlapping elements easily\n\n---\n\n## 3. Gap Utilities (Flex & Grid)\n\nSpacing between items in flex or grid layouts:\n\n```html\n<div class=\"flex gap-4\">\n  <div class=\"bg-blue-300 p-4\">Item 1</div>\n  <div class=\"bg-blue-500 p-4\">Item 2</div>\n  <div class=\"bg-blue-700 p-4\">Item 3</div>\n</div>\n```\n\n- `gap-0` → no gap\n- `gap-2` → 0.5rem\n- `gap-4` → 1re"
-    },
-    {
-      "id": "utilities/spacing.mdx#3",
-      "slug": "utilities/spacing.mdx",
-      "text": "m\n- `gap-8` → 2rem\n\nYou can also specify row and column gaps separately:\n\n- `gap-x-*` → horizontal gap\n- `gap-y-*` → vertical gap\n\n---\n\n## 4. Summary of Spacing Utilities\n\n| Utility | Description | Example |\n|---------|-------------|---------|\n| `p-*` | Padding all sides | `p-4` |\n| `px-*` | Padding horizontal | `px-6` |\n| `py-*` | Padding vertical | `py-2` |\n| `m-*` | Margin all sides | `m-4` |\n| `mx-*` | Margin horizontal | `mx-2` |\n| `my-*` | Margin vertical | `my-6` |\n| `-m-*` | Negative margin | `-mt-4` |\n| `gap-*` | Gap between flex/grid items | `gap-4` |\n| `gap-x-*` | Horizontal gap | `"
-    },
-    {
-      "id": "utilities/spacing.mdx#4",
-      "slug": "utilities/spacing.mdx",
-      "text": "gap-x-2` |\n| `gap-y-*` | Vertical gap | `gap-y-6` |\n\n---\n\n**Tip:** Use **consistent spacing values** across your project to maintain visual rhythm and alignment. Tailwind's scale ensures uniformity without writing custom CSS."
+      "text": "\">Light</p>\n<p class=\"font-bold\">Bold</p>\n\n### Line Height\n\nUse leading-* to control spacing between lines:\n\n<p class=\"leading-relaxed\">Lines are more spaced out</p>\n<p class=\"leading-tight\">Lines are closer together</p>\n\n### Text Color\n\nUse text-{color}-{shade} to change text color:\n\n<p class=\"text-blue-500\">Blue text</p>\n<p class=\"text-gray-800\">Dark gray text</p>\n\nuppercase, lowercase, capitalize to change the case\n\nitalic or not-italic to make text italic or normal\n\nBasically, all the **Tailwind classes** are just making it **look nice without writing CSS**."
     },
     {
       "id": "utilities/components.mdx#0",
       "slug": "utilities/components.mdx",
-      "text": "# Components\n\nWhile Tailwind CSS is known for its utility-first approach, it also provides ways to create reusable components. There are several methods to build components with Tailwind, from simple utility composition to full component extraction.\n\n---\n\n## 1. Utility-Based Components\n\nThe simplest way to create components is by **composing utility classes** directly in your HTML:\n\n```html\n<!-- Button Component -->\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded\">\n  Primary Button\n</button>\n\n<!-- Card Component -->\n<div class=\"max-w-sm rounded overflow-hidd"
+      "text": "# Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n### For example, a button can be made like this:\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n\nAnd if you use it a lot, you can even make a class with @apply so you don’t have to write all the utilities every time.\n\nYou can also use ready-made libr"
     },
     {
       "id": "utilities/components.mdx#1",
       "slug": "utilities/components.mdx",
-      "text": "en shadow-lg bg-white\">\n  <img class=\"w-full\" src=\"image.jpg\" alt=\"Card image\">\n  <div class=\"px-6 py-4\">\n    <h3 class=\"font-bold text-xl mb-2\">Card Title</h3>\n    <p class=\"text-gray-700 text-base\">\n      Card description goes here.\n    </p>\n  </div>\n</div>\n\n<!-- Alert Component -->\n<div class=\"bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4\">\n  <p>This is a warning alert!</p>\n</div>\n```\n\n**Advantages:**\n- No extra CSS needed\n- Easy to customize on the fly\n- Perfect for one-off or slightly different components\n\n---\n\n## 2. Component Extraction with `@apply`\n\nFor frequently reus"
-    },
-    {
-      "id": "utilities/components.mdx#2",
-      "slug": "utilities/components.mdx",
-      "text": "ed components, extract utilities into custom CSS classes using `@apply`:\n\n```css\n/* styles.css */\n.btn {\n  @apply font-bold py-2 px-4 rounded;\n}\n\n.btn-primary {\n  @apply bg-blue-500 text-white;\n}\n\n.btn-primary:hover {\n  @apply bg-blue-600;\n}\n\n.card {\n  @apply max-w-sm rounded overflow-hidden shadow-lg bg-white;\n}\n\n.card-image {\n  @apply w-full h-48 object-cover;\n}\n\n.card-content {\n  @apply px-6 py-4;\n}\n\n.card-title {\n  @apply font-bold text-xl mb-2;\n}\n```\n\n**Usage in HTML:**\n```html\n<button class=\"btn btn-primary\">Primary Button</button>\n\n<div class=\"card\">\n  <img class=\"card-image\" src=\"image"
-    },
-    {
-      "id": "utilities/components.mdx#3",
-      "slug": "utilities/components.mdx",
-      "text": ".jpg\" alt=\"Card\">\n  <div class=\"card-content\">\n    <h3 class=\"card-title\">Card Title</h3>\n    <p>Card content goes here.</p>\n  </div>\n</div>\n```\n\n**Best practices for `@apply`:**\n- Use for truly reusable components\n- Keep it minimal - don't extract everything\n- Don't use `@apply` for one-off utilities\n\n---\n\n## 3. Component Libraries with Tailwind\n\nPopular component libraries built with Tailwind:\n\n### **Official:**\n- [Tailwind UI](https://tailwindui.com/) - Paid official component library\n- [Headless UI](https://headlessui.dev/) - Unstyled accessible components\n\n### **Open Source:**\n- [DaisyUI]"
-    },
-    {
-      "id": "utilities/components.mdx#4",
-      "slug": "utilities/components.mdx",
-      "text": "(https://daisyui.com/) - Component library for Tailwind\n- [Flowbite](https://flowbite.com/) - Open-source component library\n- [Meraki UI](https://merakiui.com/) - Beautiful Tailwind components\n\n### Example with DaisyUI:\n```html\n<!-- After installing daisyUI -->\n<button class=\"btn btn-primary\">Primary Button</button>\n<div class=\"card w-96 bg-base-100 shadow-xl\">\n  <figure><img src=\"image.jpg\" alt=\"Card\" /></figure>\n  <div class=\"card-body\">\n    <h2 class=\"card-title\">Card Title</h2>\n    <p>Card description</p>\n  </div>\n</div>\n```\n\n---\n\n## 4. Building Complex Components\n\n### Navigation Component"
-    },
-    {
-      "id": "utilities/components.mdx#5",
-      "slug": "utilities/components.mdx",
-      "text": "\n```html\n<nav class=\"bg-white shadow-lg\">\n  <div class=\"container mx-auto px-4\">\n    <div class=\"flex justify-between items-center py-4\">\n      <!-- Logo -->\n      <div class=\"flex items-center\">\n        <span class=\"text-2xl font-bold text-gray-800\">Logo</span>\n      </div>\n      \n      <!-- Navigation Links -->\n      <div class=\"hidden md:flex space-x-8\">\n        <a href=\"#\" class=\"text-gray-600 hover:text-gray-900 font-medium\">Home</a>\n        <a href=\"#\" class=\"text-gray-600 hover:text-gray-900 font-medium\">About</a>\n        <a href=\"#\" class=\"text-gray-600 hover:text-gray-900 font-medium\""
-    },
-    {
-      "id": "utilities/components.mdx#6",
-      "slug": "utilities/components.mdx",
-      "text": ">Services</a>\n        <a href=\"#\" class=\"text-gray-600 hover:text-gray-900 font-medium\">Contact</a>\n      </div>\n      \n      <!-- Mobile Menu Button -->\n      <button class=\"md:hidden\">\n        <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h16M4 18h16\"></path>\n        </svg>\n      </button>\n    </div>\n  </div>\n</nav>\n```\n\n### Modal Component\n```html\n<!-- Modal Overlay -->\n<div class=\"fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50\">\n  <!-- Mod"
-    },
-    {
-      "id": "utilities/components.mdx#7",
-      "slug": "utilities/components.mdx",
-      "text": "al Content -->\n  <div class=\"bg-white rounded-lg shadow-xl max-w-md w-full mx-4\">\n    <!-- Modal Header -->\n    <div class=\"flex justify-between items-center p-6 border-b\">\n      <h3 class=\"text-xl font-semibold text-gray-900\">Modal Title</h3>\n      <button class=\"text-gray-400 hover:text-gray-600\">\n        <svg class=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"></path>\n        </svg>\n      </button>\n    </div>\n    \n    <!-- Modal Body -->\n    <div class=\"p-6\">\n      <p "
-    },
-    {
-      "id": "utilities/components.mdx#8",
-      "slug": "utilities/components.mdx",
-      "text": "class=\"text-gray-600\">Modal content goes here.</p>\n    </div>\n    \n    <!-- Modal Footer -->\n    <div class=\"flex justify-end gap-3 p-6 border-t\">\n      <button class=\"px-4 py-2 text-gray-600 hover:text-gray-800\">Cancel</button>\n      <button class=\"px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600\">Confirm</button>\n    </div>\n  </div>\n</div>\n```\n\n### Form Component\n```html\n<form class=\"max-w-md mx-auto p-6 bg-white rounded-lg shadow\">\n  <div class=\"mb-4\">\n    <label class=\"block text-gray-700 text-sm font-bold mb-2\" for=\"email\">\n      Email Address\n    </label>\n    <input class=\"w-fu"
-    },
-    {
-      "id": "utilities/components.mdx#9",
-      "slug": "utilities/components.mdx",
-      "text": "ll px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" \n           type=\"email\" \n           id=\"email\" \n           placeholder=\"you@example.com\">\n  </div>\n  \n  <div class=\"mb-6\">\n    <label class=\"block text-gray-700 text-sm font-bold mb-2\" for=\"password\">\n      Password\n    </label>\n    <input class=\"w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\" \n           type=\"password\" \n           id=\"password\" \n           placeholder=\"••••••••\">\n  </div>\n  \n  "
-    },
-    {
-      "id": "utilities/components.mdx#10",
-      "slug": "utilities/components.mdx",
-      "text": "<div class=\"flex items-center justify-between\">\n    <button class=\"w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline\" \n            type=\"submit\">\n      Sign In\n    </button>\n  </div>\n</form>\n```\n\n---\n\n## 5. Component Patterns\n\n### 1. **Variant Pattern**\n```html\n<!-- Using different variants -->\n<button class=\"btn btn-primary\">Primary</button>\n<button class=\"btn btn-secondary\">Secondary</button>\n<button class=\"btn btn-danger\">Danger</button>\n\n<style>\n.btn {\n  @apply font-bold py-2 px-4 rounded;\n}\n.btn-primary {\n  @apply bg-blue-5"
-    },
-    {
-      "id": "utilities/components.mdx#11",
-      "slug": "utilities/components.mdx",
-      "text": "00 text-white hover:bg-blue-600;\n}\n.btn-secondary {\n  @apply bg-gray-500 text-white hover:bg-gray-600;\n}\n.btn-danger {\n  @apply bg-red-500 text-white hover:bg-red-600;\n}\n</style>\n```\n\n### 2. **Size Pattern**\n```html\n<button class=\"btn btn-sm\">Small</button>\n<button class=\"btn btn-md\">Medium</button>\n<button class=\"btn btn-lg\">Large</button>\n```\n\n### 3. **State Pattern**\n```html\n<button class=\"btn\" disabled>Disabled</button>\n<button class=\"btn loading\">Loading...</button>\n<button class=\"btn btn-active\">Active</button>\n```\n\n---\n\n## 6. Component Architecture\n\n### Atomic Design with Tailwind\n1. **"
-    },
-    {
-      "id": "utilities/components.mdx#12",
-      "slug": "utilities/components.mdx",
-      "text": "Atoms**: Basic HTML elements with utilities\n   ```html\n   <button class=\"btn\">Button</button>\n   <input class=\"input\" type=\"text\">\n   ```\n\n2. **Molecules**: Groups of atoms\n   ```html\n   <div class=\"search-form\">\n     <input class=\"input\" type=\"search\" placeholder=\"Search...\">\n     <button class=\"btn\">Search</button>\n   </div>\n   ```\n\n3. **Organisms**: Complex components\n   ```html\n   <header class=\"header\">\n     <nav class=\"nav\">...</nav>\n     <div class=\"search-bar\">...</div>\n     <div class=\"user-menu\">...</div>\n   </header>\n   ```\n\n---\n\n## 7. Component Library Structure\n\n```\ncomponents/\n├─"
-    },
-    {
-      "id": "utilities/components.mdx#13",
-      "slug": "utilities/components.mdx",
-      "text": "─ buttons/\n│   ├── Button.jsx\n│   ├── IconButton.jsx\n│   └── ButtonGroup.jsx\n├── cards/\n│   ├── Card.jsx\n│   ├── CardHeader.jsx\n│   └── CardFooter.jsx\n├── forms/\n│   ├── Input.jsx\n│   ├── Select.jsx\n│   └── Checkbox.jsx\n└── layout/\n    ├── Container.jsx\n    ├── Grid.jsx\n    └── Flex.jsx\n```\n\n### Example React Component:\n```jsx\n// Button.jsx\nexport default function Button({ \n  children, \n  variant = 'primary', \n  size = 'md',\n  ...props \n}) {\n  const baseClasses = \"font-medium rounded transition-colors\";\n  \n  const variants = {\n    primary: \"bg-blue-600 text-white hover:bg-blue-700\",\n    second"
-    },
-    {
-      "id": "utilities/components.mdx#14",
-      "slug": "utilities/components.mdx",
-      "text": "ary: \"bg-gray-200 text-gray-800 hover:bg-gray-300\",\n    danger: \"bg-red-600 text-white hover:bg-red-700\",\n  };\n  \n  const sizes = {\n    sm: \"px-3 py-1 text-sm\",\n    md: \"px-4 py-2\",\n    lg: \"px-6 py-3 text-lg\",\n  };\n  \n  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]}`;\n  \n  return (\n    <button className={classes} {...props}>\n      {children}\n    </button>\n  );\n}\n```\n\n**Usage:**\n```jsx\n<Button variant=\"primary\" size=\"lg\">Large Primary</Button>\n<Button variant=\"secondary\" size=\"sm\">Small Secondary</Button>\n```\n\n---\n\n## 8. Best Practices\n\n### Do:\n- Start with utility classes"
-    },
-    {
-      "id": "utilities/components.mdx#15",
-      "slug": "utilities/components.mdx",
-      "text": ", extract to components when reused\n- Keep components small and focused\n- Use meaningful names for extracted classes\n- Maintain consistent spacing and typography\n- Document component usage and variants\n\n### Don't:\n- Over-extract with `@apply`\n- Mix component classes with utility classes unnecessarily\n- Create too many variants\n- Forget about accessibility\n\n---\n\n## 9. Component Examples Repository\n\n### Badge Component\n```html\n<span class=\"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800\">\n  New\n</span>\n\n<span class=\"inline-flex items-center px-3 "
-    },
-    {
-      "id": "utilities/components.mdx#16",
-      "slug": "utilities/components.mdx",
-      "text": "py-1 rounded-full text-sm font-medium bg-green-100 text-green-800\">\n  Success\n</span>\n\n<span class=\"inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800\">\n  Error\n</span>\n```\n\n### Avatar Component\n```html\n<div class=\"flex items-center space-x-4\">\n  <div class=\"w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center\">\n    <span class=\"text-white font-semibold\">JD</span>\n  </div>\n  \n  <div class=\"w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center\">\n    <span class=\"text-white font-bold\">AB</span>\n  </div>\n  \n  <img class=\"w-14 h"
-    },
-    {
-      "id": "utilities/components.mdx#17",
-      "slug": "utilities/components.mdx",
-      "text": "-14 rounded-full\" src=\"avatar.jpg\" alt=\"User\">\n</div>\n```\n\n### Progress Bar\n```html\n<div class=\"w-full bg-gray-200 rounded-full h-2.5\">\n  <div class=\"bg-blue-600 h-2.5 rounded-full\" style=\"width: 45%\"></div>\n</div>\n```\n\n---\n\n## Summary\n\nTailwind components can be built in multiple ways:\n\n1. **Utility-based**: Direct composition in HTML (simplest)\n2. **`@apply` extraction**: CSS-based reusable classes\n3. **Component libraries**: Pre-built solutions like DaisyUI\n4. **Framework components**: React/Vue components with dynamic classes\n\nThe key is to **start simple** with utilities and **extract pat"
-    },
-    {
-      "id": "utilities/components.mdx#18",
-      "slug": "utilities/components.mdx",
-      "text": "terns** as they become repeated. This maintains the flexibility of Tailwind while providing the reusability of traditional component systems."
+      "text": "aries built for Tailwind as i mentioned before in References : [my cool site][http://localhost:3000/docs/responsive-design]"
     },
     {
       "id": "utilities/colors.mdx#0",
       "slug": "utilities/colors.mdx",
-      "text": "# Colors\n\nTailwind CSS provides a **built-in color palette** that includes a wide range of shades for backgrounds, text, borders, and more. Colors are represented using **semantic class names** with numeric scales, making it easy to maintain consistency across your project.\n\n---\n\n## 1. Background Colors\n\nUse the `bg-{color}-{shade}` utility to set background colors:\n\n```html\n<div class=\"bg-blue-500 text-white p-4 mb-2\">Blue Background</div>\n<div class=\"bg-red-200 text-red-800 p-4 mb-2\">Light Red Background</div>\n<div class=\"bg-green-300 text-green-900 p-4 mb-2\">Green Background</div>\n```\n\n- `b"
+      "text": "# Colors in Tailwind\n\nColors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff, it already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which It makes your site look nice and consistent without much effort.\n\n### Background colors:\n<div class=\"bg-blue-500 text-white p-4\">Blue background</div>\n<div class=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n### Text colors:\n<p class=\"text-gray-800\">Dark gray text</p>\n<p clas"
     },
     {
       "id": "utilities/colors.mdx#1",
       "slug": "utilities/colors.mdx",
-      "text": "g-blue-500` → medium blue background\n- `bg-red-200` → light red background\n- `bg-green-300` → light green background\n\n---\n\n## 2. Text Colors\n\nUse the `text-{color}-{shade}` utility to set text colors:\n\n```html\n<p class=\"text-gray-800\">Dark gray text</p>\n<p class=\"text-yellow-500\">Yellow text</p>\n<p class=\"text-purple-600\">Purple text</p>\n```\n\n- `text-gray-800` → dark gray\n- `text-yellow-500` → medium yellow\n- `text-purple-600` → purple with medium-dark shade\n\n---\n\n## 3. Border Colors\n\nUse the `border-{color}-{shade}` utility to style borders:\n\n```html\n<div class=\"border-2 border-blue-500 p-4\">"
+      "text": "s=\"text-yellow-500\">Yellow text</p>\n\n### Borders:\n<div class=\"border-2 border-green-500 p-4\">Green border</div>\n\n### Hover and focus:\n<button class=\"bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600\">\n  Hover me\n</button>\n<input class=\"border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded\">\n\n### Opacity:\n<div class=\"bg-blue-500 bg-opacity-50 text-white p-4\">50% transparent</div>\n<p class=\"text-black text-opacity-70\">70% opacity text</p>\n\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend:"
     },
     {
       "id": "utilities/colors.mdx#2",
       "slug": "utilities/colors.mdx",
-      "text": "Box with blue border</div>\n<div class=\"border-2 border-red-300 p-4\">Box with light red border</div>\n```\n\n- `border-blue-500` → medium blue border\n- `border-red-300` → light red border\n\n---\n\n## 4. Hover & Focus States\n\nTailwind allows you to change colors on hover or focus using **pseudo-class prefixes**:\n\n```html\n<button class=\"bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600\">\n  Hover Me\n</button>\n\n<input class=\"border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded\" placeholder=\"Focus me\">\n```\n\n- `hover:bg-green-600` → darker green on hover\n- `focus:bo"
-    },
-    {
-      "id": "utilities/colors.mdx#3",
-      "slug": "utilities/colors.mdx",
-      "text": "rder-blue-500` → border color changes on focus\n- `focus:ring-2 focus:ring-blue-200` → adds focus ring\n\n---\n\n## 5. Opacity and Transparency\n\nYou can control color opacity with the `bg-opacity-*` or `text-opacity-*` utilities:\n\n```html\n<div class=\"bg-blue-500 bg-opacity-50 text-white p-4\">\n  Semi-transparent blue background\n</div>\n\n<p class=\"text-black text-opacity-70\">\n  Semi-transparent text\n</p>\n```\n\n- `bg-opacity-50` → 50% background opacity\n- `text-opacity-70` → 70% text opacity\n\n---\n\n## 6. Custom Colors\n\nYou can add custom colors in `tailwind.config.js`:\n\n```js\nmodule.exports = {\n  theme: "
-    },
-    {
-      "id": "utilities/colors.mdx#4",
-      "slug": "utilities/colors.mdx",
-      "text": "{\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};\n```\n\nThen use them in HTML:\n\n```html\n<div class=\"bg-brandBlue text-white p-4\">Custom Brand Blue</div>\n<div class=\"bg-brandRed text-white p-4\">Custom Brand Red</div>\n```\n\n---\n\n## Summary\n\n- `bg-*` → background color\n- `text-*` → text color\n- `border-*` → border color\n- Pseudo-class prefixes: `hover:`, `focus:`, `active:`\n- Opacity utilities: `bg-opacity-*`, `text-opacity-*`\n- Custom colors can be added in the configuration file\n\nMastering colors in Tailwind ensures **consistent, ac"
-    },
-    {
-      "id": "utilities/colors.mdx#5",
-      "slug": "utilities/colors.mdx",
-      "text": "cessible, and maintainable designs**."
+      "text": " {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};\n\n<div class=\"bg-brandBlue text-white p-4\">Brand Blue</div>\n\nbg-* → background\n\ntext-* → text\n\nborder-* → borders\n\nhover:, focus: → states\n\n*-opacity-* → transparency"
     },
     {
       "id": "utilities/cards.mdx#0",
       "slug": "utilities/cards.mdx",
-      "text": "# Cards\n\nCards are versatile containers for displaying content and actions about a single subject. Tailwind CSS makes it easy to create beautiful, responsive cards with consistent styling.\n\n---\n\n## 1. Basic Card Structure\n\n### Simple Card\n```html\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg bg-white\">\n  <div class=\"px-6 py-4\">\n    <div class=\"font-bold text-xl mb-2\">Card Title</div>\n    <p class=\"text-gray-700 text-base\">\n      This is a simple card example with basic styling.\n    </p>\n  </div>\n</div>\n```\n\n### Card with Image\n```html\n<div class=\"max-w-sm rounded overflow-hidden shado"
+      "text": "# Cards in Tailwind\nCards are boxes that hold information like text, images, buttons, or anything, and they are really useful for showing content in a clean and organized way. Tailwind makes it super easy to style them with shadows, rounded corners, and so on .\n\n### Basic idea:\nUse a div with bg-white for background, Add rounded for corners and shadow for a little depth, then Use p-4 or p-6 for padding inside.\n\n### Example:\n\n<div class=\"bg-white rounded shadow p-6\">\n  <h3 class=\"font-bold text-lg mb-2\">Card Title</h3>\n  <p class=\"text-gray-600\">some text inside.</p>\n</div>\n\nOr even You can als"
     },
     {
       "id": "utilities/cards.mdx#1",
       "slug": "utilities/cards.mdx",
-      "text": "w-lg bg-white\">\n  <img class=\"w-full h-48 object-cover\" src=\"https://via.placeholder.com/400x200\" alt=\"Card image\">\n  <div class=\"px-6 py-4\">\n    <div class=\"font-bold text-xl mb-2\">Card Title</div>\n    <p class=\"text-gray-700 text-base\">\n      Card with image header and content.\n    </p>\n  </div>\n</div>\n```\n\n---\n\n## 2. Card Layout Variations\n\n### Horizontal Card\n```html\n<div class=\"flex flex-col md:flex-row max-w-2xl rounded overflow-hidden shadow-lg bg-white\">\n  <div class=\"md:w-1/3\">\n    <img class=\"w-full h-48 md:h-full object-cover\" src=\"https://via.placeholder.com/300x400\" alt=\"Card imag"
-    },
-    {
-      "id": "utilities/cards.mdx#2",
-      "slug": "utilities/cards.mdx",
-      "text": "e\">\n  </div>\n  <div class=\"md:w-2/3 p-6\">\n    <div class=\"font-bold text-xl mb-2\">Horizontal Card</div>\n    <p class=\"text-gray-700 mb-4\">\n      This card switches from vertical on mobile to horizontal on desktop.\n    </p>\n    <button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded\">\n      Action\n    </button>\n  </div>\n</div>\n```\n\n### Grid of Cards\n```html\n<div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6\">\n  <!-- Card 1 -->\n  <div class=\"rounded overflow-hidden shadow-lg bg-white\">\n    <div class=\"p-6\">\n      <h3 class=\"font-bold text-lg mb-2\">Card"
-    },
-    {
-      "id": "utilities/cards.mdx#3",
-      "slug": "utilities/cards.mdx",
-      "text": " 1</h3>\n      <p class=\"text-gray-600\">Card content here.</p>\n    </div>\n  </div>\n  \n  <!-- Card 2 -->\n  <div class=\"rounded overflow-hidden shadow-lg bg-white\">\n    <div class=\"p-6\">\n      <h3 class=\"font-bold text-lg mb-2\">Card 2</h3>\n      <p class=\"text-gray-600\">Card content here.</p>\n    </div>\n  </div>\n  \n  <!-- Card 3 -->\n  <div class=\"rounded overflow-hidden shadow-lg bg-white\">\n    <div class=\"p-6\">\n      <h3 class=\"font-bold text-lg mb-2\">Card 3</h3>\n      <p class=\"text-gray-600\">Card content here.</p>\n    </div>\n  </div>\n</div>\n```\n\n---\n\n## 3. Card Components\n\n### Card Header\n```h"
-    },
-    {
-      "id": "utilities/cards.mdx#4",
-      "slug": "utilities/cards.mdx",
-      "text": "tml\n<div class=\"bg-white rounded-lg shadow\">\n  <div class=\"px-6 py-4 border-b border-gray-200\">\n    <h3 class=\"text-lg font-semibold text-gray-800\">Card Header</h3>\n    <p class=\"text-sm text-gray-600\">Optional subtitle</p>\n  </div>\n  <div class=\"p-6\">\n    <p>Card content goes here.</p>\n  </div>\n</div>\n```\n\n### Card Footer\n```html\n<div class=\"bg-white rounded-lg shadow\">\n  <div class=\"p-6\">\n    <p>Card content goes here.</p>\n  </div>\n  <div class=\"px-6 py-4 border-t border-gray-200 bg-gray-50\">\n    <div class=\"flex justify-between items-center\">\n      <span class=\"text-sm text-gray-600\">Footer"
-    },
-    {
-      "id": "utilities/cards.mdx#5",
-      "slug": "utilities/cards.mdx",
-      "text": " text</span>\n      <button class=\"bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-1 px-3 rounded\">\n        Action\n      </button>\n    </div>\n  </div>\n</div>\n```\n\n### Card with Actions\n```html\n<div class=\"bg-white rounded-lg shadow\">\n  <div class=\"p-6\">\n    <h3 class=\"text-lg font-semibold mb-4\">Card with Actions</h3>\n    <p class=\"text-gray-600 mb-6\">Card content description.</p>\n    <div class=\"flex space-x-3\">\n      <button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded\">\n        Primary\n      </button>\n      <button class=\"border border-gray-30"
-    },
-    {
-      "id": "utilities/cards.mdx#6",
-      "slug": "utilities/cards.mdx",
-      "text": "0 text-gray-700 hover:bg-gray-50 font-medium py-2 px-4 rounded\">\n        Secondary\n      </button>\n    </div>\n  </div>\n</div>\n```\n\n---\n\n## 4. Card Styles\n\n### Elevated Card\n```html\n<div class=\"bg-white rounded-xl shadow-xl p-6\">\n  <h3 class=\"text-xl font-bold mb-4\">Elevated Card</h3>\n  <p class=\"text-gray-600\">With larger shadow and rounded corners.</p>\n</div>\n```\n\n### Flat Card (No Shadow)\n```html\n<div class=\"bg-white rounded-lg border border-gray-200 p-6\">\n  <h3 class=\"text-lg font-semibold mb-3\">Flat Card</h3>\n  <p class=\"text-gray-600\">Clean design without shadows.</p>\n</div>\n```\n\n### Card"
-    },
-    {
-      "id": "utilities/cards.mdx#7",
-      "slug": "utilities/cards.mdx",
-      "text": " with Gradient\n```html\n<div class=\"bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg p-8 text-white\">\n  <h3 class=\"text-2xl font-bold mb-4\">Gradient Card</h3>\n  <p class=\"mb-6\">Beautiful gradient background.</p>\n  <button class=\"bg-white text-blue-600 hover:bg-blue-50 font-medium py-2 px-4 rounded\">\n    Get Started\n  </button>\n</div>\n```\n\n### Glassmorphism Card\n```html\n<div class=\"bg-white/30 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg p-8\">\n  <h3 class=\"text-xl font-bold mb-4 text-gray-800\">Glassmorphism Card</h3>\n  <p class=\"text-gray-700\">Modern glass effect"
-    },
-    {
-      "id": "utilities/cards.mdx#8",
-      "slug": "utilities/cards.mdx",
-      "text": " design.</p>\n</div>\n```\n\n---\n\n## 5. Card Content Elements\n\n### Card with Stats\n```html\n<div class=\"bg-white rounded-xl shadow p-6\">\n  <div class=\"flex items-center justify-between mb-4\">\n    <h3 class=\"text-lg font-semibold text-gray-800\">Statistics</h3>\n    <span class=\"text-sm text-green-600 bg-green-100 px-2 py-1 rounded-full\">+12%</span>\n  </div>\n  <div class=\"space-y-4\">\n    <div>\n      <p class=\"text-sm text-gray-600\">Revenue</p>\n      <p class=\"text-2xl font-bold text-gray-800\">$24,500</p>\n    </div>\n    <div>\n      <p class=\"text-sm text-gray-600\">Users</p>\n      <p class=\"text-2xl fon"
-    },
-    {
-      "id": "utilities/cards.mdx#9",
-      "slug": "utilities/cards.mdx",
-      "text": "t-bold text-gray-800\">1,842</p>\n    </div>\n  </div>\n</div>\n```\n\n### Card with List\n```html\n<div class=\"bg-white rounded-lg shadow\">\n  <div class=\"px-6 py-4 border-b border-gray-200\">\n    <h3 class=\"text-lg font-semibold\">Task List</h3>\n  </div>\n  <div class=\"divide-y divide-gray-200\">\n    <div class=\"px-6 py-4 flex items-center\">\n      <input type=\"checkbox\" class=\"rounded text-blue-500 mr-3\">\n      <span>Complete project proposal</span>\n    </div>\n    <div class=\"px-6 py-4 flex items-center\">\n      <input type=\"checkbox\" class=\"rounded text-blue-500 mr-3\">\n      <span>Review design mockups</s"
-    },
-    {
-      "id": "utilities/cards.mdx#10",
-      "slug": "utilities/cards.mdx",
-      "text": "pan>\n    </div>\n    <div class=\"px-6 py-4 flex items-center\">\n      <input type=\"checkbox\" class=\"rounded text-blue-500 mr-3\">\n      <span>Team meeting at 2 PM</span>\n    </div>\n  </div>\n</div>\n```\n\n### Card with Avatar\n```html\n<div class=\"bg-white rounded-xl shadow p-6\">\n  <div class=\"flex items-center mb-4\">\n    <img class=\"w-12 h-12 rounded-full mr-4\" src=\"https://via.placeholder.com/50\" alt=\"Avatar\">\n    <div>\n      <h4 class=\"font-semibold text-gray-800\">John Doe</h4>\n      <p class=\"text-sm text-gray-600\">Software Developer</p>\n    </div>\n  </div>\n  <p class=\"text-gray-700\">\n    \"This ca"
-    },
-    {
-      "id": "utilities/cards.mdx#11",
-      "slug": "utilities/cards.mdx",
-      "text": "rd features user information with an avatar.\"\n  </p>\n</div>\n```\n\n### Card with Badges\n```html\n<div class=\"bg-white rounded-lg shadow\">\n  <div class=\"p-6\">\n    <div class=\"flex justify-between items-start mb-4\">\n      <h3 class=\"text-lg font-semibold\">Project Card</h3>\n      <span class=\"bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded\">Active</span>\n    </div>\n    <p class=\"text-gray-600 mb-4\">Project description goes here.</p>\n    <div class=\"flex flex-wrap gap-2\">\n      <span class=\"bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded\">React</span>\n      <span class=\"bg-gray-10"
-    },
-    {
-      "id": "utilities/cards.mdx#12",
-      "slug": "utilities/cards.mdx",
-      "text": "0 text-gray-800 text-xs px-2 py-1 rounded\">Tailwind</span>\n      <span class=\"bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded\">Node.js</span>\n    </div>\n  </div>\n</div>\n```\n\n---\n\n## 6. Interactive Cards\n\n### Hover Effects\n```html\n<div class=\"bg-white rounded-lg shadow hover:shadow-xl transition-shadow duration-300 cursor-pointer\">\n  <div class=\"p-6\">\n    <h3 class=\"text-lg font-semibold mb-3\">Hover Card</h3>\n    <p class=\"text-gray-600\">This card elevates on hover.</p>\n  </div>\n</div>\n\n<!-- Scale on hover -->\n<div class=\"bg-white rounded-lg shadow hover:shadow-lg transform hover:-translate"
-    },
-    {
-      "id": "utilities/cards.mdx#13",
-      "slug": "utilities/cards.mdx",
-      "text": "-y-1 transition-all duration-300\">\n  <div class=\"p-6\">\n    <h3 class=\"text-lg font-semibold mb-3\">Interactive Card</h3>\n    <p class=\"text-gray-600\">Lifts up on hover.</p>\n  </div>\n</div>\n```\n\n### Clickable Card\n```html\n<a href=\"#\" class=\"block bg-white rounded-lg shadow hover:shadow-md transition-shadow\">\n  <div class=\"p-6\">\n    <h3 class=\"text-lg font-semibold text-blue-600 mb-2\">Clickable Card</h3>\n    <p class=\"text-gray-600\">This entire card is clickable.</p>\n  </div>\n</a>\n```\n\n---\n\n## 7. Special Card Types\n\n### Pricing Card\n```html\n<div class=\"bg-white rounded-xl shadow-lg border border-"
-    },
-    {
-      "id": "utilities/cards.mdx#14",
-      "slug": "utilities/cards.mdx",
-      "text": "gray-200 p-8 text-center\">\n  <h3 class=\"text-2xl font-bold mb-4\">Pro Plan</h3>\n  <div class=\"mb-6\">\n    <span class=\"text-4xl font-bold\">$29</span>\n    <span class=\"text-gray-600\">/month</span>\n  </div>\n  <ul class=\"space-y-3 mb-8\">\n    <li class=\"flex items-center\">\n      <svg class=\"w-5 h-5 text-green-500 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n        <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n      </svg>\n      <span>10 Projects</span>\n    </li>\n    <li c"
-    },
-    {
-      "id": "utilities/cards.mdx#15",
-      "slug": "utilities/cards.mdx",
-      "text": "lass=\"flex items-center\">\n      <svg class=\"w-5 h-5 text-green-500 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n        <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n      </svg>\n      <span>Unlimited Storage</span>\n    </li>\n    <li class=\"flex items-center\">\n      <svg class=\"w-5 h-5 text-green-500 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n        <path fill-rule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586"
-    },
-    {
-      "id": "utilities/cards.mdx#16",
-      "slug": "utilities/cards.mdx",
-      "text": "l7.293-7.293a1 1 0 011.414 0z\" clip-rule=\"evenodd\"></path>\n      </svg>\n      <span>Priority Support</span>\n    </li>\n  </ul>\n  <button class=\"w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg\">\n    Get Started\n  </button>\n</div>\n```\n\n### Testimonial Card\n```html\n<div class=\"bg-white rounded-xl shadow p-8\">\n  <div class=\"flex items-center mb-6\">\n    <div class=\"flex items-center\">\n      <img class=\"w-12 h-12 rounded-full mr-4\" src=\"https://via.placeholder.com/50\" alt=\"Customer\">\n      <div>\n        <h4 class=\"font-semibold\">Sarah Johnson</h4>\n        <p class=\"te"
-    },
-    {
-      "id": "utilities/cards.mdx#17",
-      "slug": "utilities/cards.mdx",
-      "text": "xt-sm text-gray-600\">Marketing Director</p>\n      </div>\n    </div>\n    <div class=\"ml-auto text-yellow-400\">\n      ★★★★★\n    </div>\n  </div>\n  <p class=\"text-gray-700 italic\">\n    \"This product has completely transformed our workflow. The team is more productive and collaboration has never been easier.\"\n  </p>\n</div>\n```\n\n### Feature Card\n```html\n<div class=\"bg-white rounded-lg shadow p-6 text-center\">\n  <div class=\"inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4\">\n    <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n   "
-    },
-    {
-      "id": "utilities/cards.mdx#18",
-      "slug": "utilities/cards.mdx",
-      "text": "   <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\"></path>\n    </svg>\n  </div>\n  <h3 class=\"text-lg font-semibold mb-2\">Fast Performance</h3>\n  <p class=\"text-gray-600\">\n    Optimized for speed with minimal loading times and smooth interactions.\n  </p>\n</div>\n```\n\n---\n\n## 8. Responsive Cards\n\n### Responsive Grid\n```html\n<div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6\">\n  <!-- Cards adapt to different screen sizes -->\n  <div class=\"bg-white rounded-lg shadow p-4\">\n    <h3 class=\"text-lg font-semibold mb-2\">Card 1</h3>\n    <p "
-    },
-    {
-      "id": "utilities/cards.mdx#19",
-      "slug": "utilities/cards.mdx",
-      "text": "class=\"text-gray-600 text-sm\">Responsive content</p>\n  </div>\n  <!-- More cards... -->\n</div>\n```\n\n### Mobile-Optimized Card\n```html\n<div class=\"bg-white rounded-lg shadow sm:rounded-xl sm:p-8 p-4\">\n  <div class=\"flex flex-col sm:flex-row items-start sm:items-center mb-4\">\n    <img class=\"w-16 h-16 rounded-full mb-4 sm:mb-0 sm:mr-4\" src=\"https://via.placeholder.com/64\" alt=\"Avatar\">\n    <div>\n      <h3 class=\"text-lg sm:text-xl font-semibold\">Responsive Card</h3>\n      <p class=\"text-gray-600 text-sm sm:text-base\">Adapts to screen size</p>\n    </div>\n  </div>\n  <p class=\"text-gray-700 text-sm "
-    },
-    {
-      "id": "utilities/cards.mdx#20",
-      "slug": "utilities/cards.mdx",
-      "text": "sm:text-base\">\n    This card changes layout and typography based on screen size.\n  </p>\n</div>\n```\n\n---\n\n## 9. Card Skeleton/Loading State\n```html\n<div class=\"bg-white rounded-lg shadow animate-pulse\">\n  <div class=\"p-6\">\n    <!-- Title skeleton -->\n    <div class=\"h-6 bg-gray-200 rounded w-3/4 mb-4\"></div>\n    \n    <!-- Content skeleton -->\n    <div class=\"space-y-3\">\n      <div class=\"h-4 bg-gray-200 rounded\"></div>\n      <div class=\"h-4 bg-gray-200 rounded w-5/6\"></div>\n      <div class=\"h-4 bg-gray-200 rounded w-4/6\"></div>\n    </div>\n    \n    <!-- Button skeleton -->\n    <div class=\"mt-6\""
-    },
-    {
-      "id": "utilities/cards.mdx#21",
-      "slug": "utilities/cards.mdx",
-      "text": ">\n      <div class=\"h-10 bg-gray-200 rounded w-32\"></div>\n    </div>\n  </div>\n</div>\n```\n\n---\n\n## 10. Card Component (React Example)\n\n```jsx\n// Card.jsx\nexport default function Card({\n  children,\n  title,\n  subtitle,\n  image,\n  imageAlt,\n  actions,\n  footer,\n  hoverable = false,\n  className = '',\n  ...props\n}) {\n  const baseClasses = \"bg-white rounded-lg shadow\";\n  const hoverClasses = hoverable ? \"hover:shadow-xl transition-shadow duration-300\" : \"\";\n  \n  return (\n    <div className={`${baseClasses} ${hoverClasses} ${className}`} {...props}>\n      {/* Image */}\n      {image && (\n        <img "
-    },
-    {
-      "id": "utilities/cards.mdx#22",
-      "slug": "utilities/cards.mdx",
-      "text": "\n          className=\"w-full h-48 object-cover rounded-t-lg\" \n          src={image} \n          alt={imageAlt || ''} \n        />\n      )}\n      \n      {/* Header */}\n      {(title || subtitle) && (\n        <div className=\"px-6 pt-6\">\n          {title && <h3 className=\"text-xl font-semibold text-gray-800\">{title}</h3>}\n          {subtitle && <p className=\"text-gray-600 mt-1\">{subtitle}</p>}\n        </div>\n      )}\n      \n      {/* Content */}\n      <div className=\"p-6\">\n        {children}\n      </div>\n      \n      {/* Actions */}\n      {actions && (\n        <div className=\"px-6 pb-6\">\n          "
-    },
-    {
-      "id": "utilities/cards.mdx#23",
-      "slug": "utilities/cards.mdx",
-      "text": "{actions}\n        </div>\n      )}\n      \n      {/* Footer */}\n      {footer && (\n        <div className=\"px-6 py-4 border-t border-gray-200 bg-gray-50 rounded-b-lg\">\n          {footer}\n        </div>\n      )}\n    </div>\n  );\n}\n```\n\n**Usage:**\n```jsx\n<Card \n  title=\"Product Card\"\n  subtitle=\"Premium Plan\"\n  image=\"https://via.placeholder.com/400x200\"\n  hoverable\n  actions={\n    <button className=\"bg-blue-500 text-white px-4 py-2 rounded\">\n      Buy Now\n    </button>\n  }\n>\n  <p>Card content goes here.</p>\n</Card>\n```\n\n---\n\n## 11. Best Practices\n\n### Do:\n- Maintain consistent padding and spacing\n"
-    },
-    {
-      "id": "utilities/cards.mdx#24",
-      "slug": "utilities/cards.mdx",
-      "text": "- Use semantic HTML structure\n- Ensure proper contrast ratios\n- Add hover/focus states for interactive cards\n- Make cards accessible (proper headings, ARIA labels)\n- Optimize images for card thumbnails\n\n### Don't:\n- Overcrowd cards with too much information\n- Use cards for primary navigation\n- Forget about mobile touch targets\n- Use low-contrast text on colored backgrounds\n- Mix too many different card styles in one view\n\n---\n\n## 12. Accessibility Considerations\n\n### Semantic Structure\n```html\n<article class=\"bg-white rounded-lg shadow\" aria-labelledby=\"card-title-1\">\n  <header class=\"p-6\">\n  "
-    },
-    {
-      "id": "utilities/cards.mdx#25",
-      "slug": "utilities/cards.mdx",
-      "text": "  <h3 id=\"card-title-1\" class=\"text-lg font-semibold\">Card Title</h3>\n  </header>\n  <div class=\"px-6 pb-6\">\n    <p>Card content with proper semantic structure.</p>\n  </div>\n</article>\n```\n\n### Keyboard Navigation\n```html\n<div role=\"button\" tabindex=\"0\" \n     class=\"bg-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer\">\n  <div class=\"p-6\">\n    <h3>Clickable Card</h3>\n    <p>Accessible with keyboard navigation.</p>\n  </div>\n</div>\n```\n\n---\n\n## Summary\n\nCards are essential UI components for organizing and presenting content. With Tailwind:\n\n1. **Start simp"
-    },
-    {
-      "id": "utilities/cards.mdx#26",
-      "slug": "utilities/cards.mdx",
-      "text": "le** with basic card structures\n2. **Enhance with utility classes** for styling\n3. **Make them interactive** with hover and focus states\n4. **Ensure responsiveness** for all screen sizes\n5. **Prioritize accessibility** with proper semantic markup\n\nRemember to keep cards focused on a single topic, use consistent styling, and maintain good information hierarchy within each card."
+      "text": "o add:\n\nImages: img at the top with w-full and h-48 object-cover\n\nButtons: inside the card with bg-blue-500 text-white py-2 px-4 rounded\n\nHover effects: hover:shadow-lg transition-shadow to make it interactive\n\nLayouts: you can use flex for horizontal cards or grid for a grid of cards"
     },
     {
       "id": "utilities/buttons.mdx#0",
