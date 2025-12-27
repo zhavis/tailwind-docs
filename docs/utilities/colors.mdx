@@ -1,41 +1,29 @@
 # Colors in Tailwind
 
-Colors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff, it already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which It makes your site look nice and consistent without much effort.
+Colors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff. It already has lots of colors with names and numbers like `blue-500` or `red-200`, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which makes your site look nice and consistent without much effort.
 
-bg-* → background
+**bg-\*** → background  
+**text-\*** → text  
+**border-\*** → borders  
+**hover:, focus:** → states  
+**\*-opacity-\*** → transparency
 
-text-* → text
-
-border-* → borders
-
-hover:, focus: → states
-
-*-opacity-* → transparency
+---
 
 ### Background colors:
+
 <div className="bg-blue-500 text-white p-4">Blue background</div>
 <div className="bg-red-200 text-red-800 p-4">Light red background</div>
+
+---
 
 ### Text colors:
 
 <p className="text-gray-800">Dark gray text</p>
-```html
-<p className="text-gray-800">Dark gray text</p>
-<p className="text-yellow-500">Yellow text</p>
-```html
-<p className="text-yellow-500">Yellow text</p>
-### Borders:
-<div className="border-2 border-green-500 p-4">Green border</div>
 
-### Hover and focus:
-<button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-  Hover me
-</button>
-<input className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded">
-
-### Opacity:
-<div className="bg-blue-500 bg-opacity-50 text-white p-4">50% transparent</div>
-<p className="text-black text-opacity-70">70% opacity text</p>
+```html
+<p class="text-gray-800">Dark gray text</p>
+<p class="text-yellow-500">Yellow text</p>
 
 ### Custom colors, which we talked about previously : 
 // tailwind.config.js
