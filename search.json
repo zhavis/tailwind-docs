@@ -29,7 +29,7 @@
   },
   {
     "slug": "utilities/colors.mdx",
-    "text": " Colors in Tailwind\n\nColors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff, it already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which It makes your site look nice and consistent without much effort.\n\nbg- → background\n\ntext- → text\n\nborder- → borders\n\nhover:, focus: → states\n\n-opacity- → transparency\n\n Background colors:\n<"
+    "text": " Colors in Tailwind\n\nColors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff. It already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which makes your site look nice and consistent without much effort.\n\nbg-\\ → background  \ntext-\\ → text  \nborder-\\ → borders  \nhover:, focus: → states  \n\\-opacity-\\ → transparency\n\n---\n\n Backgroun"
   },
   {
     "slug": "utilities/components.mdx",

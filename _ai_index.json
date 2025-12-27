@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T16:13:57.638Z",
+  "generated_at": "2025-12-27T16:18:36.204Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -80,17 +80,12 @@
     {
       "id": "utilities/colors.mdx#0",
       "slug": "utilities/colors.mdx",
-      "text": "# Colors in Tailwind\n\nColors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff, it already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which It makes your site look nice and consistent without much effort.\n\nbg-* → background\n\ntext-* → text\n\nborder-* → borders\n\nhover:, focus: → states\n\n*-opacity-* → transparency\n\n### Background colors:\n<div className=\"bg-blue-500 text-white p-4\">Blue background</div>\n<div className=\"bg-red-200"
+      "text": "# Colors in Tailwind\n\nColors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff. It already has lots of colors with names and numbers like `blue-500` or `red-200`, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which makes your site look nice and consistent without much effort.\n\n**bg-\\*** → background  \n**text-\\*** → text  \n**border-\\*** → borders  \n**hover:, focus:** → states  \n**\\*-opacity-\\*** → transparency\n\n---\n\n### Background colors:\n\n<div className=\"bg-blue-500 text-white p-4\">Blue backgro"
     },
     {
       "id": "utilities/colors.mdx#1",
       "slug": "utilities/colors.mdx",
-      "text": " text-red-800 p-4\">Light red background</div>\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n```html\n<p className=\"text-gray-800\">Dark gray text</p>\n<p className=\"text-yellow-500\">Yellow text</p>\n```html\n<p className=\"text-yellow-500\">Yellow text</p>\n### Borders:\n<div className=\"border-2 border-green-500 p-4\">Green border</div>\n\n### Hover and focus:\n<button className=\"bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600\">\n  Hover me\n</button>\n<input className=\"border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded\">\n\n### Opacity:\n<div cla"
-    },
-    {
-      "id": "utilities/colors.mdx#2",
-      "slug": "utilities/colors.mdx",
-      "text": "ssName=\"bg-blue-500 bg-opacity-50 text-white p-4\">50% transparent</div>\n<p className=\"text-black text-opacity-70\">70% opacity text</p>\n\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};"
+      "text": "und</div>\n<div className=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n---\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n\n```html\n<p class=\"text-gray-800\">Dark gray text</p>\n<p class=\"text-yellow-500\">Yellow text</p>\n\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};"
     },
     {
       "id": "utilities/cards.mdx#0",
