@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T17:01:03.147Z",
+  "generated_at": "2025-12-27T17:02:09.644Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -90,7 +90,7 @@
     {
       "id": "utilities/colors.mdx#1",
       "slug": "utilities/colors.mdx",
-      "text": "und</div>\n<div className=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n---\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n\n```html\n<p className=\"text-gray-800\">Dark gray text</p>\n<p className=\"text-yellow-500\">Yellow text</p>\n```\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};"
+      "text": "und</div>\n<div className=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n---\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n\n```html\n<p className=\"text-gray-800\">Dark gray text</p>\n<p className=\"text-yellow-500\">Yellow text</p>\n```\n### Custom colors, which we talked about previously : \n```js\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};\n```"
     },
     {
       "id": "utilities/cards.mdx#0",
