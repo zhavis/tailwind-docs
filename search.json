@@ -21,7 +21,7 @@
   },
   {
     "slug": "utilities/buttons.mdx",
-    "text": "Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly."
+    "text": " Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly.\n Tailwind Classes Cheat Sheet\nSo here i've just added the tailwind cheat sheet, which allows you to adjust the design of your buttons pretty easily : \n\n| Purpose       | Example Class                   |\n| ------------- | ------------------------------- |\n| Background    | bg-blue-500                   |\n| Text Color    | text-white                    |\n| Padding       | py-2 px-4                 "
   },
   {
     "slug": "utilities/cards.mdx",

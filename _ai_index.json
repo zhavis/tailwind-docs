@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T15:04:27.042Z",
+  "generated_at": "2025-12-27T15:06:00.897Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -400,7 +400,22 @@
     {
       "id": "utilities/buttons.mdx#0",
       "slug": "utilities/buttons.mdx",
-      "text": "###Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly."
+      "text": "## Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly.\n### Tailwind Classes Cheat Sheet\nSo here i've just added the tailwind cheat sheet, which allows you to adjust the design of your buttons pretty easily : \n\n| Purpose       | Example Class                   |\n| ------------- | ------------------------------- |\n| Background    | `bg-blue-500`                   |\n| Text Color    | `text-white`                    |\n| Padding       | `py-2 px-4`                     |\n| Border Radius | `rounded`                       |\n| Hover Effect  | `hover:bg-blu"
+    },
+    {
+      "id": "utilities/buttons.mdx#1",
+      "slug": "utilities/buttons.mdx",
+      "text": "e-600`             |\n| Disabled      | `opacity-50 cursor-not-allowed` |\n\n### Basic Button styles\n```html\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded\">Primary</button>\n<button class=\"bg-gray-200 text-gray-800 py-2 px-4 rounded\">Secondary</button>\n<button class=\"border border-gray-300 text-gray-700 py-2 px-4 rounded\">Outlined</button>\n\n### Changes The States\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded\">Hover</button>\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded opacity-50 cursor-not-allowed\" disabled>Disabled</button>\n\n### Changes The Size\n<b"
+    },
+    {
+      "id": "utilities/buttons.mdx#2",
+      "slug": "utilities/buttons.mdx",
+      "text": "utton class=\"text-sm py-1 px-3 rounded\">Small</button>\n<button class=\"py-2 px-4 rounded\">Medium</button>\n<button class=\"text-lg py-3 px-6 rounded-lg\">Large</button>\n\n### Button Variants\n<button class=\"bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded\">Success</button>\n<button class=\"bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded\">Danger</button>\n<button class=\"bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded\">Warning</button>\n\n### Buttons with Icons\n<button class=\"flex items-center bg-blue-500 text-white py-2 px-4 rounded\">\n  <svg class=\"w-4 h-4 mr-2\" fill=\"n"
+    },
+    {
+      "id": "utilities/buttons.mdx#3",
+      "slug": "utilities/buttons.mdx",
+      "text": "one\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\"></path>\n  </svg>\n  Add Item\n</button>"
     }
   ]
 }
