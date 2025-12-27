@@ -1,0 +1,101 @@
+[
+  {
+    "id": "docs/basics.mdx",
+    "name": "basics.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/customization.mdx",
+    "name": "customization.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/installation.mdx",
+    "name": "installation.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/introduction.mdx",
+    "name": "introduction.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/refrences.mdx",
+    "name": "refrences.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/responsive-design.mdx",
+    "name": "responsive-design.mdx",
+    "type": "file",
+    "parent": null,
+    "children": []
+  },
+  {
+    "id": "docs/utilities",
+    "name": "utilities",
+    "type": "folder",
+    "parent": null,
+    "children": [
+      {
+        "id": "docs/utilities/buttons.mdx",
+        "name": "buttons.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/cards.mdx",
+        "name": "cards.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/colors.mdx",
+        "name": "colors.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/components.mdx",
+        "name": "components.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/spacing.mdx",
+        "name": "spacing.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/start.mdx",
+        "name": "start.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      },
+      {
+        "id": "docs/utilities/typography.mdx",
+        "name": "typography.mdx",
+        "type": "file",
+        "parent": "docs/utilities",
+        "children": []
+      }
+    ]
+  }
+]
