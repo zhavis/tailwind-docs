@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T17:11:16.429Z",
+  "generated_at": "2025-12-27T17:14:26.251Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -60,17 +60,17 @@
     {
       "id": "utilities/typography.mdx#0",
       "slug": "utilities/typography.mdx",
-      "text": "# Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n### Font Size\nUse text-* to make your text bigger or smaller:\n```html\n<h1 className=\"text-4xl font-bold\">Big Heading</h1>\n<p className=\"text-base text-gray-700\">Normal paragraph</p>\n<small className=\"text-sm text-gray-500\">Small text</small>\n```\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes really big\n\n### Font Weight\nUse font-* to make text bold or light:"
+      "text": "# Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n### Font Size\nUse text-* to make your text bigger or smaller:\n```html\n<h1 className=\"text-4xl font-bold\">Big Heading</h1>\n<p className=\"text-base text-gray-700\">Normal paragraph</p>\n<small className=\"text-sm text-gray-500\">Small text</small>\n```\n```html\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes really big\n```\n### Font Weight\nUse font-* to make text bol"
     },
     {
       "id": "utilities/typography.mdx#1",
       "slug": "utilities/typography.mdx",
-      "text": "\n```html\n<p className=\"font-light\">Light</p>\n<p className=\"font-bold\">Bold</p>\n```\n### Line Height\n\nUse leading-* to control spacing between lines:\n```html\n<p className=\"leading-relaxed\">Lines are more spaced out</p>\n<p className=\"leading-tight\">Lines are closer together</p>\n```\n### Text Color\n\nUse text-{color}-{shade} to change text color:\n```html\n<p className=\"text-blue-500\">Blue text</p>\n<p className=\"text-gray-800\">Dark gray text</p>\n```\nuppercase, lowercase, capitalize to change the case\n\nitalic or not-italic to make text italic or normal\n\nBasically, all the **Tailwind classes** are just "
+      "text": "d or light:\n```html\n<p className=\"font-light\">Light</p>\n<p className=\"font-bold\">Bold</p>\n```\n### Line Height\nUse leading-** to control spacing between lines:\n```html\n<p className=\"leading-relaxed\">Lines are more spaced out</p>\n<p className=\"leading-tight\">Lines are closer together</p>\n```\nUse text-(color)-(shade) to change text color:\n```html\n<p className=\"text-blue-500\">Blue text</p>\n<p className=\"text-gray-800\">Dark gray text</p>\n```\nuppercase, lowercase, capitalize to change the case\n\nitalic or not-italic to make text italic or normal\n\nBasically, all the **Tailwind classes** are just makin"
     },
     {
       "id": "utilities/typography.mdx#2",
       "slug": "utilities/typography.mdx",
-      "text": "making it **look nice without writing CSS**."
+      "text": "g it **look nice without writing CSS**."
     },
     {
       "id": "utilities/components.mdx#0",
