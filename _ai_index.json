@@ -1,196 +1,16 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T14:14:30.809Z",
+  "generated_at": "2025-12-27T15:04:27.042Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
       "slug": "responsive-design.mdx",
-      "text": "# Responsive Design\n\nTailwind CSS follows a **mobile-first** approach to responsive design. This means that styles are applied for mobile screens by default, and you can add modifiers for larger screens. The framework provides responsive breakpoints that you can use to adjust your design at different screen sizes.\n\n---\n\n## 1. Breakpoints\n\nTailwind comes with five default breakpoints:\n\n| Prefix | Minimum Width | Description |\n|--------|---------------|-------------|\n| `sm:`  | 640px         | Small screens |\n| `md:`  | 768px         | Medium screens |\n| `lg:`  | 1024px        | Large screens |\n"
-    },
-    {
-      "id": "responsive-design.mdx#1",
-      "slug": "responsive-design.mdx",
-      "text": "| `xl:`  | 1280px        | Extra large screens |\n| `2xl:` | 1536px        | 2X large screens |\n\n---\n\n## 2. Mobile-First Approach\n\nBy default, styles apply to **all screen sizes**. You add responsive prefixes to apply styles **from that breakpoint and up**.\n\n```html\n<!-- Mobile: column, Tablet+: row -->\n<div class=\"flex flex-col md:flex-row gap-4\">\n  <div class=\"w-full md:w-1/2 bg-blue-200 p-4\">Column 1</div>\n  <div class=\"w-full md:w-1/2 bg-blue-300 p-4\">Column 2</div>\n</div>\n```\n\n**Mobile-first rule:** \n- Start with mobile styles (no prefix)\n- Add `sm:`, `md:`, `lg:` etc. for larger screens\n-"
-    },
-    {
-      "id": "responsive-design.mdx#2",
-      "slug": "responsive-design.mdx",
-      "text": " Styles cascade upward\n\n---\n\n## 3. Responsive Utilities Examples\n\n### Text Size\n```html\n<h1 class=\"text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl\">\n  Responsive Heading\n</h1>\n```\n\n### Layout Changes\n```html\n<!-- Mobile: stacked, Desktop: side-by-side -->\n<div class=\"block md:flex gap-4\">\n  <div class=\"w-full md:w-1/3 p-4 bg-gray-100\">\n    Sidebar (hidden on mobile)\n  </div>\n  <div class=\"w-full md:w-2/3 p-4 bg-white\">\n    Main content\n  </div>\n</div>\n```\n\n### Visibility Control\n```html\n<div class=\"hidden md:block\">\n  Visible only on medium screens and larger\n</div>\n\n<div class=\"block m"
-    },
-    {
-      "id": "responsive-design.mdx#3",
-      "slug": "responsive-design.mdx",
-      "text": "d:hidden\">\n  Visible only on mobile (hidden on md+)\n</div>\n```\n\n### Spacing Adjustments\n```html\n<div class=\"p-4 md:p-8 lg:p-12\">\n  Padding increases with screen size\n</div>\n```\n\n---\n\n## 4. Complex Responsive Layout Example\n\n```html\n<div class=\"container mx-auto px-4\">\n  <!-- Grid that changes columns based on screen size -->\n  <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4\">\n    <div class=\"bg-white p-4 rounded shadow\">\n      <h3 class=\"text-base lg:text-lg font-semibold\">Item 1</h3>\n      <p class=\"text-sm md:text-base\">Content adjusts with screen size</p>\n    </div>\n    <di"
-    },
-    {
-      "id": "responsive-design.mdx#4",
-      "slug": "responsive-design.mdx",
-      "text": "v class=\"bg-white p-4 rounded shadow\">\n      <h3 class=\"text-base lg:text-lg font-semibold\">Item 2</h3>\n      <p class=\"text-sm md:text-base\">Content adjusts with screen size</p>\n    </div>\n    <div class=\"bg-white p-4 rounded shadow\">\n      <h3 class=\"text-base lg:text-lg font-semibold\">Item 3</h3>\n      <p class=\"text-sm md:text-base\">Content adjusts with screen size</p>\n    </div>\n  </div>\n\n  <!-- Navigation that changes layout -->\n  <nav class=\"flex flex-col md:flex-row justify-between items-center py-4\">\n    <div class=\"mb-4 md:mb-0\">\n      <span class=\"text-xl font-bold\">Logo</span>\n    "
-    },
-    {
-      "id": "responsive-design.mdx#5",
-      "slug": "responsive-design.mdx",
-      "text": "</div>\n    <div class=\"space-x-4\">\n      <a href=\"#\" class=\"block md:inline-block mb-2 md:mb-0\">Home</a>\n      <a href=\"#\" class=\"block md:inline-block mb-2 md:mb-0\">About</a>\n      <a href=\"#\" class=\"block md:inline-block\">Contact</a>\n    </div>\n  </nav>\n</div>\n```\n\n---\n\n## 5. Custom Breakpoints\n\nYou can customize breakpoints in `tailwind.config.js`:\n\n```javascript\nmodule.exports = {\n  theme: {\n    screens: {\n      'sm': '640px',\n      'md': '768px',\n      'lg': '1024px',\n      'xl': '1280px',\n      '2xl': '1536px',\n      // Custom breakpoints\n      'tablet': '640px',\n      'laptop': '1024px'"
-    },
-    {
-      "id": "responsive-design.mdx#6",
-      "slug": "responsive-design.mdx",
-      "text": ",\n      'desktop': '1280px',\n    },\n  },\n}\n```\n\nThen use them:\n```html\n<div class=\"hidden laptop:block\">\n  Visible only on laptop screens and larger\n</div>\n```\n\n---\n\n## 6. Responsive Design Patterns\n\n### 1. **Container Class**\n```html\n<div class=\"container mx-auto px-4\">\n  Content centered with responsive padding\n</div>\n```\n\n### 2. **Responsive Images**\n```html\n<img src=\"image.jpg\" \n     class=\"w-full h-auto max-w-sm md:max-w-md lg:max-w-lg\"\n     alt=\"Responsive image\">\n```\n\n### 3. **Responsive Buttons**\n```html\n<button class=\"w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded\">\n  Respo"
-    },
-    {
-      "id": "responsive-design.mdx#7",
-      "slug": "responsive-design.mdx",
-      "text": "nsive Button\n</button>\n```\n\n### 4. **Responsive Typography**\n```html\n<p class=\"text-sm md:text-base lg:text-lg leading-tight md:leading-normal\">\n  Text that becomes larger and more readable on bigger screens\n</p>\n```\n\n---\n\n## 7. Testing Responsive Design\n\n### In Development:\n1. Use browser DevTools device toolbar\n2. Test all breakpoints\n3. Check touch interactions\n\n### Best Practices:\n- Always design mobile-first\n- Test on actual devices when possible\n- Use fluid typography and spacing\n- Consider touch targets on mobile (min 44px × 44px)\n\n---\n\n## 8. Summary Table\n\n| Task | Mobile-First Approac"
-    },
-    {
-      "id": "responsive-design.mdx#8",
-      "slug": "responsive-design.mdx",
-      "text": "h | Example |\n|------|----------------------|---------|\n| Layout | Stack columns | `flex flex-col md:flex-row` |\n| Text | Smaller text first | `text-base lg:text-lg` |\n| Spacing | Less padding first | `p-4 md:p-6 lg:p-8` |\n| Visibility | Show/hide elements | `hidden md:block` |\n| Width | Full width first | `w-full md:w-1/2` |\n\n---\n\n## 9. Example: Complete Responsive Card\n\n```html\n<div class=\"bg-white rounded-lg shadow-sm md:shadow-lg p-4 md:p-6 lg:p-8\">\n  <div class=\"flex flex-col md:flex-row md:items-center gap-4\">\n    <div class=\"w-full md:w-1/3\">\n      <img src=\"image.jpg\" class=\"w-full h-4"
-    },
-    {
-      "id": "responsive-design.mdx#9",
-      "slug": "responsive-design.mdx",
-      "text": "8 md:h-64 object-cover rounded\" alt=\"\">\n    </div>\n    <div class=\"w-full md:w-2/3\">\n      <h3 class=\"text-xl md:text-2xl font-bold mb-2\">Card Title</h3>\n      <p class=\"text-gray-600 mb-4 text-sm md:text-base\">\n        This content is optimized for all screen sizes. On mobile, it's a single column with smaller text. On tablet and desktop, it becomes a two-column layout with larger typography.\n      </p>\n      <button class=\"w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600\">\n        Responsive Button\n      </button>\n    </div>\n  </div>\n</div>\n```\n\n---\n\n## Key Takeawa"
-    },
-    {
-      "id": "responsive-design.mdx#10",
-      "slug": "responsive-design.mdx",
-      "text": "ys\n\n1. **Mobile-first**: Start with mobile styles, enhance for larger screens\n2. **Breakpoint prefixes**: Use `sm:`, `md:`, `lg:`, `xl:`, `2xl:` \n3. **Fluid design**: Use relative units and responsive utilities\n4. **Test thoroughly**: Check all breakpoints and interactions\n5. **Performance**: Use `hidden`/`block` wisely to avoid loading unnecessary content\n\nResponsive design with Tailwind is intuitive once you understand the mobile-first approach and breakpoint system. The utility classes make it easy to create designs that work beautifully on any device."
+      "text": "## Responsive Design\n\nTailwind is **mobile-first**.  \nStyles work for mobile by default, and you add breakpoints for bigger screens.\n\n### Breakpoints\nthese are useful standard sizes in this framework :\n- `sm:` 640px\n- `md:` 768px\n- `lg:` 1024px\n- `xl:` 1280px\n\n### Example\nThis is a simple responsive layout. On mobile, the boxes stack vertically, and on medium screens and above, they sit side by side.\n\n```html\n<div class=\"flex flex-col md:flex-row\">\n  <div class=\"w-full md:w-1/2\">One</div>\n  <div class=\"w-full md:w-1/2\">Two</div>\n</div>"
     },
     {
       "id": "refrences.mdx#0",
       "slug": "refrences.mdx",
-      "text": "# References\n\n## Official Documentation & Resources\n\n### Core Documentation\n- **[Tailwind CSS Official Documentation](https://tailwindcss.com/docs)** - Complete API reference and guides\n- **[Tailwind CSS v3.0 Docs](https://tailwindcss.com/docs/upgrade-guide)** - Latest version documentation\n- **[Tailwind Play](https://play.tailwindcss.com/)** - Online Tailwind editor and sandbox\n- **[Tailwind UI](https://tailwindui.com/)** - Official component library (paid)\n- **[Headless UI](https://headlessui.dev/)** - Unstyled, accessible UI components\n\n### GitHub Repositories\n- **[tailwindlabs/tailwindcss]"
-    },
-    {
-      "id": "refrences.mdx#1",
-      "slug": "refrences.mdx",
-      "text": "(https://github.com/tailwindlabs/tailwindcss)** - Main repository\n- **[tailwindlabs/tailwindcss.com](https://github.com/tailwindlabs/tailwindcss.com)** - Documentation source\n- **[tailwindlabs/headlessui](https://github.com/tailwindlabs/headlessui)** - Headless UI components\n\n---\n\n## Learning Resources\n\n### Tutorials & Courses\n- **[Tailwind CSS: From Zero to Production](https://www.youtube.com/watch?v=mr15Xzb1Ook)** - Official crash course\n- **[Tailwind CSS Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw)** - Net Ninja YouTube series\n- **[Learn Tailwind CSS]("
-    },
-    {
-      "id": "refrences.mdx#2",
-      "slug": "refrences.mdx",
-      "text": "https://web.dev/learn/tailwind/)** - Google's web.dev course\n- **[Tailwind CSS Full Course](https://www.freecodecamp.org/news/learn-tailwind-css/)** - freeCodeCamp tutorial\n\n### Interactive Learning\n- **[Tailwind CSS Interactive Examples](https://tailwindcss.com/docs/hover-focus-and-other-states)**\n- **[Tailwind Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet)**\n- **[Tailwind Components](https://tailwindcomponents.com/)** - Community components\n- **[Tailwind Toolbox](https://www.tailwindtoolbox.com/)** - Templates and components\n\n---\n\n## Community Resources\n\n### Component Libraries\n- **"
-    },
-    {
-      "id": "refrences.mdx#3",
-      "slug": "refrences.mdx",
-      "text": "[DaisyUI](https://daisyui.com/)** - Popular component library\n- **[Flowbite](https://flowbite.com/)** - Open-source component library\n- **[Meraki UI](https://merakiui.com/)** - Beautiful Tailwind components\n- **[HyperUI](https://www.hyperui.dev/)** - Free Tailwind components\n- **[Tailwind Elements](https://tailwind-elements.com/)** - Bootstrap components in Tailwind\n\n### Templates & Themes\n- **[Tailwind Templates](https://tailwindtemplates.io/)**\n- **[Tailwind Starter Kit](https://www.creative-tim.com/tailwind-starter-kit)**\n- **[Tailwind Toolbox Templates](https://www.tailwindtoolbox.com/temp"
-    },
-    {
-      "id": "refrences.mdx#4",
-      "slug": "refrences.mdx",
-      "text": "lates)**\n- **[Tailwind CSS Templates](https://tailwindtemplates.io/free-templates/)**\n\n### Tools & Utilities\n- **[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)** - VS Code extension\n- **[Tailwind CSS Playground](https://tailwindplay.com/)**\n- **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** - Utility to merge Tailwind classes\n- **[Tailwind Variants](https://www.tailwind-variants.org/)** - Type-safe variant API\n\n---\n\n## Framework Integrations\n\n### React\n- **[Create React App + Tailwind](https://tailwindcss.com/docs/guide"
-    },
-    {
-      "id": "refrences.mdx#5",
-      "slug": "refrences.mdx",
-      "text": "s/create-react-app)**\n- **[Next.js + Tailwind](https://tailwindcss.com/docs/guides/nextjs)**\n- **[Remix + Tailwind](https://tailwindcss.com/docs/guides/remix)**\n\n### Vue\n- **[Vue 3 + Tailwind](https://tailwindcss.com/docs/guides/vite)**\n- **[Nuxt 3 + Tailwind](https://tailwindcss.com/docs/guides/nuxtjs)**\n\n### Other Frameworks\n- **[Angular + Tailwind](https://tailwindcss.com/docs/guides/angular)**\n- **[Svelte + Tailwind](https://tailwindcss.com/docs/guides/sveltekit)**\n- **[Laravel + Tailwind](https://tailwindcss.com/docs/guides/laravel)**\n- **[Astro + Tailwind](https://tailwindcss.com/docs/gu"
-    },
-    {
-      "id": "refrences.mdx#6",
-      "slug": "refrences.mdx",
-      "text": "ides/astro)**\n\n---\n\n## Design Systems & Inspiration\n\n### Design System Examples\n- **[Vercel Design System](https://vercel.com/design)** - Uses Tailwind\n- **[GitHub Primer](https://primer.style/)** - With Tailwind implementation\n- **[Shopify Polaris](https://polaris.shopify.com/)** - Design system principles\n- **[Carbon Design System](https://carbondesignsystem.com/)** - IBM's system\n\n### Inspiration Websites\n- **[Tailwind Awesome](https://www.tailwindawesome.com/)** - Curated Tailwind resources\n- **[Built With Tailwind](https://builtwithtailwind.com/)** - Showcase of Tailwind sites\n- **[Tailwi"
-    },
-    {
-      "id": "refrences.mdx#7",
-      "slug": "refrences.mdx",
-      "text": "nd Templates Gallery](https://tailwindtemplates.io/gallery/)**\n- **[Awwwards + Tailwind](https://www.awwwards.com/websites/tailwind-css/)**\n\n---\n\n## Performance & Optimization\n\n### Optimization Tools\n- **[PurgeCSS](https://purgecss.com/)** - Remove unused CSS\n- **[Critical CSS](https://github.com/addyosmani/critical)** - Extract critical CSS\n- **[PostCSS](https://postcss.org/)** - CSS processor\n- **[Autoprefixer](https://github.com/postcss/autoprefixer)** - Add vendor prefixes\n\n### Performance Guides\n- **[Optimizing Tailwind for Production](https://tailwindcss.com/docs/optimizing-for-productio"
-    },
-    {
-      "id": "refrences.mdx#8",
-      "slug": "refrences.mdx",
-      "text": "n)**\n- **[PurgeCSS Configuration](https://tailwindcss.com/docs/controlling-file-size)**\n- **[JIT Mode Performance](https://tailwindcss.com/docs/just-in-time-mode)**\n\n---\n\n## Advanced Topics\n\n### Plugins & Extensions\n- **[Official Tailwind Plugins](https://tailwindcss.com/docs/plugins)**\n- **[@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)** - Prose styling\n- **[@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)** - Form styling\n- **[@tailwindcss/aspect-ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)**\n- **[@tailwindcss/line-"
-    },
-    {
-      "id": "refrences.mdx#9",
-      "slug": "refrences.mdx",
-      "text": "clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)**\n\n### Customization\n- **[Theme Configuration](https://tailwindcss.com/docs/theme)**\n- **[Customizing Colors](https://tailwindcss.com/docs/customizing-colors)**\n- **[Customizing Spacing](https://tailwindcss.com/docs/customizing-spacing)**\n- **[Adding Custom Utilities](https://tailwindcss.com/docs/adding-custom-utilities)**\n\n---\n\n## Books & Publications\n\n### Books\n- **[Refactoring UI](https://www.refactoringui.com/book)** - By Tailwind's creators\n- **[Tailwind CSS in Action](https://www.manning.com/books/tailwind-css-in-action)**\n- "
-    },
-    {
-      "id": "refrences.mdx#10",
-      "slug": "refrences.mdx",
-      "text": "**[The Tailwind CSS Handbook](https://www.freecodecamp.org/news/the-tailwind-css-handbook/)**\n\n### Blogs & Newsletters\n- **[Tailwind CSS Blog](https://blog.tailwindcss.com/)**\n- **[Tailwind Weekly](https://tailwindweekly.com/)**\n- **[Tailwind CSS News](https://www.getrevue.co/profile/tailwind-css)**\n\n---\n\n## Community & Support\n\n### Forums & Discussions\n- **[Tailwind CSS Discord](https://tailwindcss.com/discord)** - Official Discord community\n- **[GitHub Discussions](https://github.com/tailwindlabs/tailwindcss/discussions)**\n- **[Stack Overflow](https://stackoverflow.com/questions/tagged/tailw"
-    },
-    {
-      "id": "refrences.mdx#11",
-      "slug": "refrences.mdx",
-      "text": "ind-css)**\n- **[Reddit r/tailwindcss](https://www.reddit.com/r/tailwindcss/)**\n\n### Social Media\n- **[Twitter @tailwindcss](https://twitter.com/tailwindcss)**\n- **[YouTube Tailwind Labs](https://www.youtube.com/c/TailwindLabs)**\n\n---\n\n## Comparison & Alternatives\n\n### CSS Frameworks Comparison\n- **[Tailwind vs Bootstrap](https://www.sitepoint.com/tailwind-css-vs-bootstrap/)**\n- **[Tailwind vs Tachyons](https://css-tricks.com/tailwind-vs-tachyons/)**\n- **[Utility-First CSS Comparison](https://www.smashingmagazine.com/2021/12/utility-first-css-comparison/)**\n\n### Articles & Analysis\n- **[CSS-Tri"
-    },
-    {
-      "id": "refrences.mdx#12",
-      "slug": "refrences.mdx",
-      "text": "cks: Tailwind CSS](https://css-tricks.com/tag/tailwind/)**\n- **[Smashing Magazine: Tailwind](https://www.smashingmagazine.com/tag/tailwind-css/)**\n- **[State of CSS 2023](https://2023.stateofcss.com/en-US/css-frameworks/)**\n\n---\n\n## Accessibility\n\n### Accessibility Resources\n- **[Tailwind Accessibility](https://tailwindcss.com/docs/accessibility)**\n- **[Headless UI Accessibility](https://headlessui.dev/react/switch#accessibility)**\n- **[A11y Project + Tailwind](https://www.a11yproject.com/)**\n\n### Testing Tools\n- **[axe DevTools](https://www.deque.com/axe/devtools/)**\n- **[Lighthouse](https://"
-    },
-    {
-      "id": "refrences.mdx#13",
-      "slug": "refrences.mdx",
-      "text": "developers.google.com/web/tools/lighthouse)**\n- **[WAVE Evaluation Tool](https://wave.webaim.org/)**\n\n---\n\n## Version History\n\n### Release Notes\n- **[v3.0 Release Notes](https://tailwindcss.com/blog/tailwindcss-v3)**\n- **[v2.0 Release Notes](https://tailwindcss.com/blog/tailwindcss-v2)**\n- **[v1.0 Release Notes](https://blog.tailwindcss.com/tailwindcss-v1-0)**\n- **[Changelog](https://github.com/tailwindlabs/tailwindcss/blob/master/CHANGELOG.md)**\n\n### Migration Guides\n- **[Upgrade to v3](https://tailwindcss.com/docs/upgrade-guide)**\n- **[v2 to v3 Migration](https://tailwindcss.com/docs/upgradi"
-    },
-    {
-      "id": "refrences.mdx#14",
-      "slug": "refrences.mdx",
-      "text": "ng-to-v2)**\n- **[JIT Mode Migration](https://tailwindcss.com/docs/just-in-time-mode#migration-guide)**\n\n---\n\n## Contributing\n\n### How to Contribute\n- **[Contributing Guidelines](https://github.com/tailwindlabs/tailwindcss/blob/master/CONTRIBUTING.md)**\n- **[Code of Conduct](https://github.com/tailwindlabs/tailwindcss/blob/master/CODE_OF_CONDUCT.md)**\n- **[Issue Tracker](https://github.com/tailwindlabs/tailwindcss/issues)**\n\n### Plugin Development\n- **[Plugin API Documentation](https://tailwindcss.com/docs/plugins)**\n- **[Writing Plugins](https://tailwindcss.com/docs/plugins#writing-plugins)**\n"
-    },
-    {
-      "id": "refrences.mdx#15",
-      "slug": "refrences.mdx",
-      "text": "- **[Plugin Examples](https://github.com/tailwindlabs/tailwindcss-plugin-examples)**\n\n---\n\n## Academic & Research\n\n### Research Papers\n- **[Utility-First CSS Frameworks](https://dl.acm.org/doi/10.1145/3447531.3451532)** - Academic analysis\n- **[CSS Methodology Comparison](https://www.researchgate.net/publication/344418787_A_Comparative_Study_of_CSS_Frameworks)** - Research paper\n\n### Case Studies\n- **[Netflix Engineering: Tailwind](https://netflixtechblog.com/)**\n- **[Shopify: Adopting Tailwind](https://shopify.engineering/adopting-tailwind-css-shopify)**\n- **[Vercel: Design System](https://ve"
-    },
-    {
-      "id": "refrences.mdx#16",
-      "slug": "refrences.mdx",
-      "text": "rcel.com/blog/design-system-with-tailwind-css)**\n\n---\n\n## This Guide Structure\n\n### Sections Covered\n1. **Introduction** - Overview and philosophy\n2. **Installation** - Setup and configuration\n3. **Basics** - Core concepts and utilities\n4. **Utility-First** - Methodology explanation\n5. **Colors** - Color system and customization\n6. **Spacing** - Margin, padding, and layout\n7. **Typography** - Text styling and fonts\n8. **Responsive Design** - Mobile-first approach\n9. **Components** - Building reusable UI\n10. **Buttons** - Button components and variations\n11. **Cards** - Card components and layo"
-    },
-    {
-      "id": "refrences.mdx#17",
-      "slug": "refrences.mdx",
-      "text": "uts\n12. **Customization** - Configuration and theming\n13. **References** - Resources and further reading\n\n### Format\n- **Markdown Structure** - Organized with clear headings\n- **Code Examples** - Practical, copy-paste ready\n- **Best Practices** - Professional recommendations\n- **Accessibility** - Inclusive design considerations\n- **Performance** - Optimization tips\n\n---\n\n## Quick Reference Links\n\n| Topic | Link |\n|-------|------|\n| **Official Docs** | https://tailwindcss.com/docs |\n| **Playground** | https://play.tailwindcss.com/ |\n| **Cheat Sheet** | https://nerdcave.com/tailwind-cheat-sheet "
-    },
-    {
-      "id": "refrences.mdx#18",
-      "slug": "refrences.mdx",
-      "text": "|\n| **Components** | https://tailwindcomponents.com/ |\n| **Discord** | https://tailwindcss.com/discord |\n| **GitHub** | https://github.com/tailwindlabs/tailwindcss |\n\n---\n\n## License & Legal\n\n- **Tailwind CSS License**: [MIT License](https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE)\n- **Contributor License Agreement**: Required for contributions\n- **Trademark Policy**: Tailwind CSS® is a registered trademark\n\n---\n\n*This reference section provides comprehensive resources for learning, using, and mastering Tailwind CSS. Bookmark these links for quick access during your development"
-    },
-    {
-      "id": "refrences.mdx#19",
-      "slug": "refrences.mdx",
-      "text": " workflow.*"
-    },
-    {
-      "id": "introduction.mdx#0",
-      "slug": "introduction.mdx",
-      "text": "# Introduction to Tailwind CSS\r\n\r\nTailwind CSS is a **utility-first CSS framework** that enables developers to build modern, responsive user interfaces rapidly by applying pre-defined classes directly in HTML. Unlike traditional CSS frameworks, Tailwind emphasizes **atomic, reusable utility classes** rather than pre-styled components. This gives you **full control over design** while keeping your code concise and maintainable.\r\n\r\n---\r\n\r\n## Key Concepts\r\n\r\n### Utility-First Approach\r\n\r\nTraditional CSS often involves writing custom classes and styles:\r\n\r\n```css\r\n.button {\r\n  background-color: bl"
-    },
-    {
-      "id": "introduction.mdx#1",
-      "slug": "introduction.mdx",
-      "text": "ue;\r\n  color: white;\r\n  padding: 0.5rem 1rem;\r\n  border-radius: 0.25rem;\r\n}\r\n````\r\n\r\nWith Tailwind, the same styling can be applied directly using utility classes:\r\n\r\n```html\r\n<button class=\"bg-blue-500 text-white px-4 py-2 rounded\">\r\n  Click Me\r\n</button>\r\n```\r\n\r\nEach class represents a single property, e.g., `bg-blue-500` for background color or `px-4` for horizontal padding.\r\n\r\n---\r\n\r\n### Mobile-First & Responsive Design\r\n\r\nTailwind uses a **mobile-first approach** with built-in responsive breakpoints:\r\n\r\n* `sm` → ≥ 640px\r\n* `md` → ≥ 768px\r\n* `lg` → ≥ 1024px\r\n* `xl` → ≥ 1280px\r\n* `2xl` → ≥ "
-    },
-    {
-      "id": "introduction.mdx#2",
-      "slug": "introduction.mdx",
-      "text": "1536px\r\n\r\nExample:\r\n\r\n```html\r\n<div class=\"bg-blue-500 sm:bg-green-500 md:bg-red-500 p-4\">\r\n  Responsive Box\r\n</div>\r\n```\r\n\r\n* On mobile: blue\r\n* On small screens (`sm`): green\r\n* On medium screens (`md`): red\r\n\r\n---\r\n\r\n### Advantages of Tailwind CSS\r\n\r\n* **Rapid Development:** Build layouts without writing custom CSS.\r\n* **Highly Customizable:** Extend the theme, colors, and utilities via configuration.\r\n* **Consistent Design:** Utility classes enforce consistency across projects.\r\n* **Low Specificity Conflicts:** Atomic classes reduce CSS conflicts and overrides.\r\n* **Responsive & Mobile-Fri"
-    },
-    {
-      "id": "introduction.mdx#3",
-      "slug": "introduction.mdx",
-      "text": "endly:** Built-in breakpoints make responsive design simple.\r\n\r\n---\r\n\r\n### Tailwind CSS vs Traditional CSS\r\n\r\n| Feature            | Traditional CSS        | Tailwind CSS                                      |\r\n| ------------------ | ---------------------- | ------------------------------------------------- |\r\n| Development Speed  | Medium                 | Fast                                              |\r\n| Custom Styling     | CSS files required     | HTML classes                                      |\r\n| Responsive Design  | Media queries manually | Pre-defined breakpoint classes        "
-    },
-    {
-      "id": "introduction.mdx#4",
-      "slug": "introduction.mdx",
-      "text": "            |\r\n| Design Consistency | Manual enforcement     | Built-in utility system                           |\r\n| Learning Curve     | Moderate               | Low for basics, higher for advanced customization |\r\n\r\n---\r\n\r\n### Example: Simple Card Component\r\n\r\n```html\r\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white\">\r\n  <img class=\"w-full\" src=\"https://via.placeholder.com/400x200\" alt=\"Sample Image\">\r\n  <div class=\"px-4 py-2\">\r\n    <h2 class=\"font-bold text-xl mb-2\">Card Title</h2>\r\n    <p class=\"text-gray-700 text-base\">This is a simple card component built with Tailwi"
-    },
-    {
-      "id": "introduction.mdx#5",
-      "slug": "introduction.mdx",
-      "text": "nd CSS.</p>\r\n  </div>\r\n  <div class=\"px-4 pt-4 pb-2\">\r\n    <span class=\"inline-block bg-blue-200 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2\">#tag1</span>\r\n    <span class=\"inline-block bg-blue-200 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold\">#tag2</span>\r\n  </div>\r\n</div>\r\n```\r\n\r\nThis example shows how **utility classes** handle layout, spacing, typography, and colors without writing any custom CSS.\r\n\r\n---\r\n\r\n### Why Choose Tailwind CSS?\r\n\r\nTailwind empowers developers and designers to **create fully custom designs efficiently**. It combines the flexibility "
-    },
-    {
-      "id": "introduction.mdx#6",
-      "slug": "introduction.mdx",
-      "text": "of writing custom CSS with the speed and consistency of pre-defined utilities. Whether building prototypes, dashboards, or full-scale applications, Tailwind reduces CSS bloat and makes maintenance easier.\r\n\r\n---\r\n\r\n### Conclusion\r\n\r\nTailwind CSS is not just another CSS framework; it’s a **tool for creating scalable, maintainable, and responsive designs quickly**. Its utility-first philosophy encourages a new way of thinking about styling—directly in your markup—making it a favorite among modern web developers."
+      "text": "## References\n\n### Main Stuff\n- **Tailwind Docs** – everything is here  \n  https://tailwindcss.com/docs\n- **Tailwind Play** – test ideas fast  \n  https://play.tailwindcss.com\n- **GitHub** – source code and issues  \n  https://github.com/tailwindlabs/tailwindcss\n\n### Components\n- **Headless UI**\n- **DaisyUI**\n- **Flowbite**\n\n### Tools I Use\n- Tailwind IntelliSense (VS Code)\n- Tailwind cheat sheets\n- Tailwind Merge\n\nThat’s it.  \nIf you know the docs and can read utility classes, you’re already good."
     },
     {
       "id": "installation.mdx#0",
@@ -205,7 +25,7 @@
     {
       "id": "installation.mdx#2",
       "slug": "installation.mdx",
-      "text": "<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css\" rel=\"stylesheet\">\n```\n---\n### Frameworks\nTailwind works great with frameworks like these,and the setup is almost the same, you just import the CSS once:\n* Next.js\n* React\n* Vue"
+      "text": "<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css\" rel=\"stylesheet\">\n```"
     },
     {
       "id": "customization.mdx#0",
@@ -580,102 +400,7 @@
     {
       "id": "utilities/buttons.mdx#0",
       "slug": "utilities/buttons.mdx",
-      "text": "# Buttons\n\nButtons are fundamental UI components that users interact with. Tailwind CSS makes it easy to create beautiful, responsive buttons with consistent styling across your application.\n\n---\n\n## 1. Basic Button Styles\n\n### Primary Button\n```html\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rounded\">\n  Primary Button\n</button>\n```\n\n### Secondary Button\n```html\n<button class=\"bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded\">\n  Secondary Button\n</button>\n```\n\n### Outlined Button\n```html\n<button class=\"border border-gray-300 text-gray-700 font-medium py-2 px-4 rounded\">"
-    },
-    {
-      "id": "utilities/buttons.mdx#1",
-      "slug": "utilities/buttons.mdx",
-      "text": "\n  Outlined Button\n</button>\n```\n\n---\n\n## 2. Button States\n\n### Hover States\n```html\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded\">\n  Hover Effect\n</button>\n\n<button class=\"border border-blue-500 text-blue-500 hover:bg-blue-50 font-medium py-2 px-4 rounded\">\n  Hover Outline\n</button>\n```\n\n### Focus States\n```html\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2\">\n  With Focus Ring\n</button>\n```\n\n### Active/Pressed State\n```html\n<button class=\"bg-blue-500 active:bg"
-    },
-    {
-      "id": "utilities/buttons.mdx#2",
-      "slug": "utilities/buttons.mdx",
-      "text": "-blue-700 text-white font-medium py-2 px-4 rounded\">\n  Active State\n</button>\n```\n\n### Disabled State\n```html\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rounded opacity-50 cursor-not-allowed\" disabled>\n  Disabled Button\n</button>\n\n<button class=\"bg-gray-200 text-gray-500 font-medium py-2 px-4 rounded cursor-not-allowed\" disabled>\n  Disabled Secondary\n</button>\n```\n\n---\n\n## 3. Button Sizes\n\n### Small Button\n```html\n<button class=\"bg-blue-500 text-white text-sm font-medium py-1 px-3 rounded\">\n  Small Button\n</button>\n```\n\n### Medium Button (Default)\n```html\n<button class=\"bg-blu"
-    },
-    {
-      "id": "utilities/buttons.mdx#3",
-      "slug": "utilities/buttons.mdx",
-      "text": "e-500 text-white font-medium py-2 px-4 rounded\">\n  Medium Button\n</button>\n```\n\n### Large Button\n```html\n<button class=\"bg-blue-500 text-white text-lg font-medium py-3 px-6 rounded-lg\">\n  Large Button\n</button>\n```\n\n### Full Width Button\n```html\n<button class=\"w-full bg-blue-500 text-white font-medium py-2 px-4 rounded\">\n  Full Width Button\n</button>\n```\n\n### Responsive Button Width\n```html\n<button class=\"w-full sm:w-auto bg-blue-500 text-white font-medium py-2 px-4 rounded\">\n  Responsive Width\n</button>\n```\n\n---\n\n## 4. Button Variants\n\n### Success Button\n```html\n<button class=\"bg-green-500 ho"
-    },
-    {
-      "id": "utilities/buttons.mdx#4",
-      "slug": "utilities/buttons.mdx",
-      "text": "ver:bg-green-600 text-white font-medium py-2 px-4 rounded\">\n  Success\n</button>\n```\n\n### Warning Button\n```html\n<button class=\"bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-4 rounded\">\n  Warning\n</button>\n```\n\n### Danger/Error Button\n```html\n<button class=\"bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded\">\n  Delete\n</button>\n```\n\n### Info Button\n```html\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded\">\n  Info\n</button>\n```\n\n### Dark Button\n```html\n<button class=\"bg-gray-800 hover:bg-gray-900 text-white font-medium py-"
-    },
-    {
-      "id": "utilities/buttons.mdx#5",
-      "slug": "utilities/buttons.mdx",
-      "text": "2 px-4 rounded\">\n  Dark\n</button>\n```\n\n### Light Button\n```html\n<button class=\"bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded\">\n  Light\n</button>\n```\n\n---\n\n## 5. Button with Icons\n\n### Left Icon\n```html\n<button class=\"flex items-center bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded\">\n  <svg class=\"w-4 h-4 mr-2\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\"></path>\n  </svg>\n  Add Item\n</button>\n```\n\n### Right Icon\n```html\n<button class=\"flex it"
-    },
-    {
-      "id": "utilities/buttons.mdx#6",
-      "slug": "utilities/buttons.mdx",
-      "text": "ems-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded\">\n  Continue\n  <svg class=\"w-4 h-4 ml-2\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\"></path>\n  </svg>\n</button>\n```\n\n### Icon Only (Circular)\n```html\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full\">\n  <svg class=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\"></path"
-    },
-    {
-      "id": "utilities/buttons.mdx#7",
-      "slug": "utilities/buttons.mdx",
-      "text": ">\n  </svg>\n</button>\n```\n\n### Icon Only (Square)\n```html\n<button class=\"bg-gray-200 hover:bg-gray-300 text-gray-700 p-2 rounded\">\n  <svg class=\"w-5 h-5\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"></path>\n  </svg>\n</button>\n```\n\n---\n\n## 6. Special Button Styles\n\n### Gradient Button\n```html\n<button class=\"bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-2 px-4 rounded\">\n  Gradient Button\n</button>\n```\n\n### Shadow Button\n```ht"
-    },
-    {
-      "id": "utilities/buttons.mdx#8",
-      "slug": "utilities/buttons.mdx",
-      "text": "ml\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded shadow hover:shadow-lg transition-shadow\">\n  Shadow Button\n</button>\n```\n\n### Rounded Pill Button\n```html\n<button class=\"bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full\">\n  Pill Button\n</button>\n```\n\n### Ghost Button\n```html\n<button class=\"text-blue-500 hover:text-blue-600 hover:bg-blue-50 font-medium py-2 px-4 rounded\">\n  Ghost Button\n</button>\n```\n\n### Loading/Spinner Button\n```html\n<button class=\"flex items-center bg-blue-500 text-white font-medium py-2 px-4 rounded opacity-7"
-    },
-    {
-      "id": "utilities/buttons.mdx#9",
-      "slug": "utilities/buttons.mdx",
-      "text": "5 cursor-not-allowed\">\n  <svg class=\"animate-spin -ml-1 mr-3 h-4 w-4 text-white\" fill=\"none\" viewBox=\"0 0 24 24\">\n    <circle class=\"opacity-25\" cx=\"12\" cy=\"12\" r=\"10\" stroke=\"currentColor\" stroke-width=\"4\"></circle>\n    <path class=\"opacity-75\" fill=\"currentColor\" d=\"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z\"></path>\n  </svg>\n  Processing...\n</button>\n```\n\n---\n\n## 7. Button Groups\n\n### Horizontal Group\n```html\n<div class=\"inline-flex rounded-md shadow-sm\">\n  <button class=\"px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100\">\n    Left\n "
-    },
-    {
-      "id": "utilities/buttons.mdx#10",
-      "slug": "utilities/buttons.mdx",
-      "text": " </button>\n  <button class=\"px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100\">\n    Center\n  </button>\n  <button class=\"px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100\">\n    Right\n  </button>\n</div>\n```\n\n### Vertical Group\n```html\n<div class=\"inline-flex flex-col space-y-2\">\n  <button class=\"px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600\">\n    First\n  </button>\n  <button class=\"px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blu"
-    },
-    {
-      "id": "utilities/buttons.mdx#11",
-      "slug": "utilities/buttons.mdx",
-      "text": "e-600\">\n    Second\n  </button>\n  <button class=\"px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded hover:bg-blue-600\">\n    Third\n  </button>\n</div>\n```\n\n### Segmented Control\n```html\n<div class=\"inline-flex bg-gray-100 p-1 rounded-lg\">\n  <button class=\"px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md\">\n    Monthly\n  </button>\n  <button class=\"px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900\">\n    Yearly\n  </button>\n</div>\n```\n\n---\n\n## 8. Responsive Buttons\n\n### Text Changes on Mobile\n```html\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rou"
-    },
-    {
-      "id": "utilities/buttons.mdx#12",
-      "slug": "utilities/buttons.mdx",
-      "text": "nded\">\n  <span class=\"hidden sm:inline\">Add to Cart</span>\n  <span class=\"sm:hidden\">Add</span>\n</button>\n```\n\n### Icon-Only on Mobile\n```html\n<button class=\"flex items-center bg-blue-500 text-white font-medium py-2 px-4 rounded\">\n  <svg class=\"w-5 h-5 sm:mr-2\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\"></path>\n  </svg>\n  <span class=\"hidden sm:inline\">Add Item</span>\n</button>\n```\n\n---\n\n## 9. Accessibility Considerations\n\n### Properly Labeled Buttons\n```html\n<button aria-label=\"Close modal"
-    },
-    {
-      "id": "utilities/buttons.mdx#13",
-      "slug": "utilities/buttons.mdx",
-      "text": "\" class=\"p-2 rounded hover:bg-gray-100\">\n  <svg class=\"w-5 h-5\">×</svg>\n</button>\n\n<button aria-label=\"Search\" class=\"p-2 rounded hover:bg-gray-100\">\n  <svg class=\"w-5 h-5\">🔍</svg>\n</button>\n```\n\n### Keyboard Navigation\n```html\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-300\">\n  Accessible Button\n</button>\n```\n\n---\n\n## 10. Button Component (React Example)\n\n```jsx\n// Button.jsx\nexport default function Button({\n  children,\n  variant = 'primary',\n  size = 'md',\n  disabled = false,\n  loading = false,\n  icon = null,\n  iconPosition = 'left"
-    },
-    {
-      "id": "utilities/buttons.mdx#14",
-      "slug": "utilities/buttons.mdx",
-      "text": "',\n  className = '',\n  ...props\n}) {\n  const baseClasses = 'font-medium rounded transition-colors focus:outline-none focus:ring-2';\n  \n  const variants = {\n    primary: 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-300',\n    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-300',\n    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-300',\n    danger: 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-300',\n    success: 'bg-green-500 text-white hover:bg-green-600 focus:ring-green-300',\n  };\n  \n  const sizes = {\n    sm: 'text-sm"
-    },
-    {
-      "id": "utilities/buttons.mdx#15",
-      "slug": "utilities/buttons.mdx",
-      "text": " py-1 px-3',\n    md: 'py-2 px-4',\n    lg: 'text-lg py-3 px-6',\n  };\n  \n  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';\n  \n  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${disabledClasses} ${className}`;\n  \n  return (\n    <button className={classes} disabled={disabled || loading} {...props}>\n      {loading ? (\n        <div className=\"flex items-center justify-center\">\n          <svg className=\"animate-spin h-4 w-4 mr-2\" viewBox=\"0 0 24 24\">\n            {/* Spinner SVG */}\n          </svg>\n          Loading...\n        </div>\n      ) : (\n        <"
-    },
-    {
-      "id": "utilities/buttons.mdx#16",
-      "slug": "utilities/buttons.mdx",
-      "text": "div className=\"flex items-center justify-center\">\n          {icon && iconPosition === 'left' && <span className=\"mr-2\">{icon}</span>}\n          {children}\n          {icon && iconPosition === 'right' && <span className=\"ml-2\">{icon}</span>}\n        </div>\n      )}\n    </button>\n  );\n}\n```\n\n**Usage:**\n```jsx\n<Button variant=\"primary\" size=\"lg\">Large Primary</Button>\n<Button variant=\"danger\" loading>Deleting...</Button>\n<Button variant=\"outline\" icon={<Icon />} iconPosition=\"right\">\n  With Icon\n</Button>\n```\n\n---\n\n## 11. Button Best Practices\n\n### Do:\n- Use consistent padding and sizing across bu"
-    },
-    {
-      "id": "utilities/buttons.mdx#17",
-      "slug": "utilities/buttons.mdx",
-      "text": "ttons\n- Maintain sufficient contrast between text and background\n- Include focus states for keyboard navigation\n- Use semantic HTML (`<button>` for actions, `<a>` for navigation)\n- Provide loading states for async actions\n\n### Don't:\n- Use buttons for navigation (use `<a>` tags instead)\n- Make buttons too small on mobile (min 44px touch target)\n- Forget disabled states\n- Overcomplicate with too many variants\n\n---\n\n## 12. Button Utility Classes\n\n| Property | Classes | Example |\n|----------|---------|---------|\n| Background | `bg-{color}-{shade}` | `bg-blue-500` |\n| Text | `text-{color}-{shade}`"
-    },
-    {
-      "id": "utilities/buttons.mdx#18",
-      "slug": "utilities/buttons.mdx",
-      "text": " | `text-white` |\n| Padding | `p-*, px-*, py-*` | `py-2 px-4` |\n| Border | `border, border-{color}` | `border border-gray-300` |\n| Radius | `rounded, rounded-*` | `rounded-lg` |\n| Hover | `hover:bg-*, hover:text-*` | `hover:bg-blue-600` |\n| Focus | `focus:outline-none, focus:ring-*` | `focus:ring-2 focus:ring-blue-300` |\n| Disabled | `opacity-50, cursor-not-allowed` | `opacity-50 cursor-not-allowed` |\n| Transition | `transition-*` | `transition-colors` |\n\n---\n\n## Summary\n\nTailwind makes button styling simple and consistent. Remember to:\n1. **Use semantic HTML** - `<button>` for actions, `<a>` "
-    },
-    {
-      "id": "utilities/buttons.mdx#19",
-      "slug": "utilities/buttons.mdx",
-      "text": "for navigation\n2. **Include all states** - hover, focus, active, disabled\n3. **Ensure accessibility** - proper contrast, focus rings, ARIA labels\n4. **Maintain consistency** - use the same sizing and spacing patterns\n5. **Consider mobile** - adequate touch targets, responsive sizing\n\nButtons are your primary interaction elements - make them clear, accessible, and visually appealing with Tailwind's utility classes."
+      "text": "###Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly."
     }
   ]
 }

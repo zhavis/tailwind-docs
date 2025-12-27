@@ -18,12 +18,6 @@
     "parent": null
   },
   {
-    "id": "docs/introduction.mdx",
-    "name": "introduction.mdx",
-    "type": "file",
-    "parent": null
-  },
-  {
     "id": "docs/refrences.mdx",
     "name": "refrences.mdx",
     "type": "file",

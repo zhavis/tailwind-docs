@@ -12,20 +12,16 @@
     "text": " Installation\nBefore using Tailwind, you need to add it to your project,\nThere are a few ways to do this, but most of the time you’ll use npm, and once installed, you’re ready to start using Tailwind.\n\n Using npm (Recommended)\nThis is the normal way for real projects, First of all, create a project and initialize npm:\n\nbash\nnpm init -y\n\nAfter that, install Tailwind and its helpers:\nbash\nnpm install -D tailwindcss postcss autoprefixer\n\nthen create the configuration files:\nbash\nnpx tailwindcss ini"
   },
   {
-    "slug": "introduction.mdx",
-    "text": " Introduction to Tailwind CSS\r\n\r\nTailwind CSS is a utility-first CSS framework that enables developers to build modern, responsive user interfaces rapidly by applying pre-defined classes directly in HTML. Unlike traditional CSS frameworks, Tailwind emphasizes atomic, reusable utility classes rather than pre-styled components. This gives you full control over design while keeping your code concise and maintainable.\r\n\r\n---\r\n\r\n Key Concepts\r\n\r\n Utility-First Approach\r\n\r\nTraditional CSS often involv"
-  },
-  {
     "slug": "refrences.mdx",
-    "text": " References\n\n Official Documentation & Resources\n\n Core Documentation\n- [Tailwind CSS Official Documentation](https://tailwindcss.com/docs) - Complete API reference and guides\n- [Tailwind CSS v3.0 Docs](https://tailwindcss.com/docs/upgrade-guide) - Latest version documentation\n- [Tailwind Play](https://play.tailwindcss.com/) - Online Tailwind editor and sandbox\n- [Tailwind UI](https://tailwindui.com/) - Official component library (paid)\n- [Headless UI](https://headlessui.dev/) - Unstyled, access"
+    "text": " References\n\n Main Stuff\n- Tailwind Docs – everything is here  \n  https://tailwindcss.com/docs\n- Tailwind Play – test ideas fast  \n  https://play.tailwindcss.com\n- GitHub – source code and issues  \n  https://github.com/tailwindlabs/tailwindcss\n\n Components\n- Headless UI\n- DaisyUI\n- Flowbite\n\n Tools I Use\n- Tailwind IntelliSense (VS Code)\n- Tailwind cheat sheets\n- Tailwind Merge\n\nThat’s it.  \nIf you know the docs and can read utility classes, you’re already good.\n"
   },
   {
     "slug": "responsive-design.mdx",
-    "text": " Responsive Design\n\nTailwind CSS follows a mobile-first approach to responsive design. This means that styles are applied for mobile screens by default, and you can add modifiers for larger screens. The framework provides responsive breakpoints that you can use to adjust your design at different screen sizes.\n\n---\n\n 1. Breakpoints\n\nTailwind comes with five default breakpoints:\n\n| Prefix | Minimum Width | Description |\n|--------|---------------|-------------|\n| sm:  | 640px         | Small screen"
+    "text": " Responsive Design\n\nTailwind is mobile-first.  \nStyles work for mobile by default, and you add breakpoints for bigger screens.\n\n Breakpoints\nthese are useful standard sizes in this framework :\n- sm: 640px\n- md: 768px\n- lg: 1024px\n- xl: 1280px\n\n Example\nThis is a simple responsive layout. On mobile, the boxes stack vertically, and on medium screens and above, they sit side by side.\n\nhtml\n<div class=\"flex flex-col md:flex-row\"\n  <div class=\"w-full md:w-1/2\"One</div\n  <div class=\"w-full md:w-1/2\"Tw"
   },
   {
     "slug": "utilities/buttons.mdx",
-    "text": " Buttons\n\nButtons are fundamental UI components that users interact with. Tailwind CSS makes it easy to create beautiful, responsive buttons with consistent styling across your application.\n\n---\n\n 1. Basic Button Styles\n\n Primary Button\nhtml\n<button class=\"bg-blue-500 text-white font-medium py-2 px-4 rounded\"\n  Primary Button\n</button\n\n\n Secondary Button\nhtml\n<button class=\"bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded\"\n  Secondary Button\n</button\n\n\n Outlined Button\nhtml\n<button class="
+    "text": "Buttons \n\nButtons let users interact with your site. Tailwind makes it easy to style them quickly."
   },
   {
     "slug": "utilities/cards.mdx",
