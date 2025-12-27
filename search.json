@@ -33,10 +33,10 @@
   },
   {
     "slug": "utilities/components.mdx",
-    "text": " Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n For example, a button can be made like this:\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\"\n  Click me\n</button\n\nAnd if you use it a lot, you can even make a class with @ap"
+    "text": " Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n For example, a button can be made like this:\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\"\n  Click me\n</button\nhtml\n<button className=\"bg-blue-500 text-white py-2 px-4"
   },
   {
     "slug": "utilities/typography.mdx",
-    "text": " Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n Font Size\nUse text- to make your text bigger or smaller:\n\n<h1 class=\"text-4xl font-bold\"Big Heading</h1\n<p class=\"text-base text-gray-700\"Normal paragraph</p\n<small class=\"text-sm text-gray-500\"Small text</small\n\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes"
+    "text": " Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n Font Size\nUse text- to make your text bigger or smaller:\nhtml\n<h1 class=\"text-4xl font-bold\"Big Heading</h1\n<p class=\"text-base text-gray-700\"Normal paragraph</p\n<small class=\"text-sm text-gray-500\"Small text</small\n\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl m"
   }
 ]
