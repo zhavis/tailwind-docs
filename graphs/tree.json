@@ -1,11 +1,5 @@
 [
   {
-    "id": "docs/introduction.mdx",
-    "name": "introduction.mdx",
-    "type": "file",
-    "parent": null
-  },
-  {
     "id": "docs/basics.mdx",
     "name": "basics.mdx",
     "type": "file",
@@ -20,6 +14,12 @@
   {
     "id": "docs/installation.mdx",
     "name": "installation.mdx",
+    "type": "file",
+    "parent": null
+  },
+  {
+    "id": "docs/introduction.mdx",
+    "name": "introduction.mdx",
     "type": "file",
     "parent": null
   },
