@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T13:59:41.107Z",
+  "generated_at": "2025-12-27T14:01:27.081Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -225,22 +225,22 @@
     {
       "id": "customization.mdx#0",
       "slug": "customization.mdx",
-      "text": "## Customization\n\n- The core tailwind : \n\n* **Don’t fight the defaults**\n* **Extend instead of replacing**\n* **Keep everything in the config**\n\nI'd mention that, One of the best things about Tailwind is that you can **change it to fit your project**, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n\n---\n\n### The Config File\n\nAll customization happens in one place:\n\n**`tailwind.config.js`**\n\nThis file actually tells Tailwind that : \n- where your files are\n- what colors, fonts, and sizes to use\n- which plugins are enabled\n\nAnd A ve"
+      "text": "## Customization\n- The core tailwind : \n* **Don’t fight the defaults**\n* **Extend instead of replacing**\n* **Keep everything in the config**\nI'd mention that, One of the best things about Tailwind is that you can **change it to fit your project**, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n---\n\n### The Config File\n\nAll customization happens in one place:\n\n**`tailwind.config.js`**\n\nThis file actually tells Tailwind that : \n- where your files are\n- what colors, fonts, and sizes to use\n- which plugins are enabled\n\nAnd A very b"
     },
     {
       "id": "customization.mdx#1",
       "slug": "customization.mdx",
-      "text": "ry basic config looks like this:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n````\n\nMost of the time, you only touch `theme.extend`.\n\n---\n\n### Adding Your Own Colors\n\nInstead of replacing Tailwind’s colors, you usually **extend** them.\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: \"#1E40AF\",\n      },\n    },\n  },\n}\n```\n\nNow you can use that : \n\n```html\n<div class=\"bg-brand text-white p-4\">\n  Brand color box\n</div>\n```\n\n---\n\n### Custom Fonts\n\nYou can also add your own fonts:\n\n```js\nmodule.e"
+      "text": "asic config looks like this:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n````\nMost of the time, you only touch `theme.extend`.\n---\n\n### Adding Your Own Colors\n\nInstead of replacing Tailwind’s colors, you usually **extend** them.\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: \"#1E40AF\",\n      },\n    },\n  },\n}\n```\n\nNow you can use that : \n\n```html\n<div class=\"bg-brand text-white p-4\">\n  Brand color box\n</div>\n```\n\n---\n### Custom Fonts\n\nYou can also add your own fonts:\n\n```js\nmodule.exports "
     },
     {
       "id": "customization.mdx#2",
       "slug": "customization.mdx",
-      "text": "xports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: [\"Inter\", \"system-ui\", \"sans-serif\"],\n      },\n    },\n  },\n}\n```\n\nThen use it normally:\n\n```html\n<p class=\"font-sans\">\n  This uses the custom font\n</p>\n```\n\n---\n\n### Changing Spacing\n\nIf the default spacing isn’t enough, you can add more:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      spacing: {\n        128: \"32rem\",\n      },\n    },\n  },\n}\n```\n\nUsage:\n\n```html\n<div class=\"p-128\">\n  Big padding\n</div>\n```\n\n---\n\n### Plugins\n\nTailwind has official plugins that save time.\n\nFor example:\n\n```js\nplugins: [\n  require(\"@tai"
+      "text": "= {\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: [\"Inter\", \"system-ui\", \"sans-serif\"],\n      },\n    },\n  },\n}\n```\n\nThen use it normally:\n\n```html\n<p class=\"font-sans\">\n  This uses the custom font\n</p>\n```\n\n---\n### Changing Spacing\n\nIf the default spacing isn’t enough, you can add more:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      spacing: {\n        128: \"32rem\",\n      },\n    },\n  },\n}\n```\n\nUsage:\n\n```html\n<div class=\"p-128\">\n  Big padding\n</div>\n```\n\n---\n\n### Plugins\n\nTailwind has official plugins that save time.\n\nFor example:\n\n```js\nplugins: [\n  require(\"@tailwindcss"
     },
     {
       "id": "customization.mdx#3",
       "slug": "customization.mdx",
-      "text": "lwindcss/forms\"),\n  require(\"@tailwindcss/typography\"),\n]\n```\n---\n**As i told before**, it might feel kinda wierd, but once your config is set, writing UI becomes much faster and more consistent."
+      "text": "/forms\"),\n  require(\"@tailwindcss/typography\"),\n]\n```\n---\n**As i told before**, it might feel kinda wierd, but once your config is set, writing UI becomes much faster and more consistent."
     },
     {
       "id": "basics.mdx#0",
