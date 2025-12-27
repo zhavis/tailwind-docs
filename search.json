@@ -25,7 +25,7 @@
   },
   {
     "slug": "utilities/cards.mdx",
-    "text": " Cards in Tailwind\nCards are boxes that hold information like text, images, buttons, or anything, and they are really useful for showing content in a clean and organized way. Tailwind makes it super easy to style them with shadows, rounded corners, and so on .\n\n Basic idea:\nUse a div with bg-white for background, Add rounded for corners and shadow for a little depth, then Use p-4 or p-6 for padding inside.\n\n Example:\n\n<div class=\"bg-white rounded shadow p-6\"\n  <h3 class=\"font-bold text-lg mb-2\"C"
+    "text": " Cards in Tailwind\nCards are boxes that hold information like text, images, buttons, or anything, and they are really useful for showing content in a clean and organized way. Tailwind makes it super easy to style them with shadows, rounded corners, and so on .\n\n Basic idea:\nUse a div with bg-white for background, Add rounded for corners and shadow for a little depth, then Use p-4 or p-6 for padding inside.\n\n Example:\nhtml\n<div class=\"bg-white rounded shadow p-6\"\n  <h3 class=\"font-bold text-lg mb"
   },
   {
     "slug": "utilities/colors.mdx",
