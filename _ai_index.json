@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T13:52:56.043Z",
+  "generated_at": "2025-12-27T13:59:41.107Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -225,157 +225,22 @@
     {
       "id": "customization.mdx#0",
       "slug": "customization.mdx",
-      "text": "# Customization\n\nTailwind CSS is designed to be highly customizable. You can extend or override the default configuration to match your project's design system perfectly. The main configuration file is `tailwind.config.js`.\n\n---\n\n## 1. Basic Configuration File\n\nWhen you run `npx tailwindcss init`, it creates a basic configuration file:\n\n```javascript\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js,jsx,ts,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n```\n\n### Extended Configuration Example:\n```javascript\n/** @type {import('tail"
+      "text": "## Customization\n\n- The core tailwind : \n\n* **Don’t fight the defaults**\n* **Extend instead of replacing**\n* **Keep everything in the config**\n\nI'd mention that, One of the best things about Tailwind is that you can **change it to fit your project**, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n\n---\n\n### The Config File\n\nAll customization happens in one place:\n\n**`tailwind.config.js`**\n\nThis file actually tells Tailwind that : \n- where your files are\n- what colors, fonts, and sizes to use\n- which plugins are enabled\n\nAnd A ve"
     },
     {
       "id": "customization.mdx#1",
       "slug": "customization.mdx",
-      "text": "windcss').Config} */\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js,jsx,ts,tsx}\",\n    \"./public/index.html\",\n  ],\n  darkMode: 'class', // or 'media'\n  theme: {\n    extend: {\n      colors: {\n        brand: {\n          primary: '#1E40AF',\n          secondary: '#DC2626',\n        }\n      },\n      fontFamily: {\n        sans: ['Inter', 'system-ui', 'sans-serif'],\n      },\n    },\n  },\n  plugins: [\n    require('@tailwindcss/forms'),\n    require('@tailwindcss/typography'),\n  ],\n}\n```\n\n---\n\n## 2. Color Customization\n\n### Extending Colors (Recommended)\n```javascript\nmodule.exports = {\n  theme: "
+      "text": "ry basic config looks like this:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n````\n\nMost of the time, you only touch `theme.extend`.\n\n---\n\n### Adding Your Own Colors\n\nInstead of replacing Tailwind’s colors, you usually **extend** them.\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: \"#1E40AF\",\n      },\n    },\n  },\n}\n```\n\nNow you can use that : \n\n```html\n<div class=\"bg-brand text-white p-4\">\n  Brand color box\n</div>\n```\n\n---\n\n### Custom Fonts\n\nYou can also add your own fonts:\n\n```js\nmodule.e"
     },
     {
       "id": "customization.mdx#2",
       "slug": "customization.mdx",
-      "text": "{\n    extend: {\n      colors: {\n        // Add new colors\n        brand: {\n          50: '#f0f9ff',\n          100: '#e0f2fe',\n          200: '#bae6fd',\n          300: '#7dd3fc',\n          400: '#38bdf8',\n          500: '#0ea5e9',\n          600: '#0284c7',\n          700: '#0369a1',\n          800: '#075985',\n          900: '#0c4a6e',\n          950: '#082f49',\n        },\n        // Single custom color\n        'custom-orange': '#FF6B35',\n        // Using CSS variables\n        'primary': 'var(--color-primary)',\n        'secondary': 'var(--color-secondary)',\n      },\n    },\n  },\n}\n```\n\n### Overridin"
+      "text": "xports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: [\"Inter\", \"system-ui\", \"sans-serif\"],\n      },\n    },\n  },\n}\n```\n\nThen use it normally:\n\n```html\n<p class=\"font-sans\">\n  This uses the custom font\n</p>\n```\n\n---\n\n### Changing Spacing\n\nIf the default spacing isn’t enough, you can add more:\n\n```js\nmodule.exports = {\n  theme: {\n    extend: {\n      spacing: {\n        128: \"32rem\",\n      },\n    },\n  },\n}\n```\n\nUsage:\n\n```html\n<div class=\"p-128\">\n  Big padding\n</div>\n```\n\n---\n\n### Plugins\n\nTailwind has official plugins that save time.\n\nFor example:\n\n```js\nplugins: [\n  require(\"@tai"
     },
     {
       "id": "customization.mdx#3",
       "slug": "customization.mdx",
-      "text": "g Colors (Replace Defaults)\n```javascript\nmodule.exports = {\n  theme: {\n    colors: {\n      // Completely replace the default color palette\n      transparent: 'transparent',\n      current: 'currentColor',\n      black: '#000',\n      white: '#fff',\n      gray: {\n        50: '#f9fafb',\n        100: '#f3f4f6',\n        // ... custom gray shades\n      },\n      // Your custom colors\n      primary: {\n        500: '#3B82F6',\n        600: '#2563EB',\n      },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<div class=\"bg-brand-500 text-white p-4\">Brand Color</div>\n<button class=\"bg-custom-orange text-white px-4 py"
-    },
-    {
-      "id": "customization.mdx#4",
-      "slug": "customization.mdx",
-      "text": "-2\">Custom Orange</button>\n```\n\n---\n\n## 3. Typography Customization\n\n### Font Families\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        // Add new font families\n        'display': ['\"SF Pro Display\"', 'system-ui', 'sans-serif'],\n        'body': ['\"Open Sans\"', 'system-ui', 'sans-serif'],\n        'mono': ['\"JetBrains Mono\"', 'monospace'],\n        // Override default sans-serif\n        'sans': ['Inter', 'system-ui', 'sans-serif'],\n      },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<h1 class=\"font-display text-4xl\">Display Font</h1>\n<p class=\"font-body text-base\">"
-    },
-    {
-      "id": "customization.mdx#5",
-      "slug": "customization.mdx",
-      "text": "Body font for paragraphs</p>\n<code class=\"font-mono text-sm\">Code snippets</code>\n```\n\n### Font Sizes\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      fontSize: {\n        // Add custom sizes\n        '2xs': ['0.625rem', { lineHeight: '0.75rem' }],\n        '10xl': ['10rem', { lineHeight: '1' }],\n        // Responsive font size example\n        'fluid': 'clamp(1rem, 5vw, 3rem)',\n      },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<p class=\"text-2xs\">Extra extra small text</p>\n<h1 class=\"text-10xl\">Huge heading</h1>\n<h2 class=\"text-fluid\">Responsive heading</h2>\n```\n\n---\n\n## 4. Spacing Cu"
-    },
-    {
-      "id": "customization.mdx#6",
-      "slug": "customization.mdx",
-      "text": "stomization\n\n### Custom Spacing Scale\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      spacing: {\n        // Add custom spacing values\n        '128': '32rem',\n        '144': '36rem',\n        // Pixel values\n        '18': '4.5rem',\n        '88': '22rem',\n        // Percentage values\n        '1/10': '10%',\n        '9/10': '90%',\n      },\n    },\n  },\n}\n```\n\n### Override Default Spacing\n```javascript\nmodule.exports = {\n  theme: {\n    spacing: {\n      // Completely replace the default spacing scale\n      '0': '0',\n      '1': '0.25rem',\n      '2': '0.5rem',\n      '3': '0.75rem',\n     "
-    },
-    {
-      "id": "customization.mdx#7",
-      "slug": "customization.mdx",
-      "text": " '4': '1rem',\n      '5': '1.25rem',\n      '6': '1.5rem',\n      '8': '2rem',\n      '10': '2.5rem',\n      '12': '3rem',\n      '16': '4rem',\n      '20': '5rem',\n      '24': '6rem',\n      '32': '8rem',\n      '40': '10rem',\n      '48': '12rem',\n      '56': '14rem',\n      '64': '16rem',\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<div class=\"p-128\">Custom padding</div>\n<div class=\"w-1/10\">10% width</div>\n<div class=\"h-88\">88px height</div>\n```\n\n---\n\n## 5. Breakpoints Customization\n\n### Custom Breakpoints\n```javascript\nmodule.exports = {\n  theme: {\n    screens: {\n      // Custom names\n      'phone': '375px"
-    },
-    {
-      "id": "customization.mdx#8",
-      "slug": "customization.mdx",
-      "text": "',\n      'tablet': '768px',\n      'laptop': '1024px',\n      'desktop': '1440px',\n      'tv': '1920px',\n      \n      // Or extend default\n      'xs': '475px',\n      ...defaultTheme.screens,\n    },\n  },\n}\n```\n\n### Mobile-First Breakpoints\n```javascript\nmodule.exports = {\n  theme: {\n    screens: {\n      'sm': '640px',\n      'md': '768px',\n      'lg': '1024px',\n      'xl': '1280px',\n      '2xl': '1536px',\n      // Custom min-width breakpoint\n      'portrait': { 'raw': '(orientation: portrait)' },\n      // Max-width breakpoint\n      'max-lg': { 'max': '1023px' },\n      // Range\n      'tablet-only':"
-    },
-    {
-      "id": "customization.mdx#9",
-      "slug": "customization.mdx",
-      "text": " { 'min': '640px', 'max': '767px' },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<div class=\"phone:hidden tablet:block\">Visible on tablet+</div>\n<div class=\"portrait:flex landscape:hidden\">Only in portrait</div>\n<div class=\"max-lg:hidden\">Hidden on small screens</div>\n```\n\n---\n\n## 6. Customizing Borders & Border Radius\n\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      borderRadius: {\n        // Custom border radius\n        '4xl': '2rem',\n        'full': '9999px',\n        // Named radii\n        'card': '0.75rem',\n        'button': '0.5rem',\n      },\n      borderWidth: {\n        // Cust"
-    },
-    {
-      "id": "customization.mdx#10",
-      "slug": "customization.mdx",
-      "text": "om border widths\n        '3': '3px',\n        '6': '6px',\n        '10': '10px',\n      },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<div class=\"rounded-4xl\">Extra rounded</div>\n<div class=\"border-6 border-blue-500\">Thick border</div>\n<button class=\"rounded-button\">Styled button</button>\n```\n\n---\n\n## 7. Customizing Shadows\n\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      boxShadow: {\n        // Custom shadows\n        'inner-lg': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',\n        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',\n        'glow': '0 0 20p"
-    },
-    {
-      "id": "customization.mdx#11",
-      "slug": "customization.mdx",
-      "text": "x rgba(59, 130, 246, 0.5)',\n        'glow-red': '0 0 20px rgba(239, 68, 68, 0.5)',\n        // Depth shadows\n        'depth-1': '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',\n        'depth-2': '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',\n        'depth-3': '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',\n      },\n    },\n  },\n}\n```\n\n**Usage:**\n```html\n<div class=\"shadow-soft\">Soft shadow</div>\n<div class=\"shadow-glow\">Glowing element</div>\n<button class=\"shadow-depth-2 hover:shadow-depth-3\">Interactive button</button>\n```\n\n---\n\n## 8. Creating Custom Utilities\n"
-    },
-    {
-      "id": "customization.mdx#12",
-      "slug": "customization.mdx",
-      "text": "\n### Using `@layer` Directives\nCreate a CSS file (e.g., `src/styles/tailwind.css`):\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer base {\n  /* Custom base styles */\n  h1 {\n    @apply text-4xl font-bold;\n  }\n  \n  /* CSS Custom Properties */\n  :root {\n    --color-primary: #3B82F6;\n    --color-secondary: #10B981;\n  }\n}\n\n@layer components {\n  /* Custom component classes */\n  .btn-primary {\n    @apply px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg \n           hover:bg-blue-600 focus:outline-none focus:ring-2 \n           focus:ring-blue-300 transition-colors du"
-    },
-    {
-      "id": "customization.mdx#13",
-      "slug": "customization.mdx",
-      "text": "ration-200;\n  }\n  \n  .card {\n    @apply bg-white rounded-xl shadow-lg p-6;\n  }\n  \n  .input-field {\n    @apply w-full px-3 py-2 border border-gray-300 rounded-lg \n           focus:outline-none focus:ring-2 focus:ring-blue-500 \n           focus:border-transparent transition-shadow;\n  }\n}\n\n@layer utilities {\n  /* Custom utility classes */\n  .scrollbar-hide {\n    -ms-overflow-style: none;\n    scrollbar-width: none;\n  }\n  .scrollbar-hide::-webkit-scrollbar {\n    display: none;\n  }\n  \n  .text-shadow {\n    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);\n  }\n  \n  .animate-float {\n    animation: float 3s eas"
-    },
-    {
-      "id": "customization.mdx#14",
-      "slug": "customization.mdx",
-      "text": "e-in-out infinite;\n  }\n  \n  @keyframes float {\n    0%, 100% { transform: translateY(0px); }\n    50% { transform: translateY(-10px); }\n  }\n  \n  /* Responsive utilities */\n  .text-balance {\n    text-wrap: balance;\n  }\n}\n```\n\n### Component Extraction with `@apply`\n```css\n/* Extract common button patterns */\n.btn {\n  @apply inline-flex items-center justify-center font-medium \n         rounded-lg transition-colors focus:outline-none \n         focus:ring-2 focus:ring-offset-2;\n}\n\n.btn-sm {\n  @apply px-3 py-1.5 text-sm;\n}\n\n.btn-md {\n  @apply px-4 py-2;\n}\n\n.btn-lg {\n  @apply px-6 py-3 text-lg;\n}\n\n.btn"
-    },
-    {
-      "id": "customization.mdx#15",
-      "slug": "customization.mdx",
-      "text": "-primary {\n  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;\n}\n\n.btn-secondary {\n  @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;\n}\n```\n\n---\n\n## 9. Dynamic Classes with JavaScript\n\n### React Component with Dynamic Classes\n```jsx\n// Button.jsx\nexport default function Button({ \n  variant = 'primary', \n  size = 'md', \n  isLoading,\n  children,\n  ...props \n}) {\n  const baseClasses = \"font-medium rounded-lg transition-colors focus:outline-none focus:ring-2\";\n  \n  const variants = {\n    primary: \"bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-50"
-    },
-    {
-      "id": "customization.mdx#16",
-      "slug": "customization.mdx",
-      "text": "0\",\n    secondary: \"bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400\",\n    danger: \"bg-red-600 text-white hover:bg-red-700 focus:ring-red-500\",\n  };\n  \n  const sizes = {\n    sm: \"px-3 py-1.5 text-sm\",\n    md: \"px-4 py-2\",\n    lg: \"px-6 py-3 text-lg\",\n  };\n  \n  const loadingClasses = isLoading ? \"opacity-70 cursor-not-allowed\" : \"\";\n  \n  return (\n    <button\n      className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${loadingClasses}`}\n      disabled={isLoading}\n      {...props}\n    >\n      {isLoading ? (\n        <span className=\"flex items-center\">\n          <svg class"
-    },
-    {
-      "id": "customization.mdx#17",
-      "slug": "customization.mdx",
-      "text": "Name=\"animate-spin -ml-1 mr-2 h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\">\n            {/* Spinner SVG */}\n          </svg>\n          Loading...\n        </span>\n      ) : (\n        children\n      )}\n    </button>\n  );\n}\n```\n\n### Vue Component with Dynamic Classes\n```vue\n<template>\n  <button\n    :class=\"[\n      'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2',\n      variantClasses[variant],\n      sizeClasses[size],\n      isLoading ? 'opacity-70 cursor-not-allowed' : ''\n    ]\"\n    :disabled=\"isLoading\"\n  >\n    <slot />\n  </button>\n</template>\n\n<script setup>\nimport { defin"
-    },
-    {
-      "id": "customization.mdx#18",
-      "slug": "customization.mdx",
-      "text": "eProps } from 'vue';\n\nconst props = defineProps({\n  variant: {\n    type: String,\n    default: 'primary',\n    validator: (value) => ['primary', 'secondary', 'danger'].includes(value)\n  },\n  size: {\n    type: String,\n    default: 'md',\n    validator: (value) => ['sm', 'md', 'lg'].includes(value)\n  },\n  isLoading: Boolean\n});\n\nconst variantClasses = {\n  primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',\n  secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400',\n  danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'\n};\n\nconst sizeClasses = "
-    },
-    {
-      "id": "customization.mdx#19",
-      "slug": "customization.mdx",
-      "text": "{\n  sm: 'px-3 py-1.5 text-sm',\n  md: 'px-4 py-2',\n  lg: 'px-6 py-3 text-lg'\n};\n</script>\n```\n\n---\n\n## 10. Using CSS Variables\n\n### Configuring with CSS Variables\n```javascript\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        primary: 'var(--color-primary)',\n        secondary: 'var(--color-secondary)',\n        accent: 'var(--color-accent)',\n      },\n      spacing: {\n        'header': 'var(--header-height)',\n        'sidebar': 'var(--sidebar-width)',\n      },\n    },\n  },\n}\n```\n\n### CSS File with Variables\n```css\n/* styles.css */\n:root {\n  --color-primary:"
-    },
-    {
-      "id": "customization.mdx#20",
-      "slug": "customization.mdx",
-      "text": " #3B82F6;\n  --color-secondary: #10B981;\n  --color-accent: #8B5CF6;\n  --header-height: 64px;\n  --sidebar-width: 280px;\n}\n\n.dark {\n  --color-primary: #60A5FA;\n  --color-secondary: #34D399;\n  --color-accent: #A78BFA;\n}\n```\n\n**Usage:**\n```html\n<div class=\"bg-primary text-white p-4\">Primary color</div>\n<header class=\"h-header\">Header with custom height</header>\n```\n\n---\n\n## 11. Plugin Integration\n\n### Official Plugins\n```bash\nnpm install @tailwindcss/forms @tailwindcss/typography @tailwindcss/aspect-ratio\n```\n\n```javascript\n// tailwind.config.js\nmodule.exports = {\n  plugins: [\n    require('@tailwin"
-    },
-    {
-      "id": "customization.mdx#21",
-      "slug": "customization.mdx",
-      "text": "dcss/forms'),       // Better form styling\n    require('@tailwindcss/typography'),  // Prose styles\n    require('@tailwindcss/aspect-ratio'), // Aspect ratio utilities\n    require('@tailwindcss/line-clamp'),  // Line clamping\n  ],\n}\n```\n\n### Custom Plugin Creation\n```javascript\n// tailwind.config.js\nconst plugin = require('tailwindcss/plugin');\n\nmodule.exports = {\n  plugins: [\n    plugin(function({ addUtilities, addComponents, addBase, theme }) {\n      // Add custom utilities\n      addUtilities({\n        '.scrollbar-hide': {\n          /* Firefox */\n          'scrollbar-width': 'none',\n        "
-    },
-    {
-      "id": "customization.mdx#22",
-      "slug": "customization.mdx",
-      "text": "  /* IE and Edge */\n          '-ms-overflow-style': 'none',\n        },\n        '.scrollbar-hide::-webkit-scrollbar': {\n          display: 'none',\n        },\n        '.text-balance': {\n          'text-wrap': 'balance',\n        },\n      });\n      \n      // Add custom components\n      addComponents({\n        '.btn': {\n          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,\n          borderRadius: theme('borderRadius.md'),\n          fontWeight: theme('fontWeight.medium'),\n        },\n        '.btn-primary': {\n          backgroundColor: theme('colors.blue.600'),\n          color: theme('col"
-    },
-    {
-      "id": "customization.mdx#23",
-      "slug": "customization.mdx",
-      "text": "ors.white'),\n          '&:hover': {\n            backgroundColor: theme('colors.blue.700'),\n          },\n        },\n      });\n      \n      // Add base styles\n      addBase({\n        'h1': {\n          fontSize: theme('fontSize.2xl'),\n          fontWeight: theme('fontWeight.bold'),\n        },\n        'h2': {\n          fontSize: theme('fontSize.xl'),\n          fontWeight: theme('fontWeight.semibold'),\n        },\n      });\n    }),\n  ],\n}\n```\n\n---\n\n## 12. Purge Configuration for Production\n\n```javascript\n// tailwind.config.js\nmodule.exports = {\n  content: [\n    './src/**/*.{html,js,jsx,ts,tsx,vue}',"
-    },
-    {
-      "id": "customization.mdx#24",
-      "slug": "customization.mdx",
-      "text": "\n    './public/**/*.html',\n    // Add all template paths\n  ],\n  safelist: [\n    // Always include these classes\n    'bg-blue-500',\n    'text-red-500',\n    // Pattern matching\n    'bg-(red|green|blue)-(500|600)',\n    'text-(xs|sm|base|lg|xl)',\n    // Dynamic classes\n    'opacity-0',\n    'opacity-50',\n    'opacity-100',\n  ],\n  // Or use blocklist to exclude specific classes\n  blocklist: [\n    'container',\n    'mx-auto',\n  ],\n}\n```\n\n---\n\n## 13. Presets\n\nCreate reusable configuration presets:\n\n```javascript\n// tailwind.preset.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        b"
-    },
-    {
-      "id": "customization.mdx#25",
-      "slug": "customization.mdx",
-      "text": "rand: {\n          primary: '#1E40AF',\n          secondary: '#DC2626',\n        }\n      },\n      fontFamily: {\n        sans: ['Inter', 'system-ui', 'sans-serif'],\n      },\n    },\n  },\n  plugins: [\n    require('@tailwindcss/forms'),\n  ],\n}\n```\n\n**Usage in main config:**\n```javascript\n// tailwind.config.js\nconst preset = require('./tailwind.preset');\n\nmodule.exports = {\n  presets: [preset],\n  content: ['./src/**/*.{html,js}'],\n  theme: {\n    extend: {\n      // Additional customizations\n    },\n  },\n}\n```\n\n---\n\n## 14. JIT Mode Specific Configuration\n\n```javascript\n// tailwind.config.js for JIT mode\n"
-    },
-    {
-      "id": "customization.mdx#26",
-      "slug": "customization.mdx",
-      "text": "module.exports = {\n  mode: 'jit',\n  purge: [\n    './src/**/*.{html,js,jsx,ts,tsx}',\n  ],\n  darkMode: 'class',\n  theme: {\n    extend: {\n      // Customizations here\n    },\n  },\n  variants: {\n    extend: {\n      // Enable variants for JIT\n      opacity: ['disabled'],\n      backgroundColor: ['active'],\n    },\n  },\n}\n```\n\n---\n\n## 15. Best Practices for Customization\n\n### Do:\n1. **Use `extend`** for adding new values instead of overriding\n2. **Create design tokens** for colors, spacing, etc.\n3. **Use meaningful names** for custom values\n4. **Keep custom CSS minimal** - prefer configuration over CSS"
-    },
-    {
-      "id": "customization.mdx#27",
-      "slug": "customization.mdx",
-      "text": "\n5. **Document custom utilities** and components\n6. **Use presets** for multi-project consistency\n\n### Don't:\n1. **Don't override entire sections** unless necessary\n2. **Avoid deep nesting** in configuration\n3. **Don't create too many custom utilities** - use Tailwind's defaults when possible\n4. **Avoid hard-coded values** in custom CSS when they could be in config\n\n### Organization Example:\n```javascript\n// tailwind.config.js\nconst defaultTheme = require('tailwindcss/defaultTheme');\n\nmodule.exports = {\n  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],\n  \n  theme: {\n    // Extend rather than ove"
-    },
-    {
-      "id": "customization.mdx#28",
-      "slug": "customization.mdx",
-      "text": "rride\n    extend: {\n      // Colors\n      colors: {\n        brand: {\n          light: '#f0f9ff',\n          DEFAULT: '#0ea5e9',\n          dark: '#0369a1',\n        },\n      },\n      \n      // Typography\n      fontFamily: {\n        sans: ['Inter var', ...defaultTheme.fontFamily.sans],\n      },\n      \n      // Spacing\n      spacing: {\n        '18': '4.5rem',\n        '128': '32rem',\n      },\n      \n      // Animations\n      animation: {\n        'bounce-slow': 'bounce 2s infinite',\n        'spin-slow': 'spin 3s linear infinite',\n      },\n    },\n  },\n  \n  // Variants\n  variants: {\n    extend: {\n     "
-    },
-    {
-      "id": "customization.mdx#29",
-      "slug": "customization.mdx",
-      "text": " opacity: ['disabled'],\n      scale: ['active'],\n    },\n  },\n  \n  // Plugins\n  plugins: [\n    require('@tailwindcss/forms'),\n    // Custom plugin\n    function({ addUtilities }) {\n      addUtilities({\n        '.text-shadow': {\n          'text-shadow': '2px 2px 4px rgba(0,0,0,0.1)',\n        },\n      });\n    },\n  ],\n};\n```\n\n---\n\n## Summary\n\nTailwind CSS customization allows you to:\n\n1. **Extend the default theme** with your design tokens\n2. **Create custom utilities** and components\n3. **Integrate with CSS variables** for dynamic theming\n4. **Build reusable configuration presets**\n5. **Add plugin"
-    },
-    {
-      "id": "customization.mdx#30",
-      "slug": "customization.mdx",
-      "text": "s** for extended functionality\n\nThe key is to leverage Tailwind's configuration system rather than writing custom CSS. This maintains consistency, improves performance, and makes your design system more maintainable.\n\n**Remember:** Tailwind is designed to be customized. Don't be afraid to adapt it to your project's needs while maintaining the utility-first philosophy."
+      "text": "lwindcss/forms\"),\n  require(\"@tailwindcss/typography\"),\n]\n```\n---\n**As i told before**, it might feel kinda wierd, but once your config is set, writing UI becomes much faster and more consistent."
     },
     {
       "id": "basics.mdx#0",

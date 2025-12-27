@@ -5,7 +5,7 @@
   },
   {
     "slug": "customization.mdx",
-    "text": " Customization\n\nTailwind CSS is designed to be highly customizable. You can extend or override the default configuration to match your project's design system perfectly. The main configuration file is tailwind.config.js.\n\n---\n\n 1. Basic Configuration File\n\nWhen you run npx tailwindcss init, it creates a basic configuration file:\n\njavascript\n/ @type {import('tailwindcss').Config} /\nmodule.exports = {\n  content: [\n    \"./src//.{html,js,jsx,ts,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: "
+    "text": " Customization\n\n- The core tailwind : \n\n Don’t fight the defaults\n Extend instead of replacing\n Keep everything in the config\n\nI'd mention that, One of the best things about Tailwind is that you can change it to fit your project, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n\n---\n\n The Config File\n\nAll customization happens in one place:\n\ntailwind.config.js\n\nThis file actually tells Tailwind that : \n- where your files are\n- what"
   },
   {
     "slug": "installation.mdx",
