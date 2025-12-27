@@ -2,26 +2,40 @@
 
 Colors in Tailwind are super handy, you can use them for backgrounds, text, borders, and stuff, it already has lots of colors with names and numbers like blue-500 or red-200, so you don’t have to pick hex codes yourself. We have numbers that just show how light or dark the color is, which It makes your site look nice and consistent without much effort.
 
+bg-* → background
+
+text-* → text
+
+border-* → borders
+
+hover:, focus: → states
+
+*-opacity-* → transparency
+
 ### Background colors:
-<div class="bg-blue-500 text-white p-4">Blue background</div>
-<div class="bg-red-200 text-red-800 p-4">Light red background</div>
+<div className="bg-blue-500 text-white p-4">Blue background</div>
+<div className="bg-red-200 text-red-800 p-4">Light red background</div>
 
 ### Text colors:
-<p class="text-gray-800">Dark gray text</p>
-<p class="text-yellow-500">Yellow text</p>
 
+<p className="text-gray-800">Dark gray text</p>
+```html
+<p className="text-gray-800">Dark gray text</p>
+<p className="text-yellow-500">Yellow text</p>
+```html
+<p className="text-yellow-500">Yellow text</p>
 ### Borders:
-<div class="border-2 border-green-500 p-4">Green border</div>
+<div className="border-2 border-green-500 p-4">Green border</div>
 
 ### Hover and focus:
-<button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+<button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
   Hover me
 </button>
-<input class="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded">
+<input className="border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 p-2 rounded">
 
 ### Opacity:
-<div class="bg-blue-500 bg-opacity-50 text-white p-4">50% transparent</div>
-<p class="text-black text-opacity-70">70% opacity text</p>
+<div className="bg-blue-500 bg-opacity-50 text-white p-4">50% transparent</div>
+<p className="text-black text-opacity-70">70% opacity text</p>
 
 ### Custom colors, which we talked about previously : 
 // tailwind.config.js
@@ -36,14 +50,3 @@ module.exports = {
   },
 };
 
-<div class="bg-brandBlue text-white p-4">Brand Blue</div>
-
-bg-* → background
-
-text-* → text
-
-border-* → borders
-
-hover:, focus: → states
-
-*-opacity-* → transparency
