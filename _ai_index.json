@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T14:10:30.650Z",
+  "generated_at": "2025-12-27T14:14:30.809Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -195,17 +195,17 @@
     {
       "id": "installation.mdx#0",
       "slug": "installation.mdx",
-      "text": "## Installation\nBefore using Tailwind, you need to **add it to your project**,\nThere are a few ways to do this, but most of the time you’ll use **npm**, and once installed, you’re ready to start using Tailwind.\n\n### Using npm (Recommended)\nThis is the normal way for real projects.\n\nFirst of all, create a project and initialize npm:\n\n```bash\nnpm init -y\n````\nAfter that, install Tailwind and its helpers:\n```bash\nnpm install -D tailwindcss postcss autoprefixer\n```\nthen create the configuration files:\n```bash\nnpx tailwindcss init -p\n```\nIt gives you:\n* `tailwind.config.js`\n* `postcss.config.js`\n--"
+      "text": "## Installation\nBefore using Tailwind, you need to **add it to your project**,\nThere are a few ways to do this, but most of the time you’ll use **npm**, and once installed, you’re ready to start using Tailwind.\n\n### Using npm (Recommended)\nThis is the normal way for real projects, First of all, create a project and initialize npm:\n\n```bash\nnpm init -y\n````\nAfter that, install Tailwind and its helpers:\n```bash\nnpm install -D tailwindcss postcss autoprefixer\n```\nthen create the configuration files:\n```bash\nnpx tailwindcss init -p\n```\nIt gives you:\n* `tailwind.config.js`\n* `postcss.config.js`\n---"
     },
     {
       "id": "installation.mdx#1",
       "slug": "installation.mdx",
-      "text": "-\n### Tell Tailwind Where Your Files Are\nOpen `tailwind.config.js` and add your file paths,this lets Tailwind remove unused styles.:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n```\n---\n### Add Tailwind to CSS\nCreate a CSS file (for example `src/styles.css`) and add this,that’s all Tailwind needs:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n---\n### Using CDN (Quick)\nIf you just want to **try Tailwind quickly**, you can use its CDN,this is fine for demos, but **not good for real projects**:\n```html"
+      "text": "\n### Tell Tailwind Where Your Files Are\nOpen `tailwind.config.js` and add your file paths,this lets Tailwind remove unused styles.:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n```\n---\n### Add Tailwind to CSS\nCreate a CSS file (for example `src/styles.css`) and add this,that’s all Tailwind needs:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n---\n### Using CDN (Quick)\nIf you just want to **try Tailwind quickly**, you can use its CDN,this is fine for demos, but **not good for real projects**:\n```html\n"
     },
     {
       "id": "installation.mdx#2",
       "slug": "installation.mdx",
-      "text": "\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css\" rel=\"stylesheet\">\n```\n---\n### Frameworks\nTailwind works great with frameworks like these,and the setup is almost the same, you just import the CSS once:\n* Next.js\n* React\n* Vue"
+      "text": "<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css\" rel=\"stylesheet\">\n```\n---\n### Frameworks\nTailwind works great with frameworks like these,and the setup is almost the same, you just import the CSS once:\n* Next.js\n* React\n* Vue"
     },
     {
       "id": "customization.mdx#0",

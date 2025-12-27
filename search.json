@@ -9,7 +9,7 @@
   },
   {
     "slug": "installation.mdx",
-    "text": " Installation\nBefore using Tailwind, you need to add it to your project,\nThere are a few ways to do this, but most of the time you’ll use npm, and once installed, you’re ready to start using Tailwind.\n\n Using npm (Recommended)\nThis is the normal way for real projects.\n\nFirst of all, create a project and initialize npm:\n\nbash\nnpm init -y\n\nAfter that, install Tailwind and its helpers:\nbash\nnpm install -D tailwindcss postcss autoprefixer\n\nthen create the configuration files:\nbash\nnpx tailwindcss in"
+    "text": " Installation\nBefore using Tailwind, you need to add it to your project,\nThere are a few ways to do this, but most of the time you’ll use npm, and once installed, you’re ready to start using Tailwind.\n\n Using npm (Recommended)\nThis is the normal way for real projects, First of all, create a project and initialize npm:\n\nbash\nnpm init -y\n\nAfter that, install Tailwind and its helpers:\nbash\nnpm install -D tailwindcss postcss autoprefixer\n\nthen create the configuration files:\nbash\nnpx tailwindcss ini"
   },
   {
     "slug": "introduction.mdx",
