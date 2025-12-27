@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T08:39:32.380Z",
+  "generated_at": "2025-12-27T13:52:56.043Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -380,42 +380,12 @@
     {
       "id": "basics.mdx#0",
       "slug": "basics.mdx",
-      "text": "# Tailwind Basics\n\nTailwind CSS is built around the concept of **utility-first classes**, where each class applies a single CSS property. Understanding the core utilities is essential to building layouts quickly and efficiently.\n\n---\n\n## 1. Utility-First Concept\n\nInstead of writing custom CSS for every element:\n\n```css\n.button {\n  background-color: blue;\n  color: white;\n  padding: 0.5rem 1rem;\n  border-radius: 0.25rem;\n}\n```\n[Start utility first concept](https://docs-hubb.netlify.app/docs/utilities/start)\n\nTailwind allows you to apply styles directly using classes:\n\n```html\n<button class=\"bg-b"
+      "text": "## Tailwind Basics\n\nTailwind CSS works very differently from normal CSS and Instead of writing CSS files and class names, you style elements **directly in HTML** using small utility classes.\n\nAt first this looks messy, but it actually makes things faster and easier once you get used to it.\n\n---\n\n### Utility Classes\n\nEach Tailwind class usually does **one thing**.\n\nFor example:\n\n- `bg-blue-500` → background color  \n- `text-white` → text color  \n- `p-4` → padding  \n- `rounded` → border radius  \n\nYou don’t create custom class names, just combine small classes to get the style you want.\n\n---\n\n### "
     },
     {
       "id": "basics.mdx#1",
       "slug": "basics.mdx",
-      "text": "lue-500 text-white px-4 py-2 rounded\">\n  Click Me\n</button>\n```\n\nEach class corresponds to **one property**:\n\n- `bg-blue-500` → background color\n- `text-white` → text color\n- `px-4` → horizontal padding\n- `py-2` → vertical padding\n- `rounded` → border radius\n\n---\n\n## 2. Colors\n\nTailwind provides a **built-in color palette** that covers shades for backgrounds, text, borders, and more.\n\n### Examples:\n\n```html\n<div class=\"bg-red-500 text-white p-4 mb-2\">Red Background</div>\n<div class=\"bg-green-200 text-green-800 p-4 mb-2\">Light Green</div>\n<div class=\"text-blue-600\">Blue Text</div>\n```\n\n- `bg-*`"
-    },
-    {
-      "id": "basics.mdx#2",
-      "slug": "basics.mdx",
-      "text": " → background color\n- `text-*` → text color\n- `border-*` → border color\n\nYou can customize the colors in `tailwind.config.js`.\n\n---\n\n## 3. Spacing (Margin & Padding)\n\nTailwind uses a **spacing scale** (`0, 1, 2, 3, 4…`) representing multiples of `0.25rem` by default.\n\n### Margin and Padding\n\n```html\n<div class=\"m-4 p-6 bg-gray-200\">Box with spacing</div>\n```\n\n- `m-4` → margin on all sides\n- `mt-2` → margin-top\n- `mb-6` → margin-bottom\n- `px-4` → padding-left & padding-right\n- `py-2` → padding-top & padding-bottom\n\n### Negative Margin\n\n```html\n<div class=\"mt-[-10px]\">Negative margin example</di"
-    },
-    {
-      "id": "basics.mdx#3",
-      "slug": "basics.mdx",
-      "text": "v>\n```\n\n---\n\n## 4. Typography\n\nTailwind provides utilities for **font size, weight, line height, and text alignment**:\n\n```html\n<h1 class=\"text-4xl font-bold mb-4\">Heading 1</h1>\n<p class=\"text-base text-gray-700 leading-relaxed\">\n  This is a paragraph styled with Tailwind typography utilities.\n</p>\n```\n\n- `text-*` → font size\n- `font-bold`, `font-medium`, `font-light` → font weight\n- `leading-*` → line height\n- `text-center`, `text-left`, `text-right` → alignment\n\n---\n\n## 5. Borders and Rounded Corners\n\nAdd borders and radius with:\n\n```html\n<div class=\"border border-gray-300 rounded-lg p-4\">\n"
-    },
-    {
-      "id": "basics.mdx#4",
-      "slug": "basics.mdx",
-      "text": "  Box with border and rounded corners\n</div>\n```\n\n- `border` → adds border\n- `border-gray-300` → sets border color\n- `rounded` → default border radius\n- `rounded-sm`, `rounded-md`, `rounded-lg`, `rounded-full` → custom radius\n\n---\n\n## 6. Shadows\n\nTailwind provides several shadow utilities:\n\n```html\n<div class=\"shadow-sm p-4 mb-2\">Small shadow</div>\n<div class=\"shadow-md p-4 mb-2\">Medium shadow</div>\n<div class=\"shadow-lg p-4\">Large shadow</div>\n```\n\n- `shadow` → default shadow\n- `shadow-sm`, `shadow-md`, `shadow-lg`, `shadow-xl`, `shadow-2xl` → different shadow sizes\n- `shadow-none` → removes "
-    },
-    {
-      "id": "basics.mdx#5",
-      "slug": "basics.mdx",
-      "text": "shadow\n\n---\n\n## 7. Widths, Heights, and Max Sizes\n\n```html\n<div class=\"w-64 h-32 bg-blue-200\">Fixed width and height</div>\n<div class=\"max-w-sm p-4 bg-gray-100\">Max width example</div>\n```\n\n- `w-*` → width\n- `h-*` → height\n- `max-w-*`, `min-w-*` → max/min width\n- `max-h-*`, `min-h-*` → max/min height\n\n---\n\n## 8. Display and Flex Utilities\n\nTailwind provides classes for **layout control**:\n\n```html\n<div class=\"flex items-center justify-between p-4 bg-gray-100\">\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</div>\n```\n\n- `flex` → display flex\n- `grid` → display grid\n- `items-center"
-    },
-    {
-      "id": "basics.mdx#6",
-      "slug": "basics.mdx",
-      "text": "` → vertical alignment\n- `justify-between` → horizontal distribution\n\n---\n\n## 9. Example: Simple Card Component\n\n```html\n<div class=\"max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white\">\n  <img class=\"w-full\" src=\"https://via.placeholder.com/400x200\" alt=\"Sample Image\">\n  <div class=\"px-4 py-2\">\n    <h2 class=\"font-bold text-xl mb-2\">Card Title</h2>\n    <p class=\"text-gray-700 text-base\">This is a simple card component using Tailwind utilities.</p>\n  </div>\n</div>\n```\n\nThis shows how **spacing, typography, borders, and shadows** can be applied with simple classes.\n\n---\n\nTailwind basics cov"
-    },
-    {
-      "id": "basics.mdx#7",
-      "slug": "basics.mdx",
-      "text": "er **utilities for spacing, color, typography, layout, and shadows**. Mastering these will allow you to build most UI components without writing custom CSS."
+      "text": "Why It's Useful\n\nWith normal CSS:\n\n- You can easily jump between HTML and CSS files\n- You create class names\n- You forget what styles are applied\n\nWith Tailwind:\n\n- Everything is visible in one place\n- No naming problems\n- Changes are so fast\n\n---\n\n### It Feels Weird\n\nSeeing many classes on one element looks ugly at first, But after some practice, your brain starts reading them like a sentence, And you stop fighting CSS.\n\n---\n\nIn the **next section**, we’ll use these basic utilities to control spacing and layout."
     },
     {
       "id": "utilities/typography.mdx#0",

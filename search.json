@@ -1,7 +1,7 @@
 [
   {
     "slug": "basics.mdx",
-    "text": " Tailwind Basics\n\nTailwind CSS is built around the concept of utility-first classes, where each class applies a single CSS property. Understanding the core utilities is essential to building layouts quickly and efficiently.\n\n---\n\n 1. Utility-First Concept\n\nInstead of writing custom CSS for every element:\n\ncss\n.button {\n  background-color: blue;\n  color: white;\n  padding: 0.5rem 1rem;\n  border-radius: 0.25rem;\n}\n\n[Start utility first concept](https://docs-hubb.netlify.app/docs/utilities/start)\n\nT"
+    "text": " Tailwind Basics\n\nTailwind CSS works very differently from normal CSS and Instead of writing CSS files and class names, you style elements directly in HTML using small utility classes.\n\nAt first this looks messy, but it actually makes things faster and easier once you get used to it.\n\n---\n\n Utility Classes\n\nEach Tailwind class usually does one thing.\n\nFor example:\n\n- bg-blue-500 → background color  \n- text-white → text color  \n- p-4 → padding  \n- rounded → border radius  \n\nYou don’t create custo"
   },
   {
     "slug": "customization.mdx",
