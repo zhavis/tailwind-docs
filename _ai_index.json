@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T14:03:17.670Z",
+  "generated_at": "2025-12-27T14:10:30.650Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -195,32 +195,17 @@
     {
       "id": "installation.mdx#0",
       "slug": "installation.mdx",
-      "text": "# Installation\n\nTailwind CSS can be installed in multiple ways depending on your project type: via **npm** (recommended), **CDN** (quick prototyping), or using **CLI tools**.\n\n---\n\n## 1. Using npm (Recommended for Projects)\n\nThis is the recommended method for modern projects because it allows full customization and integration with build tools.\n\n### Step 1: Initialize your project\n```bash\n# Create a new project folder and initialize npm\nmkdir my-project\ncd my-project\nnpm init -y\n```\n\n### Step 2: Install Tailwind CSS and its dependencies\n```bash\nnpm install -D tailwindcss postcss autoprefixer\n`"
+      "text": "## Installation\nBefore using Tailwind, you need to **add it to your project**,\nThere are a few ways to do this, but most of the time you’ll use **npm**, and once installed, you’re ready to start using Tailwind.\n\n### Using npm (Recommended)\nThis is the normal way for real projects.\n\nFirst of all, create a project and initialize npm:\n\n```bash\nnpm init -y\n````\nAfter that, install Tailwind and its helpers:\n```bash\nnpm install -D tailwindcss postcss autoprefixer\n```\nthen create the configuration files:\n```bash\nnpx tailwindcss init -p\n```\nIt gives you:\n* `tailwind.config.js`\n* `postcss.config.js`\n--"
     },
     {
       "id": "installation.mdx#1",
       "slug": "installation.mdx",
-      "text": "``\n\n### Step 3: Generate configuration files\n```bash\nnpx tailwindcss init -p\n```\n\nThis will create two files:\n- `tailwind.config.js` → Tailwind configuration\n- `postcss.config.js` → PostCSS configuration\n\n### Step 4: Configure Tailwind to remove unused CSS\nEdit `tailwind.config.js` to specify your template paths:\n```js\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    \"./src/**/*.{html,js,ts,jsx,tsx}\", // adjust to your project structure\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n};\n```\n\n### Step 5: Include Tailwind in your CSS\nCreate a CSS file (e.g., `s"
+      "text": "-\n### Tell Tailwind Where Your Files Are\nOpen `tailwind.config.js` and add your file paths,this lets Tailwind remove unused styles.:\n\n```js\nmodule.exports = {\n  content: [\"./src/**/*.{html,js,tsx}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n```\n---\n### Add Tailwind to CSS\nCreate a CSS file (for example `src/styles.css`) and add this,that’s all Tailwind needs:\n\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n---\n### Using CDN (Quick)\nIf you just want to **try Tailwind quickly**, you can use its CDN,this is fine for demos, but **not good for real projects**:\n```html"
     },
     {
       "id": "installation.mdx#2",
       "slug": "installation.mdx",
-      "text": "rc/styles.css`) and add:\n```css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n```\n\n### Step 6: Build your CSS\nAdd a build script in `package.json`:\n```json\n\"scripts\": {\n  \"build:css\": \"tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch\"\n}\n```\nThen run:\n```bash\nnpm run build:css\n```\nInclude the generated CSS in your HTML:\n```html\n<link href=\"./dist/styles.css\" rel=\"stylesheet\">\n```\n\n---\n\n## 2. Using CDN (Quick Prototyping)\n\nFor small projects or quick testing, you can use the Tailwind CDN without installing npm packages:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  "
-    },
-    {
-      "id": "installation.mdx#3",
-      "slug": "installation.mdx",
-      "text": "<meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Tailwind CDN Example</title>\n  <link href=\"https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n  <div class=\"bg-blue-500 text-white p-4\">\n    Hello, Tailwind!\n  </div>\n</body>\n</html>\n```\n\n**Note:** Using CDN is convenient but **not recommended for production**, as it prevents purging unused CSS and reduces performance optimization.\n\n---\n\n## 3. Using Tailwind CLI\n\nYou can also use Tailwind's standalone CLI tool for quick builds without a fu"
-    },
-    {
-      "id": "installation.mdx#4",
-      "slug": "installation.mdx",
-      "text": "ll Node.js setup:\n\n```bash\n# Install globally (optional)\nnpm install -g tailwindcss\n\n# Initialize Tailwind config\ntailwindcss init\n\n# Build CSS\ntailwindcss -i ./src/input.css -o ./dist/output.css --watch\n```\n\n---\n\n## 4. Integrating with Frameworks\n\nTailwind integrates easily with popular frameworks:\n\n### **Next.js**\n- Create a new Next.js project\n- Install Tailwind\n- Configure `tailwind.config.js` and import CSS in `pages/_app.js`\n\n### **React**\n- Install Tailwind via npm\n- Import Tailwind CSS in `index.js` or `App.js`\n\n### **Vue, Angular, Laravel, etc.**\n- Tailwind provides official guides fo"
-    },
-    {
-      "id": "installation.mdx#5",
-      "slug": "installation.mdx",
-      "text": "r framework integration: [Tailwind Docs](https://tailwindcss.com/docs/installation)\n\n---\n\n## Summary\n\n- **npm setup:** Recommended for real projects and full customization.\n- **CDN:** Quick testing or small prototypes.\n- **CLI:** Lightweight build tool without full Node.js project.\n- **Framework integration:** Tailwind works seamlessly with modern web frameworks."
+      "text": "\n<link href=\"https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css\" rel=\"stylesheet\">\n```\n---\n### Frameworks\nTailwind works great with frameworks like these,and the setup is almost the same, you just import the CSS once:\n* Next.js\n* React\n* Vue"
     },
     {
       "id": "customization.mdx#0",

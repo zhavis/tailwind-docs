@@ -9,7 +9,7 @@
   },
   {
     "slug": "installation.mdx",
-    "text": " Installation\n\nTailwind CSS can be installed in multiple ways depending on your project type: via npm (recommended), CDN (quick prototyping), or using CLI tools.\n\n---\n\n 1. Using npm (Recommended for Projects)\n\nThis is the recommended method for modern projects because it allows full customization and integration with build tools.\n\n Step 1: Initialize your project\nbash\n Create a new project folder and initialize npm\nmkdir my-project\ncd my-project\nnpm init -y\n\n\n Step 2: Install Tailwind CSS and it"
+    "text": " Installation\nBefore using Tailwind, you need to add it to your project,\nThere are a few ways to do this, but most of the time you’ll use npm, and once installed, you’re ready to start using Tailwind.\n\n Using npm (Recommended)\nThis is the normal way for real projects.\n\nFirst of all, create a project and initialize npm:\n\nbash\nnpm init -y\n\nAfter that, install Tailwind and its helpers:\nbash\nnpm install -D tailwindcss postcss autoprefixer\n\nthen create the configuration files:\nbash\nnpx tailwindcss in"
   },
   {
     "slug": "introduction.mdx",
