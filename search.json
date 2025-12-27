@@ -5,7 +5,7 @@
   },
   {
     "slug": "customization.mdx",
-    "text": " Customization\n- The core tailwind : \n Don’t fight the defaults\n Extend instead of replacing\n Keep everything in the config\nI'd mention that, One of the best things about Tailwind is that you can change it to fit your project, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n---\n\n The Config File\n\nAll customization happens in one place:\n\ntailwind.config.js\n\nThis file actually tells Tailwind that : \n- where your files are\n- what col"
+    "text": " Customization\n Don’t fight the defaults\n Extend instead of replacing\n Keep everything in the config\nI'd mention that, One of the best things about Tailwind is that you can change it to fit your project, and you don’t have to use the default colors, fonts, or spacing forever, cause Tailwind is made to be customized.\n---\n\n The Config File\nAll customization happens in one place:\ntailwind.config.js\nThis file actually tells Tailwind that : \n- where your files are\n- what colors, fonts, and sizes to u"
   },
   {
     "slug": "installation.mdx",
