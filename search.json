@@ -33,7 +33,7 @@
   },
   {
     "slug": "utilities/components.mdx",
-    "text": " Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n For example, a button can be made like this:\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\"\n  Click me\n</button\nhtml\n<button className=\"bg-blue-500 text-white py-2 px-4"
+    "text": " Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n For example, a button can be made like this:\n<button className=\"inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\"\n  Click me\n</button\n\nhtml\n<button className=\"bg-blue-500 text-w"
   },
   {
     "slug": "utilities/typography.mdx",

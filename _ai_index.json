@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T17:02:09.644Z",
+  "generated_at": "2025-12-27T17:10:03.656Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -75,12 +75,12 @@
     {
       "id": "utilities/components.mdx#0",
       "slug": "utilities/components.mdx",
-      "text": "# Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n### For example, a button can be made like this:\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n```html\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n```\n\nAnd if you use it a lot, you can eve"
+      "text": "# Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n### For example, a button can be made like this:\n<button className=\"inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n\n```html\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n```\n\nAnd if you use it a lo"
     },
     {
       "id": "utilities/components.mdx#1",
       "slug": "utilities/components.mdx",
-      "text": "n make a class with @apply so you don’t have to write all the utilities every time.\n\nYou can also use ready-made libraries built for Tailwind as i mentioned before in References : [my cool site][http://localhost:3000/docs/responsive-design]"
+      "text": "t, you can even make a class with @apply so you don’t have to write all the utilities every time.\n\nYou can also use ready-made libraries built for Tailwind as i mentioned before in [References](http://localhost:3000/docs/responsive-design)"
     },
     {
       "id": "utilities/colors.mdx#0",
