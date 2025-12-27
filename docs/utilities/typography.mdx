@@ -1,38 +1,53 @@
 # Typography
 
-Typography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.
+Typography is just how you make your text look nice how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any CSS; just put the right classes on your text and it works.
 
 ### Font Size
-Use text-* to make your text bigger or smaller:
+Use `text-*` to make your text bigger or smaller:
+
 ```html
 <h1 className="text-4xl font-bold">Big Heading</h1>
 <p className="text-base text-gray-700">Normal paragraph</p>
 <small className="text-sm text-gray-500">Small text</small>
-```
-```html
-text-xs makes tiny
-text-base makes normal
-text-4xl makes really big
-```
+````
+
+Examples of sizes:
+
+* `text-xs` makes tiny text
+* `text-base` makes normal text
+* `text-4xl` makes really big text
+
 ### Font Weight
-Use font-* to make text bold or light:
+
+Use `font-*` to make text bold or light:
+
 ```html
 <p className="font-light">Light</p>
 <p className="font-bold">Bold</p>
 ```
+
 ### Line Height
-Use leading-** to control spacing between lines:
+
+Use `leading-*` to control spacing between lines:
+
 ```html
 <p className="leading-relaxed">Lines are more spaced out</p>
 <p className="leading-tight">Lines are closer together</p>
 ```
-Use text-(color)-(shade) to change text color:
+
+### Text Color
+
+Use `text-(color)-(shade)` to change text color:
+
 ```html
 <p className="text-blue-500">Blue text</p>
 <p className="text-gray-800">Dark gray text</p>
 ```
-uppercase, lowercase, capitalize to change the case
 
-italic or not-italic to make text italic or normal
+### Other Text Styles
+
+* `uppercase`, `lowercase`, `capitalize` → change text case
+* `italic`, `not-italic` → make text italic or normal
 
 Basically, all the **Tailwind classes** are just making it **look nice without writing CSS**.
+
