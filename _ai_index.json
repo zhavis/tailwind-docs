@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2025-12-27T16:54:35.263Z",
+  "generated_at": "2025-12-27T16:56:52.019Z",
   "docs": [
     {
       "id": "responsive-design.mdx#0",
@@ -60,22 +60,27 @@
     {
       "id": "utilities/typography.mdx#0",
       "slug": "utilities/typography.mdx",
-      "text": "# Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n### Font Size\nUse text-* to make your text bigger or smaller:\n\n<h1 class=\"text-4xl font-bold\">Big Heading</h1>\n<p class=\"text-base text-gray-700\">Normal paragraph</p>\n<small class=\"text-sm text-gray-500\">Small text</small>\n\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes really big\n\n### Font Weight\nUse font-* to make text bold or light:\n\n<p class=\"font-light"
+      "text": "# Typography\n\nTypography is just how you make your text look nice—like how big it is, how bold, where it’s aligned, and so on. The fun thing is that you don’t have to write any css put the right classes on your text and it works.\n\n### Font Size\nUse text-* to make your text bigger or smaller:\n```html\n<h1 class=\"text-4xl font-bold\">Big Heading</h1>\n<p class=\"text-base text-gray-700\">Normal paragraph</p>\n<small class=\"text-sm text-gray-500\">Small text</small>\n```\ntext-xs makes tiny\ntext-base makes normal\ntext-4xl makes really big\n\n### Font Weight\nUse font-* to make text bold or light:\n```html\n<p "
     },
     {
       "id": "utilities/typography.mdx#1",
       "slug": "utilities/typography.mdx",
-      "text": "\">Light</p>\n<p class=\"font-bold\">Bold</p>\n\n### Line Height\n\nUse leading-* to control spacing between lines:\n\n<p class=\"leading-relaxed\">Lines are more spaced out</p>\n<p class=\"leading-tight\">Lines are closer together</p>\n\n### Text Color\n\nUse text-{color}-{shade} to change text color:\n\n<p class=\"text-blue-500\">Blue text</p>\n<p class=\"text-gray-800\">Dark gray text</p>\n\nuppercase, lowercase, capitalize to change the case\n\nitalic or not-italic to make text italic or normal\n\nBasically, all the **Tailwind classes** are just making it **look nice without writing CSS**."
+      "text": "class=\"font-light\">Light</p>\n<p class=\"font-bold\">Bold</p>\n```\n### Line Height\n\nUse leading-* to control spacing between lines:\n```html\n<p class=\"leading-relaxed\">Lines are more spaced out</p>\n<p class=\"leading-tight\">Lines are closer together</p>\n```\n### Text Color\n\nUse text-{color}-{shade} to change text color:\n```html\n<p class=\"text-blue-500\">Blue text</p>\n<p class=\"text-gray-800\">Dark gray text</p>\n```\nuppercase, lowercase, capitalize to change the case\n\nitalic or not-italic to make text italic or normal\n\nBasically, all the **Tailwind classes** are just making it **look nice without writin"
+    },
+    {
+      "id": "utilities/typography.mdx#2",
+      "slug": "utilities/typography.mdx",
+      "text": "g CSS**."
     },
     {
       "id": "utilities/components.mdx#0",
       "slug": "utilities/components.mdx",
-      "text": "# Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n### For example, a button can be made like this:\n<button class=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n\nAnd if you use it a lot, you can even make a class with @apply so you don’t have to write all the utilities every time.\n\nYou can also use ready-made libr"
+      "text": "# Components\n\nComponents are just pieces of your website that you can reuse, like buttons, cards, forms, or navbars. The cool thing about Tailwind is that you don’t have to write a lot of CSS to make them look nice, just put together utility classes in your HTML and boom—you have a component.\n\n---\n\n### For example, a button can be made like this:\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n```html\n<button className=\"bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600\">\n  Click me\n</button>\n```\n\nAnd if you use it a lot, you can eve"
     },
     {
       "id": "utilities/components.mdx#1",
       "slug": "utilities/components.mdx",
-      "text": "aries built for Tailwind as i mentioned before in References : [my cool site][http://localhost:3000/docs/responsive-design]"
+      "text": "n make a class with @apply so you don’t have to write all the utilities every time.\n\nYou can also use ready-made libraries built for Tailwind as i mentioned before in References : [my cool site][http://localhost:3000/docs/responsive-design]"
     },
     {
       "id": "utilities/colors.mdx#0",
@@ -85,7 +90,7 @@
     {
       "id": "utilities/colors.mdx#1",
       "slug": "utilities/colors.mdx",
-      "text": "und</div>\n<div className=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n---\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n\n```html\n<p class=\"text-gray-800\">Dark gray text</p>\n<p class=\"text-yellow-500\">Yellow text</p>\n\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};"
+      "text": "und</div>\n<div className=\"bg-red-200 text-red-800 p-4\">Light red background</div>\n\n---\n\n### Text colors:\n\n<p className=\"text-gray-800\">Dark gray text</p>\n\n```html\n<p className=\"text-gray-800\">Dark gray text</p>\n<p className=\"text-yellow-500\">Yellow text</p>\n```\n### Custom colors, which we talked about previously : \n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brandBlue: '#1E40AF',\n        brandRed: '#DC2626',\n      },\n    },\n  },\n};"
     },
     {
       "id": "utilities/cards.mdx#0",
