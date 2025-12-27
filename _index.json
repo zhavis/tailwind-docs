@@ -50,16 +50,6 @@
         "path": "utilities/components.mdx"
       },
       {
-        "name": "spacing",
-        "type": "file",
-        "path": "utilities/spacing.mdx"
-      },
-      {
-        "name": "start",
-        "type": "file",
-        "path": "utilities/start.mdx"
-      },
-      {
         "name": "typography",
         "type": "file",
         "path": "utilities/typography.mdx"
